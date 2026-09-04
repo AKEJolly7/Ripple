@@ -1,7 +1,7 @@
-target/
-output/
-artifacts/
-work/
+/target/
+/output/
+/artifacts/
+/work/
 *.log
 .env
 *.key
