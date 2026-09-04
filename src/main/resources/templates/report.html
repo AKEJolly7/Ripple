@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:">
+<title>观澜 Ripple · 行情 × 事件归因</title>
+<style>
+:root{--red:#d0342c;--green:#0f9d58;--ink:#1c2733;--muted:#6b7a8c;--line:#e3e8ee;--bg:#f7f9fb}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
+header{display:flex;align-items:baseline;gap:16px;padding:14px 22px 8px;flex-wrap:wrap}
+h1{font-size:20px;margin:0}
+.slogan{font-size:12px;color:var(--muted);font-weight:400}
+label{margin-left:auto;font-size:13px;color:var(--muted)}
+select{font-size:14px;padding:3px 8px}
+#chart{width:calc(100% - 44px);height:520px;background:#fff;border:1px solid var(--line);border-radius:8px;margin:0 22px}
+#panel{margin:18px 22px 30px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 18px 14px}
+#panel h2{font-size:16px;margin:10px 0 6px}
+.filters{display:flex;gap:8px;margin:8px 0 12px}
+.filters button{border:1px solid var(--line);background:#fff;border-radius:14px;padding:2px 14px;font-size:13px;cursor:pointer}
+.filters button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.mark{border-top:1px solid var(--line);padding:8px 2px}
+.panelSym > .mark:first-of-type{border-top:none}
+.meta{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted);align-items:baseline}
+.mdate{font-weight:600;color:var(--ink)}
+.rating{font-weight:600}
+.rating-BULLISH{color:var(--red)}
+.rating-BEARISH{color:var(--green)}
+.rating-NEUTRAL{color:var(--muted)}
+.mtitle{font-weight:600;margin-top:2px}
+.mreason{font-size:12.5px;color:var(--muted);margin-top:2px}
+a{color:#1155cc}
+.miss{border-top:1px dashed var(--line);padding:6px 2px;font-size:12.5px;color:var(--muted)}
+footer{padding:10px 22px 24px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>观澜 · Ripple</h1>
+  <span class="slogan">观其澜，知其源 —— Watch the waves, find the stones.</span>
+  <label>标的 <select id="symbolSelect"></select></label>
+</header>
+<div id="chart"></div>
+<div id="panel">
+  <h2>溯源面板 <span id="missingNote" style="font-weight:400;font-size:12px;color:var(--muted)"></span></h2>
+  <div class="filters">
+    <button data-f="ALL" class="active">全部</button>
+    <button data-f="BULLISH">利好</button>
+    <button data-f="BEARISH">利空</button>
+    <button data-f="NEUTRAL">中性</button>
+  </div>
+  __PANEL_SECTIONS__
+</div>
+<footer>__FOOTER__</footer>
+<script>__ECHARTS_JS__</script>
+<script>
+var DATA = __DATA_JSON__;
+var RATING_LABEL = {BULLISH:'利好', BEARISH:'利空', NEUTRAL:'中性'};
+var RATING_COLOR = {BULLISH:'#d0342c', BEARISH:'#0f9d58', NEUTRAL:'#8a8f98'};
+var STRENGTH_LABEL = {STRONG:'强相关', MODERATE:'相关', WEAK:'弱相关'};
+var current = DATA.defaultSymbol;
+var sel = document.getElementById('symbolSelect');
+Object.keys(DATA.symbols).forEach(function (s) {
+  var o = document.createElement('option');
+  o.value = s; o.textContent = s;
+  sel.appendChild(o);
+});
+var chart = echarts.init(document.getElementById('chart'));
+window.addEventListener('resize', function () { chart.resize(); });
+
+function esc(s) {
+  var d = document.createElement('div');
+  d.textContent = s == null ? '' : String(s);
+  return d.innerHTML;
+}
+function truncate(s, n) {
+  s = s == null ? '' : String(s);
+  return s.length > n ? s.slice(0, n) + '…' : s;
+}
+function fmt(v) {
+  if (v == null) return '-';
+  return v >= 1e9 ? (v / 1e9).toFixed(2) + 'B' : v >= 1e6 ? (v / 1e6).toFixed(2) + 'M'
+    : v >= 1e3 ? (v / 1e3).toFixed(1) + 'K' : String(Math.round(v));
+}
+
+function buildOption(d) {
+  var dates = d.dates, ohlc = d.ohlc;
+  var vol = [];
+  for (var i = 0; i < ohlc.length; i++) {
+    vol.push({ value: d.volume[i],
+      itemStyle: { color: ohlc[i][3] >= ohlc[i][0] ? 'rgba(208,52,44,0.55)' : 'rgba(15,157,88,0.55)' } });
+  }
+  var highBy = {};
+  dates.forEach(function (dt, i) {
+    if (highBy[dt] == null || ohlc[i][1] > highBy[dt]) highBy[dt] = ohlc[i][1];
+  });
+  d.markByDate = {};
+  d.marks.forEach(function (m) { d.markByDate[m.pivotDate] = m; });
+  var events = d.marks.map(function (m) {
+    return { value: [m.pivotDate, (highBy[m.pivotDate] || 0) * 1.035],
+      itemStyle: { color: RATING_COLOR[m.rating] || '#8a8f98' } };
+  });
+  var markLines = d.marks.map(function (m) { return { xAxis: m.pivotDate }; });
+  var areas = (d.segments || []).filter(function (s) { return s.label === 'UP' || s.label === 'DOWN'; })
+    .map(function (s) {
+      return [{ xAxis: s.startDate, itemStyle: { color: s.label === 'UP' ? 'rgba(208,52,44,0.05)' : 'rgba(15,157,88,0.05)' } },
+              { xAxis: s.endDate }];
+    });
+  var maSeries = [['MA5', d.ma5, '#f5a623'], ['MA20', d.ma20, '#4a90d9'], ['MA60', d.ma60, '#9013fe']]
+    .map(function (t) {
+      return { id: t[0].toLowerCase(), name: t[0], type: 'line', data: t[1], showSymbol: false,
+        smooth: true, lineStyle: { width: 1.2, color: t[2] }, itemStyle: { color: t[2] } };
+    });
+  return {
+    animation: false,
+    legend: { top: 6, left: 60, data: ['K线', 'MA5', 'MA20', 'MA60', '事件'] },
+    tooltip: {
+      trigger: 'axis',
+      triggerOn: 'mousemove|click',
+      axisPointer: { type: 'cross' },
+      formatter: function (params) {
+        if (!Array.isArray(params)) params = [params];
+        var date = params[0].axisValue;
+        var html = '<b>' + date + '</b>';
+        var byId = {};
+        params.forEach(function (p) { byId[p.seriesId || p.seriesName] = p; });
+        var c = byId.candles;
+        if (c && c.value) {
+          html += '<br/>开 ' + c.value[0].toFixed(2) + ' 高 ' + c.value[1].toFixed(2)
+            + ' 低 ' + c.value[2].toFixed(2) + ' 收 ' + c.value[3].toFixed(2);
+        }
+        ['ma5', 'ma20', 'ma60'].forEach(function (k) {
+          if (byId[k] && byId[k].value != null) {
+            html += '<br/>' + byId[k].seriesName + ' ' + byId[k].value.toFixed(2);
+          }
+        });
+        var v = byId.vol;
+        if (v) html += '<br/>量 ' + fmt(v.value);
+        var m = d.markByDate[date];
+        if (m) {
+          html += '<hr style="margin:4px 0"/>事件：<b>' + esc(m.eventTitle) + '</b>'
+            + '<br/>' + esc(truncate(m.summary, 80))
+            + '<br/>[' + (RATING_LABEL[m.rating] || '') + '|' + (STRENGTH_LABEL[m.strength] || '')
+            + '|置信度 ' + Number(m.confidence).toFixed(2) + '] '
+            + (String(m.url || '').indexOf('http') === 0
+                ? '<a href="' + esc(m.url) + '" target="_blank" rel="noopener">来源 ↗</a>' : '（无链接）');
+        }
+        return html;
+      }
+    },
+    axisPointer: { link: [{ xAxisIndex: 'all' }] },
+    grid: [{ left: 60, right: 24, top: 36, height: '56%' },
+           { left: 60, right: 24, top: '74%', height: '15%' }],
+    xAxis: [
+      { type: 'category', data: dates, boundaryGap: true, axisLine: { lineStyle: { color: '#c3cbd4' } } },
+      { type: 'category', gridIndex: 1, data: dates, boundaryGap: true,
+        axisLabel: { show: false }, axisTick: { show: false } }
+    ],
+    yAxis: [
+      { scale: true, splitLine: { lineStyle: { color: '#eef2f6' } } },
+      { gridIndex: 1, axisLabel: { formatter: fmt }, splitNumber: 2, splitLine: { show: false } }
+    ],
+    dataZoom: [
+      { type: 'inside', xAxisIndex: [0, 1] },
+      { type: 'slider', xAxisIndex: [0, 1], bottom: 2, height: 18 }
+    ],
+    series: maSeries.concat([
+      { id: 'candles', name: 'K线', type: 'candlestick', data: ohlc,
+        itemStyle: { color: '#d0342c', color0: '#0f9d58', borderColor: '#d0342c', borderColor0: '#0f9d58' },
+        markLine: { symbol: 'none', silent: true, label: { show: false },
+          lineStyle: { type: 'dashed', color: '#8a8f98', width: 1, opacity: 0.6 }, data: markLines },
+        markArea: { silent: true, data: areas } },
+      { id: 'vol', name: '成交量', type: 'bar', xAxisIndex: 1, yAxisIndex: 1, data: vol },
+      { id: 'events', name: '事件', type: 'scatter', data: events, symbol: 'circle',
+        symbolSize: 12, z: 5,
+        label: { show: true, position: 'top', fontSize: 10, color: '#5a6572',
+          formatter: function (p) { return truncate((d.markByDate[p.value[0]] || {}).eventTitle, 16); } },
+        tooltip: { show: false } }
+    ])
+  };
+}
+
+function updatePanel() {
+  document.querySelectorAll('.panelSym').forEach(function (el) {
+    el.hidden = el.getAttribute('data-symbol') !== current;
+  });
+  var d = DATA.symbols[current];
+  document.getElementById('missingNote').textContent = d.missingCount > 0
+    ? '（' + d.missingCount + ' 个拐点未找到强相关事件，仅列同期候选，不做归因）' : '';
+}
+
+function renderChart() {
+  chart.setOption(buildOption(DATA.symbols[current]), true);
+  updatePanel();
+  sel.value = current;
+}
+
+sel.addEventListener('change', function () { current = sel.value; renderChart(); });
+
+document.querySelectorAll('.filters button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('.filters button').forEach(function (x) { x.classList.remove('active'); });
+    b.classList.add('active');
+    var f = b.getAttribute('data-f');
+    var vis = document.querySelector('.panelSym:not([hidden])');
+    if (!vis) return;
+    vis.querySelectorAll('.mark').forEach(function (el) {
+      el.style.display = (f === 'ALL' || el.getAttribute('data-rating') === f) ? '' : 'none';
+    });
+  });
+});
+
+renderChart();
+</script>
+</body>
+</html>
