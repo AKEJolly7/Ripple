@@ -1,0 +1,11 @@
+target/
+output/
+artifacts/
+work/
+*.log
+.env
+*.key
+.DS_Store
+.idea/
+*.iml
+*.local.properties
