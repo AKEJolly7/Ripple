@@ -1,11 +1,11 @@
-# 观澜（Ripple）里程碑 —— R0-R8
+# 观澜（Ripple）里程碑 —— R0-R10
 
-> 状态总览：**R0-R8 全部完成**。每条保留实际执行的范围、关键变更与最终验收结论；
+> 状态总览：**R0-R8 全部完成；R9/R10 为追加轮（LLM 真实路径实测 / JDK 17 降级与产物版式修复）**。每条保留实际执行的范围、关键变更与最终验收结论；
 > 过程细节（输入提示词、问题修复三列表、方法论）见 DEVLOG.md，架构与题目核验 checklist 见 DESIGN.md。
 
 - [x] **R0 骨架与治理（0.25h）**
-  设计方案获批（四层架构 / 数据源选型 / 五项关键取舍）；Maven 骨架（Java 21 + langchain4j 1.19.0 + POI 5.5.1 + Jackson 2.22.2）；治理文件四件（CLAUDE.md 5 条约定 / 本文件 / DEVLOG.md / .gitignore）；ECharts 6.1.0 本地入库（SHA-256 `b66b25ae…0fd0`）。
-  环境：JDK 21 装至 `~/tools/jdk-21.0.12.1+1`（Adoptium tar.gz 免 sudo）；构建统一 `JAVA_HOME=<JDK21> MAVEN_SKIP_RC=1`（跳过 ~/.mavenrc 的 zulu-8）。
+  设计方案获批（四层架构 / 数据源选型 / 五项关键取舍）；Maven 骨架（Java 17 + langchain4j 1.19.0 + POI 5.5.1 + Jackson 2.22.2）；治理文件四件（CLAUDE.md 5 条约定 / 本文件 / DEVLOG.md / .gitignore）；ECharts 6.1.0 本地入库（SHA-256 `b66b25ae…0fd0`）。
+  环境：JDK 17 装至 `~/tools/jdk-17`（Adoptium tar.gz 免 sudo）；构建统一 `JAVA_HOME=<JDK17> MAVEN_SKIP_RC=1`（跳过 ~/.mavenrc 的 zulu-8）。
   验收：`mvn -q compile` 通过，治理文件与 echarts.min.js 齐备。
 
 - [x] **R1 行情数据通道（计划 0.5h，实际 1.5h 含数据源灾备）**
@@ -50,3 +50,12 @@
 - [x] **R8 安全审查 + 演示彩排（0.5h，只查不改）**
   密钥全仓审查（src/pom/md/target/work/jar 内 class 零泄漏）；前端安全（0 外链/CSP/URL 白名单/noopener/注入转义）；健壮性三路径（429 退避 / LLM 90s 超时降级 / --no-llm 离线实测）；简洁性（11 包类型单一、依赖无环、死代码 2 处记录）；demo.md 3 分钟脚本；DESIGN.md 附检查者视角 checklist。
   验收：checklist **21/21 全绿**；断网渲染实测可用（0 网络请求）；唯一改动为 .gitignore 补 `*.local.properties`。
+
+- [x] **R9 LLM 真实路径端到端验证与修复（追加轮）**
+  动因：DEEPSEEK_API_KEY 配置到位后实测 LLM 归因路径，暴露 4 个阻断缺陷（5 个 agent 接口缺 @UserMessage / 工具参数名 arg0 / 整标的输入超模型上下文与输出上限 / ObjectMapper 缺 JavaTimeModule）；用户 review 发现 javadoc 承诺"解析失败由上层降级规则对齐"从未实现。
+  关键变更：LlmAligner 重构为单拐点分片（alignOne：1 拐点 + 规则分预筛 top-8 候选，证据随用户消息下发）；散文包裹 JSON 提取兜底；丢弃/空返回回填"事件缺失"（拐点守恒 48）；RippleOrchestrator 补上层降级（LLM 归因为空 → 规则对齐，mode 如实落盘）；pom 补 maven.compiler.parameters；测试 46 → 48。
+  验收：真实 key `mode=llm` 26 归因 + 22 缺失 = 48，URL 26/26 溯源、三锚点归因正确；无效 key 整体降级实测（48 次 401 → `mode=rule` 48 归因，退出码 0）；HTML 重渲染。双路径差异分析记入 DESIGN.md 取舍 6；遗留：--orchestrate 路径待分片改造后实测。
+
+- [x] **R10 JDK 17 降级 + 产物版式修复 + 从零全链路回归（追加轮，2026-09-09）**
+  JDK 21→17：release 17 + 58 处 SequencedCollection API 替换 + md 版本字面替换；langchain4j 1.19.0 最低要求 17（底线）。版式修复（用户实开产物发现）：PPT 组合页表格列宽显式分配（默认 100pt/列不受 anchor 约束致溢出压图）+ 图片右移；Excel 表头填充 RGB 误传调色板索引截断成 indexed=-4364 黑底——改 XSSFColor。新增 PptxLayoutTest/ExcelStyleTest（TestSnapshots 共享），48 → 50 用例。
+  验收：`mvn -q clean verify` 全绿、字节码 major 61；从零 run-all（带 key）退出码 0——NVDA `mode=llm` 29+19=48 守恒、URL 溯源 96/96、三锚点命中、吻合率 96.6%；双路径同证据集对比印证取舍 6（LLM 29 ⊆ 规则 48，R3 经典误标场景 LLM 拒绝归因）。

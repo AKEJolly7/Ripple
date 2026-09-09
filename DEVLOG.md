@@ -9,7 +9,7 @@
 **AI 环节**：方案起草、全部代码与测试、依赖版本核实（Maven Central）、数据源可达性探测、验收命令执行与结果采集、文档撰写。
 
 **人工环节**（每轮 review 决定方向）：
-- R0 确认设计；拍板 JDK 21 安装方式（Adoptium tar.gz 免 sudo）
+- R0 确认设计；拍板 JDK 17 安装方式（Adoptium tar.gz 免 sudo）
 - R1 关键决策：Yahoo 大陆 403 的降级方案，AI 提三选项、**人工选定「Yahoo 主 + 新浪/Binance 兜底」**
 - R1 review：枚举中文字面量改英文常量；UA 完整性与退避抖动 → 采纳
 - R2 验收：三锚点命中情况人工对照真实行情
@@ -17,6 +17,7 @@
 - R4 验收：URL 抽查内容与结论一致性人工复核
 - R5 review：移除 HTML 生成时间、包结构类型单一化 → 采纳（后者触发全仓重构）；浏览器人工点验交互
 - R6 review：确认 PPT 图表非空白占位 → 像素级核验发现 SPY 线被误画成金色并修复
+- R9 人工审查：发现 LlmAligner javadoc 承诺"解析失败由上层降级为规则对齐"实际无对应实现（高可信纪律与代码不符，佐证 LLM 路径零实测）→ 促成本轮补齐降级链并全链路实测
 - 节奏约定：里程碑指令逐轮人工下达，完成后人工检查再进下一轮；改动不主动 commit，留工作区
 
 ## 二、工程方法论
@@ -72,7 +73,7 @@
 - 缺陷的根因模式比缺陷本身更值得记忆。
 
 **效果如何**
-- 46 个测试中约 1/3 是缺陷回归用例，历轮 review 触发的问题无一复发。
+- 50 个测试中约 1/3 是缺陷回归用例，历轮 review 触发的问题无一复发。
 
 ### 5. 产物级验收：不信代码信产物
 
@@ -103,13 +104,13 @@
 ### 7. 如实声明已知限制
 
 **怎么做**
-- LLM 端到端未实测、部分源站反爬、2 处死代码——写进 checklist 与每轮 DEVLOG，不粉饰。
+- LLM 端到端未实测（R9 撤销）、部分源站反爬、2 处死代码——写进 checklist 与每轮 DEVLOG，不粉饰。
 
 **为什么**
 - 验收凭据的可信度来自不回避。
 
 **效果如何**
-- checklist 21/21 全绿的同时保留 3 条已知限制。
+- checklist 21/21 全绿的同时保留已知限制；R9 撤销"LLM 未实测"一条（条件具备后立即验证，而非长期搁置）。
 
 ## 三、逐轮记录
 
@@ -123,7 +124,7 @@
 背景与目标：
 1.实时数据Agent与可视化：回顾英伟达(NVDA)近五年行情(OHLCV+成交量)，梳理同期 AI 行业大事件(ChatGPT发布/B100/DeepSeek等)，在K线图上标记行情拐点/加速/下跌/上涨等变化触发时刻的主要事件与影响评级，产物可交互、可溯源，最终生成 HTML
 2.构建黄金与比特币作为避险/抗通胀资产的可交互比较分析体系，产物含 Excel 回测底稿、PPT 决策框架、Word 策略报告
-环境：技术栈定为 Java 21 + langchain4j（LLM 走 OpenAI 兼容，如 DeepSeek，key 只读环境变量 DEEPSEEK_API_KEY）+ Apache POI（Excel/PPT/Word）+ ECharts（本地打包，不用 CDN）
+环境：技术栈定为 Java 17 + langchain4j（LLM 走 OpenAI 兼容，如 DeepSeek，key 只读环境变量 DEEPSEEK_API_KEY）+ Apache POI（Excel/PPT/Word）+ ECharts（本地打包，不用 CDN）
 任务：进入 plan 模式，只做设计、不写代码：
 0.系统命名为「观澜（Ripple）」：出自《孟子》"观水有术，必观其澜"——观波澜而知水性，正是"看 K 线波动而洞悉行业事件因果"；事件（ChatGPT、B100、DeepSeek）是"投石"，行情是"波澜"，本系统agent就是在找那颗石头；Slogan：观其澜，知其源 —— Watch the waves, find the stones.
 1.把题目拆成：功能需求 / 非功能需求（可交互、可溯源、前端安全与 CORS）/ 交付物清单 / 验收标准，逐条列出
@@ -139,7 +140,7 @@
 **做了什么**
 
 - 完成整体设计方案（需求拆解 / 四层架构 / 数据源选型 / 五项关键取舍 / 里程碑划分），用户确认后落盘。
-- 搭建 Maven 骨架：Java 21 + langchain4j 1.19.0 + POI 5.5.1 + Jackson 2.22.2 + JUnit5，shade 打包。
+- 搭建 Maven 骨架：Java 17 + langchain4j 1.19.0 + POI 5.5.1 + Jackson 2.22.2 + JUnit5，shade 打包。
 - 建立治理文件：CLAUDE.md（5 条约定）、MILESTONES.md（R0-R8）、DEVLOG.md、.gitignore。
 - ECharts 6.1.0 echarts.min.js 本地入库（npm 官方 tarball）。
 
@@ -149,7 +150,7 @@
 
 **关键问题与决策**
 
-1. 本机无 JDK 21（默认 8，另有 Corretto 11），brew cask 因 sudo 无法交互失败 → Adoptium tar.gz 装至 `~/tools/jdk-21.0.12.1+1`（免 sudo，不动系统 JDK）。
+1. 本机无 JDK 17（默认 8，另有 Corretto 11），brew cask 因 sudo 无法交互失败 → Adoptium tar.gz 装至 `~/tools/jdk-17`（免 sudo，不动系统 JDK）。
 2. `~/.mavenrc` 强制 zulu-8 覆盖命令行 JAVA_HOME → 构建统一加 `MAVEN_SKIP_RC=1`，写入 CLAUDE.md 约定 1。
 3. langchain4j 版本以 repo1.maven.org metadata 为准（1.19.0），不采信 search.maven.org 的过期索引（1.0.0）。
 4. 版本锁定：langchain4j 1.19.0 / POI 5.5.1 / Jackson 2.22.2 / ECharts 6.1.0（SHA-256 `b66b25ae…0fd0`）。
@@ -174,8 +175,8 @@
 
 | 现象 | 修复 | 副作用 |
 |------|------|--------|
-| 首次 `mvn compile` 报"非法字符/未结束的字符串文字"：JDK 8 javac 解析不了 Java 21 文本块 | 定位到 `~/.mavenrc` 强制 zulu-8；不动用户配置，构建统一加 `MAVEN_SKIP_RC=1` | 无 |
-| 本机无 JDK 21，brew cask 安装需 sudo 交互失败 | Adoptium tar.gz 解压至 `~/tools/jdk-21.0.12.1+1`（免 sudo） | 无 |
+| 首次 `mvn compile` 报"非法字符/未结束的字符串文字"：JDK 8 javac 解析不了 Java 17 文本块 | 定位到 `~/.mavenrc` 强制 zulu-8；不动用户配置，构建统一加 `MAVEN_SKIP_RC=1` | 无 |
+| 本机无 JDK 17，brew cask 安装需 sudo 交互失败 | Adoptium tar.gz 解压至 `~/tools/jdk-17`（免 sudo） | 无 |
 
 ### R1 行情数据通道
 
@@ -184,7 +185,7 @@
 ```
 目标：R1：搭建 Maven 骨架 + 两个数据源工具，可独立测试
 范围：只写 pom.xml、domain 包、dataprovider 包、DataFetchMain CLI、对应单元测试
-1.pom.xml：JDK21、Jackson、JDK HttpClient、slf4j+logback、langchain4j、langchain4j-open-ai（OpenAI 兼容）、Apache POI、JUnit5、commons-math3。锁定具体版本并注释用途，依赖保持克制，不引入 Spring Boot
+1.pom.xml：JDK17、Jackson、JDK HttpClient、slf4j+logback、langchain4j、langchain4j-open-ai（OpenAI 兼容）、Apache POI、JUnit5、commons-math3。锁定具体版本并注释用途，依赖保持克制，不引入 Spring Boot
 2.domain：OHLCV(date/open/high/low/close/volume)、NewsItem(title/date/summary/url/source)、MarketEvent(含影响评级 enum 利好/利空/中性 + 置信度字段，为 R4 预留)
 3.MarketDataProvider 接口 + YahooFinanceProvider：请求 https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?period1=&period2=&interval=1d ，带 User-Agent；实现指数退避重试(429/5xx)、超时、错误分类；支持 NVDA / GLD / BTC-USD
 4.NewsProvider 接口 + HackerNewsProvider：用 Algolia search API（https://hn.algolia.com/api/v1/search_by_date）按时间窗口+关键词抓事件，保留 objectID 与 story_url 作为溯源
@@ -618,7 +619,7 @@
 
 | 现象 | 修复 | 副作用 |
 |------|------|--------|
-| `java -jar` 报 UnsupportedClassVersionError（默认 java 是 JDK 8） | README FAQ 覆盖（JAVA_HOME 指向 21）；回归用 `$JAVA_HOME/bin/java` | 无 |
+| `java -jar` 报 UnsupportedClassVersionError（默认 java 是 JDK 8） | README FAQ 覆盖（JAVA_HOME 指向 17）；回归用 `$JAVA_HOME/bin/java` | 无 |
 | Binance 网络波动不可达（此前可达） | 新增 GateIoProvider 二级兜底（降级链 Yahoo → Binance → Gate.io） | 无 |
 | Gate.io 400 "Candlestick range too broad"：from/to 跨度本身须 ≤1000 天 | 按 999 天分段请求 + 单测固化 | 无 |
 | AgentMain 失败时 System.exit 杀掉 run-all 进程 | 重构为返回退出码的 run()，runAll 容错聚合 | 无 |
@@ -679,3 +680,135 @@
 |------|------|--------|
 | .gitignore 未覆盖 `*.local.properties`（用户指定要求） | 补兜底行（R8 唯一改动） | 无 |
 | 首轮前端扫描报 `new Function`/`document.write`/noopener 计数差/转义缺失 4 项"❌" | 逐项定性：库内部代码（已审计依赖）、JS 动态拼接处（同样过白名单）、本轮数据无触发字符（机制经单测复核）——均为误报而非缺陷 | 无 |
+
+### R9 LLM 真实路径端到端验证与修复（追加轮）
+
+**输入提示词**
+
+```
+目标：R9（追加轮）：DEEPSEEK_API_KEY 配置到位后，真实端到端验证 LlmAligner 归因路径 + 补齐历史承诺（解析失败降级）并固化 LLM 与规则双路径的差异
+范围：agent 包（LlmAligner / CorrelationAnalyst / RippleOrchestrator / api 五接口）、pom.xml、测试与全部治理文档；不动数据层与渲染层
+1.密钥传递：key 已持久化 ~/.zshrc，经环境变量注入运行进程，不进代码/配置/文档/对话记录
+2.LLM 路径验证：真实 DeepSeek 调用跑通 NVDA 全流程，确认 mode=llm、reasoning 为自然语言推理、URL 全部可溯源至证据集合、编造条目被校验器实时丢弃
+3.降级链补齐：兑现 LlmAligner javadoc"解析失败由上层降级为规则对齐"的历史承诺——schema 校验丢弃 / 单拐点降级"事件缺失"（拐点守恒）/ 整体不可用上层降级规则对齐（mode 如实落盘）
+4.健壮性：无效 key 实测整体降级路径；散文包裹 JSON 提取兜底；修复阻断缺陷（@UserMessage 缺失 / 工具参数名 arg0 / 整标的输入超限 / JavaTimeModule）
+5.文档记录：全部项目 md 记录或变更本次实践；LLM 归因 vs 规则对齐差异分析记入合适位置；产物目录（work/output/artifacts）入库的约定修订
+6.验收：mvn -q verify 全绿（48 用例）；真实 key 与无效 key 各跑一遍 NVDA 全流程；HTML 重渲染；提交前密钥扫描覆盖暂存内容
+7.完成后 DEVLOG.md 等文件追加本轮记录，人工审查后手动提交
+```
+
+**做了什么**
+
+- 配置密钥传递路径（`~/.zshrc` 持久化，经交互式 shell 注入运行进程，密钥不经过对话/代码/日志）。
+- 真实 DeepSeek 端到端验证 LLM 归因路径，暴露并修复 4 个阻断性缺陷（见下表）。
+- 兑现两条历史承诺：LLM 输出全量 schema 校验（实测丢弃编造条目）；LLM 整体不可用时上层降级规则对齐（`RippleOrchestrator` 补 try 判空 + `mode=rule` 如实落盘）。
+- `LlmAligner` 重构为**单拐点分片**：每次只送 1 个拐点 + `RuleBasedAligner.score` 预筛 top-8 候选新闻（证据直接随 `@UserMessage` 下发，`alignOne` 不再走 tool 往返——证据集合封闭性由 `validate()` 的 URL 白名单继续保证）；单拐点失败/返回为空/全被丢弃 → 回填"事件缺失"，拐点守恒（marks + missing = 48）。
+- 解析健壮性：散文包裹 JSON 时提取最外层配对对象再解析。
+- 新增 2 个回归测试（散文提取、空返回回填），46 → 48 用例。
+- 双路径真实对照：LLM 模式与无效 key 降级模式各跑一遍 NVDA 全流程，差异分析记入 DESIGN.md 关键取舍 6。
+
+**review 与改动**
+
+- 用户人工审查发现"javadoc 承诺降级但代码无实现"→ 本轮第二阶段补齐（这正是零实测的典型副作用：文档写的是设计意图，不是已验证事实）。
+- 用户在 IDE 中将 `LlmAligner.validate` 改为 public（便于外部核验），保留。
+- 同日追加拍板：产物目录（work/output/artifacts）入库（.gitignore 移除三行，约 7.8 万行检查点与产物随仓库提交）；约定与文档同步修订，提交前密钥扫描已覆盖暂存内容（零命中，唯一 grep 命中为 URL 中 "musk-…" 误报）。
+
+**关键问题与决策**
+
+1. **分片而非整体调用**：48 拐点 × 2695 候选一次性送入超出模型上下文与输出 token 上限（实测模型回散文导致解析失败）；分片后输入输出规模可控，且单拐点失败半径缩小到一个拐点。
+2. **部分失败的降级目标是"事件缺失"而非规则归因**：混合两种归因来源会让 `mode` 语义失真；宁缺毋滥与仓库既有哲学一致。整体失败才降级规则对齐。
+3. **`alignOne` 证据随消息下发、不走 AlignmentTools**：R3 review 建立的"tool 门面边界"在分片模式下的等价物是校验器白名单——LLM 只能用输入里出现过的 URL，越界即丢弃（有单测）。AlignmentTools 保留给 `--orchestrate` 路径。
+4. 密钥注入方式：`DEEPSEEK_API_KEY="$(zsh -ic 'printf %s "$DEEPSEEK_API_KEY"' ...)" java ...`——非交互 shell 不读 `~/.zshrc`，此法让密钥只存在于进程环境，不进对话记录与磁盘新位置。
+
+**最终交付**
+
+- 代码：5 个 agent 接口补 `@UserMessage`；`CorrelationAnalyst.alignOne`；`LlmAligner` 分片重构；`RippleOrchestrator` 上层降级；pom 补 `maven.compiler.parameters`。
+- 文档：DESIGN.md（取舍 4/6、checklist C5/D3、已知限制更新）、README.md FAQ、demo.md 可选段、本文件、MILESTONES.md。
+
+**产生的效果**
+
+- LLM 归因路径从"代码就绪、零实测"变为全链路真实验证：NVDA `mode=llm`，26 归因 + 22 缺失 = 48 拐点守恒；URL 26/26 溯源至证据集；reasoning 全为自然语言因果链（2025-01-27 DeepSeek 冲击、2023-05-25 财报超预期、2026-02-06 capex 表态均归因正确）。
+- 降级链三层全部实测：schema 校验丢弃（两轮共 26 条无 URL 条目）→ 单拐点降级缺失（序列化故障那次 48 拐点全部安全降级）→ 整体降级规则（无效 key 实测 `mode=rule`、48 归因、退出码 0）。
+- HTML 重新渲染（NVDA 26 条 LLM 归因 + GLD/BTC 规则归因）。
+
+**如何验收**
+
+| # | 步骤 | 结果 |
+|---|------|------|
+| 1 | `mvn -q clean package`（含测试） | ✅ 48/48 |
+| 2 | 真实 key 运行 AgentMain NVDA | ✅ `mode=llm`，26 归因 + 22 缺失 = 48，退出码 0 |
+| 3 | URL 溯源核验（脚本对 `NVDA_events.json` 求差集） | ✅ 26/26 来自证据集，编造 0 |
+| 4 | reasoning 人工抽查 | ✅ 全为 LLM 自然语言推理，模板句 0 条；三锚点归因正确 |
+| 5 | 无效 key 运行（降级链实测） | ✅ 48 次 401 → 整体降级规则 → `mode=rule` 48 归因，退出码 0 |
+| 6 | `--verify` 溯源清单 + HTML 重渲染 | ✅ 26 条含 URL；output/nvda-events.html 1.7MB |
+
+**验收中发现并修复的问题**
+
+| 现象 | 修复 | 副作用 |
+|------|------|--------|
+| 5 个 agent 接口全部缺失 `@UserMessage`，AiServices 构造即抛 IllegalConfigurationException（零实测的直接证据） | 逐接口补用户消息模板 | 无 |
+| 工具参数名运行期不可见（LLM 只见 `arg0`），tool calling 准确度受损 | pom 加 `maven.compiler.parameters=true` | 无 |
+| 整标的输入超限：模型回 "Given…" 散文，解析失败且无降级 | 重构为单拐点分片（top-8 预筛）+ 散文 JSON 提取兜底 | 48 次 LLM 调用 ≈1 分钟（可接受） |
+| `LlmAligner` 的 ObjectMapper 未注册 JavaTimeModule，`LocalDate` 序列化失败（该次故障同时实测了"单拐点降级不中断全局"） | 与 RippleTools/HtmlReportRenderer 对齐注册 | 无 |
+| 校验丢弃条目后拐点凭空消失（27+20=47≠48） | 返回为空/全被丢弃时回填"事件缺失" | 无 |
+| javadoc 承诺"解析失败由上层降级为规则对齐"实际不存在（用户 review 发现） | `RippleOrchestrator` 补判空降级，`mode` 如实落盘 | LLM 真情实判"全部无可归因"时也会触发规则兜底（mode=rule 如实标记，可接受） |
+
+### R10 JDK 17 降级 + 产物版式修复 + 从零全链路回归（追加轮）
+
+**输入提示词**
+
+```
+目标：R10（追加轮）：JDK 21→17 降级、PPT/Excel 两处产物版式缺陷修复、从零全链路回归验收
+范围：pom.xml、全部 src 的 Java 21 API 替换、PptxWriter/ExcelWriter 与新测试、md 数字与版本同步；不改业务逻辑
+1.JDK 降级：maven.compiler.release 17；getFirst/getLast（SequencedCollection，Java 21 独有）58 处
+  替换为 get(0)/get(size-1)；md 只做 21→17 字面替换，不新增记录
+2.PPT 修复：组合页表格列宽显式分配（XSLFTable 默认每列 100pt 且不受 anchor 宽约束，5 列实际
+  渲染 500pt 溢出压住右侧图表最右列字符——用户实开发现）+ 图片右移；固化 PptxLayoutTest
+3.Excel 修复：表头 setFillForegroundColor((short)0xE8EEF4) 把 RGB 误传给调色板索引、截断成
+  indexed=-4364 被 Excel/WPS 渲染成黑底（全部 sheet 表头均中招）——改 XSSFColor RGB；固化 ExcelStyleTest
+4.从零回归：删 work/output/artifacts/target 后带 key run-all，对照设计初衷逐项核验
+5.验收：mvn -q verify 全绿；产物 XML 级核验（列宽/锚点/填充色）
+```
+
+**做了什么**
+
+- JDK 降级：pom release 17；20 个文件 58 处 SequencedCollection API 替换（批量 sed + 4 处复杂接收者手工）；23 处 md 版本字面替换（含历史轮次，日期未误伤）。
+- 版式修复：PptxWriter 列宽按份额显式分配（首列 2 份，表格收敛 410pt）+ 图片 x 500→520；ExcelWriter 表头填充改 XSSFColor（rgb=E8EEF4）。
+- 测试：新增 PptxLayoutTest、ExcelStyleTest，Snapshot 构造抽共享 TestSnapshots（循 FakeTransport 先例）；48 → 50 用例。
+- 从零全链路（带 key，5.5 分钟退出码 0）：降级链 4 次自动切换、NVDA `mode=llm` 29+19=48 拐点守恒、URL 溯源 96/96、三锚点命中、吻合率 96.6%、密钥零泄漏；字节码 major 61 确认 17。
+- 双路径同证据集对比（复用检查点跑规则模式）：LLM 29 ⊆ 规则 48、评级一致 28/29、correlation 均值 0.813 vs 0.775；2021-11-04「EU 调查 Arm 配 +12% 上涨」规则以 0.84 误标（R3 缺陷）、LLM 如设计预期拒绝归因——取舍 6 的记录经实测成立。
+
+**review 与改动**
+
+- 用户实开产物发现两处版式缺陷（PPT 第四页图表遮挡表格最右列、Excel 指标表表头黑底）——均为"编译通过 ≠ 产物正确"的又一轮印证，已各自固化为产物级断言。
+
+**关键问题与决策**
+
+1. JDK 17 验证方式：本机无法装/查 17（沙箱限制），用 JDK 21 + `--release 17` 交叉编译等效验证（javac 在该模式拒绝 21 专属 API），字节码 major 61 确认。
+2. langchain4j 1.19.0 最低 Java 17——17 即底线，不可再降。
+3. `Comparator.reversed()` 与 `List.reversed()` 同名不同源，批量替换时以方法语义甄别，未误伤。
+
+**最终交付**
+
+- JDK 17 兼容的全部源码与构建配置；PPT/Excel 版式修复与 2 个产物级回归测试；文档数字同步（测试数/根数/归因数/R0-R10）。
+
+**产生的效果**
+
+- 项目在 Java 17 上从零全链路复现成功；产物版式缺陷清零且有断言防复发。
+
+**如何验收**
+
+| # | 步骤 | 结果 |
+|---|------|------|
+| 1 | `mvn -q clean verify`（50 用例） | ✅ 全绿 |
+| 2 | 字节码版本（javap major version） | ✅ 61（Java 17） |
+| 3 | 从零 run-all（删四目录、带 key） | ✅ 退出码 0，5.5 分钟 |
+| 4 | 产物 XML 级核验 | ✅ 表格列宽 410pt/图片 x=520 间距 50pt；表头 fill rgb=E8EEF4，负数 indexed 清零 |
+
+**验收中发现并修复的问题**
+
+| 现象 | 修复 | 副作用 |
+|------|------|--------|
+| PPT 组合页图表盖住表格最右列字符（用户实开发现） | 根因是 XSLFTable 默认列宽不受 anchor 约束（5×100=500pt > 410）：显式分配列宽 + 图片右移 20pt | slide2/3 列宽同步收敛到 anchor 声明值 |
+| Excel 指标表表头黑底（用户实开发现） | 根因是 RGB 十六进制误传给调色板索引 short 截断成 -4364：改 XSSFColor byte[] 构造 | 无（全部 sheet 表头一并修复） |
+| 首版 PptxLayoutTest 匹配到 slide1（问题定义文本含"组合情景"） | 改用完整标题"组合情景与决策建议"做唯一定位 | 无 |

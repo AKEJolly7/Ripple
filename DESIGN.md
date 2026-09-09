@@ -6,7 +6,7 @@
 
 ```
 ripple/
-├── pom.xml                                # Maven：Java 21 · langchain4j 1.19.0 · POI 5.5.1 · Jackson · slf4j/logback · commons-math3 · JUnit5 · shade 打包
+├── pom.xml                                # Maven：Java 17 · langchain4j 1.19.0 · POI 5.5.1 · Jackson · slf4j/logback · commons-math3 · JUnit5 · shade 打包
 ├── run.cmd                                # Windows 一键运行脚本
 ├── CLAUDE.md / README.md / DESIGN.md / MILESTONES.md / DEVLOG.md / demo.md
 │
@@ -56,21 +56,21 @@ ripple/
 │   │       └── AnalysisResult.java        #   分析结果（K 线 + 指标序列 + 拐点 + 趋势段）
 │   │
 │   ├── agent/                             # 【Agent 层】编排 + 子 agent + 对齐实现
-│   │   ├── api/                           #   子 agent 接口（langchain4j AiServices，@SystemMessage 定义职责）
+│   │   ├── api/                           #   子 agent 接口（langchain4j AiServices，@SystemMessage + @UserMessage）
 │   │   │   ├── MarketDataAgent.java       #     行情 agent：拉行情+算指标，只回 JSON
 │   │   │   ├── NewsEventAgent.java        #     事件 agent：窗口检索+去重+相关性打分
-│   │   │   ├── CorrelationAnalyst.java    #     归因 agent（LLM 核心落点）：拐点×事件对齐
+│   │   │   ├── CorrelationAnalyst.java    #     归因 agent（LLM 核心落点）：alignOne 单拐点分片（顺序路径）/ align 整标的（--orchestrate）
 │   │   │   ├── RenderAgent.java           #     渲染 agent（占位，R5/R6 由 RenderMain/BuildArtifactsMain 实现）
 │   │   │   └── OrchestratorAgent.java     #     主编排 agent（--orchestrate 模式，agent-as-tool）
 │   │   ├── tools/                         #   工具层（@Tool 门面 + 检查点管理）
 │   │   │   ├── RippleTools.java           #     能力实现 + work/ 检查点（断点续跑核心）
 │   │   │   ├── MarketDataTools.java       #     MarketDataAgent 门面（行情+分析 2 工具，边界强制）
 │   │   │   ├── NewsTools.java             #     NewsEventAgent 门面（仅 HN 检索 1 工具）
-│   │   │   ├── AlignmentTools.java        #     CorrelationAnalyst 门面（仅读对齐输入——证据集合封闭）
+│   │   │   ├── AlignmentTools.java        #     CorrelationAnalyst 门面（仅读对齐输入——证据集合封闭；--orchestrate 路径使用）
 │   │   │   └── SubAgentTools.java         #     agent-as-tool：4 个子 agent 封装为 @Tool 供主编排调用
 │   │   ├── RippleOrchestrator.java        #   默认顺序循环编排（含取舍注释：vs DAG / LangGraph4j 演进条件）
 │   │   ├── LlmModels.java                 #   LLM 工厂（DeepSeek OpenAI 兼容，key 只读 env，90s 超时）
-│   │   ├── LlmAligner.java                #   LLM 对齐 + 输出三重校验（URL 必属证据集合等，编造即丢弃）
+│   │   ├── LlmAligner.java                #   LLM 对齐（单拐点分片 + 三重校验 + 失败降级为事件缺失/规则对齐）
 │   │   └── RuleBasedAligner.java          #   --no-llm 规则对齐（词典硬约束 + 日期接近度 + 放量打分）
 │   │
 │   ├── render/                            # 【渲染层】任务 A 产物
@@ -90,16 +90,16 @@ ripple/
 │   ├── static/echarts.min.js              # ECharts 6.1.0 本地包（SHA-256 b66b25ae…0fd0，无 CDN）
 │   └── templates/report.html              # HTML 模板（占位符装配 + 内嵌 JS 交互逻辑）
 │
-├── src/test/java/com/ripple/              # 17 个测试类 46 用例（全 mock HTTP，无网络依赖）
+├── src/test/java/com/ripple/              # 17 个测试类 50 用例（全 mock HTTP，无网络依赖）
 │   ├── dataprovider/                      #   FakeTransport（mock 传输）+ 6 个 Provider/退避测试
 │   ├── analysis/                          #   指标数学正确性 / 合成序列信号 / 真实 NVDA 锚点断言
 │   ├── agent/ + agent/tools/              #   规则对齐 / LLM 校验器 / 拐点季度选择
 │   ├── render/                            #   HTML 解析断言（mark>0、href 全 http、无外链 script）
 │   └── artifacts/                         #   组合统计正确性 / ChartPng 三系列颜色
 │
-├── work/      (gitignored)                # 检查点：ohlcv/analysis/events/alignments JSON（断点续跑 + 溯源凭据）
-├── output/    (gitignored)                # 任务 A 产物：nvda-events.html（单文件，断网可开）
-└── artifacts/ (gitignored)                # 任务 B 产物：xlsx/pptx/docx + 归一化 PNG
+├── work/      (入库：验收凭据)            # 检查点：ohlcv/analysis/events/alignments JSON（断点续跑 + 溯源凭据；*.log 仍忽略）
+├── output/    (入库)                      # 任务 A 产物：nvda-events.html（单文件，断网可开）
+└── artifacts/ (入库)                      # 任务 B 产物：xlsx/pptx/docx + 归一化 PNG
 ```
 
 **阅读指引**：依赖方向单向向下（根 CLI → agent → analysis/dataprovider → domain），无环；
@@ -167,9 +167,25 @@ ripple/
 
 **3. 编排用顺序循环 + agent-as-tool 增强，不用 DAG 引擎。** 五步线性依赖、每步产物落盘可校验——顺序循环可单测、可断点续跑、无 key 可跑（--no-llm）。langchain4j 无原生 DAG，自建需图定义/拓扑排序/状态机三套代码，对线性流程是过度设计。agent-as-tool（--orchestrate）保留给分支依赖运行时内容的场景（窗口空了换关键词、置信度低回补检索）。演进到 LangGraph4j 的触发条件：条件分支与环、并行扇出+人审中断点、步骤数增长需图结构。
 
-**4. LLM 定点介入（归因/评级/推理），其余全部确定性。** 拐点检测是数学问题——LLM 做会幻觉日期价格且不可复现；"这条新闻是不是那次下跌的原因"是语义问题——确定性代码写不出。LLM 输出过三重校验：URL 必属检索证据集合、拐点日期必须真实存在、枚举/置信度收敛到合法域——**LLM 负责判断，不负责"知道"**。
+**4. LLM 定点介入（归因/评级/推理），其余全部确定性。** 拐点检测是数学问题——LLM 做会幻觉日期价格且不可复现；"这条新闻是不是那次下跌的原因"是语义问题——确定性代码写不出。LLM 输出过三重校验：URL 必属检索证据集合、拐点日期必须真实存在、枚举/置信度收敛到合法域——**LLM 负责判断，不负责"知道"**。真实 DeepSeek 端到端实测（R9）：NVDA 26 归因 + 22 缺失，URL 26/26 溯源，编造条目实时丢弃；无效 key 整体降级规则对齐亦实测通过。
 
-**5. 密钥治理。** `DEEPSEEK_API_KEY` 只经 `System.getenv` 读取；不入代码/配置/测试/文档/prompt 模板（文档占位 `${DEEPSEEK_API_KEY}`）；.gitignore 覆盖 work/、output/、artifacts/、.env、*.key；每轮验收 grep 扫描全仓。
+**5. 密钥治理。** `DEEPSEEK_API_KEY` 只经 `System.getenv` 读取；不入代码/配置/测试/文档/prompt 模板（文档占位 `${DEEPSEEK_API_KEY}`）；产物目录（work/output/artifacts）入库作为验收凭据（人工拍板，原 gitignore 约定废止），.gitignore 保留 target/、*.log、.env、*.key、*.local.properties，密钥扫描范围相应扩大到已入库产物。
+
+**6. LLM 归因与规则对齐双路径并存——语义判断与确定性兜底的分工（R9 实测对照）。** 同一证据集（48 拐点 × 2695 候选新闻）下两路径实测差异：
+
+| 维度 | LLM 归因（CorrelationAnalyst.alignOne） | 规则对齐（RuleBasedAligner） |
+|---|---|---|
+| 判定机制 | 语义因果判断：读标题/摘要判断"是否为当日行情的合理动因" | 词法统计：词典命中 × 日期接近 × 动量加权 |
+| 评级正确性 | 事件性质与价格方向须一致（能识别"监管调查配大涨不合理"） | 机械跟随价格方向（R3 实测误标：EU 调查 Arm 配 +12% 被标利好——引入 LLM 的动机） |
+| 归因尺度 | 宁缺毋滥更严格：26/48 归因、22 判缺失 | 阈值以上尽量归因：48/48 全归因、0 缺失 |
+| 推理文本 | 自然语言因果链（面向人可读，如"DeepSeek 突破引发高端芯片需求担忧，直接导致当日暴跌"） | 模板句（机械但稳定，单测可固化期望值） |
+| 可复现性 | 不可复现（同输入不同输出，temperature 0.2 仍波动） | 确定性纯函数，可复算 |
+| 成本/时延 | 48 次 DeepSeek 调用 ≈1 分钟 + token 费用 | 本地毫秒级、零成本 |
+| 失败模式 | 401/超时/散文输出/编造 URL/字段缺失 | 无（纯函数） |
+| 失败防御 | 三层：schema 校验丢弃 → 单拐点降级"事件缺失" → 整体降级规则对齐（mode 落盘为 rule） | 不需要 |
+| 落盘标记 | `mode=llm` | `mode=rule`——降级发生时如实标记，产物可辨识归因来源 |
+
+分工结论：**LLM 提供质量（语义正确性、可读推理），规则提供底线（可用性、可复现性、零成本）**；降级不是"劣化版"而是可用性保底。两条路径互为镜像——同一输入可对比复算，这也是吻合率可量化的前提。
 
 ## 四、溯源设计（结论可回链来源）
 
@@ -212,12 +228,12 @@ HN 检索结果   ──落盘──> work/{symbol}_events.json（objectID + sto
 
 | # | 期望 | 核验方法 | 结果 |
 |---|------|---------|------|
-| A1 | 近五年 OHLCV+成交量 | work/NVDA_ohlcv.json 1253 根（2021-09~2026-09），含成交量与前复权 | ✅ |
+| A1 | 近五年 OHLCV+成交量 | work/NVDA_ohlcv.json 1254 根（2021-09~2026-09），含成交量与前复权 | ✅ |
 | A2 | 梳理 AI 行业大事件 | HN 检索覆盖 ChatGPT/B100/DeepSeek 锚点窗口，24 窗口 2205 条候选 | ✅ |
 | A3 | K 线上标记拐点/加速/下跌/上涨 | 48 拐点四类全覆盖（BIG_UP 27/BIG_DOWN 13/局部高低点 8），散点+竖线+趋势段区块 | ✅ |
 | A4 | 标记事件与影响评级 | 评级 利好/利空 全程标注（关联度/置信度附随） | ✅ |
 | A5 | 可交互 | dataZoom 缩放、标的下拉切换、评级筛选、tooltip（hover/click）实测 | ✅ |
-| A6 | 可溯源 | 115 条归因每条带 http(s) 来源 URL；--verify 清单；原始 JSON 检查点 | ✅ |
+| A6 | 可溯源 | 全部归因条目（规则模式 115 / 含 LLM 的 run-all 96）每条带 http(s) 来源 URL；--verify 清单；原始 JSON 检查点 | ✅ |
 | A7 | 生成 HTML | output/nvda-events.html（1.7MB 单文件，file:// 直开） | ✅ |
 
 ### 黄金 vs 比特币三件套
@@ -232,25 +248,26 @@ HN 检索结果   ──落盘──> work/{symbol}_events.json（objectID + sto
 
 | # | 期望 | 核验 | 结果 |
 |---|------|------|------|
-| C1 | Java 21 | maven.compiler.release=21 | ✅ |
+| C1 | Java 17 | maven.compiler.release=17 | ✅ |
 | C2 | langchain4j | 1.19.0（langchain4j + langchain4j-open-ai） | ✅ |
 | C3 | POI | poi-ooxml 5.5.1（XSSF/XSLF/XWPF 三件全用） | ✅ |
 | C4 | ECharts 本地打包 | resources/static/echarts.min.js（SHA-256 记录），产物 0 外链资源 | ✅ |
-| C5 | LLM OpenAI 兼容接 DeepSeek | baseUrl=https://api.deepseek.com，key 只读 System.getenv("DEEPSEEK_API_KEY") | ✅ |
+| C5 | LLM OpenAI 兼容接 DeepSeek | baseUrl=https://api.deepseek.com，key 只读 System.getenv("DEEPSEEK_API_KEY")；R9 真实调用端到端实测 | ✅ |
 
 ### 隐含工程期望（原方案 NFR/验收标准）
 
 | # | 期望 | 核验 | 结果 |
 |---|------|------|------|
-| D1 | 密钥不入库 | 全仓 grep（src/pom/md/target/work/jar 内 class）零命中；git 无提交历史；.gitignore 覆盖 target/work/*.key/.env/*.local.properties | ✅ |
+| D1 | 密钥不入库 | 全仓 grep（src/pom/md/target/work/jar 内 class）零命中；git 无提交历史；产物目录 R9 起入库，.gitignore 覆盖 target/*.log/.env/*.key/*.local.properties，提交前扫描含入库产物 | ✅ |
 | D2 | 前端安全（CORS/CDN） | 0 资源外链、CSP meta、无 fetch/XHR、JSON `</` 转义（单测）、URL 白名单（indexOf('http')===0）、target=_blank 全带 rel=noopener | ✅ |
-| D3 | 无 key 可跑 | --no-llm 规则对齐全流程（env -u 实测），LLM 失败自动降级 | ✅ |
+| D3 | 无 key 可跑 | --no-llm 规则对齐全流程（env -u 实测）；R9 补验：无效 key 下 LLM 整体降级规则对齐（mode=rule 落盘，退出码 0） | ✅ |
 | D4 | 记录 AI 开发过程 | DEVLOG.md 逐轮记录（AI 工具/参与环节/人工判断总览 + 每轮详情） | ✅ |
 | D5 | 断网可演示 | HTML 渲染只依赖 work/（实测 0 网络请求）；产物 file:// 直开 | ✅ |
 | D6 | 事件与拐点吻合 | 吻合率 95.8%（±3 交易日，验收线 70%）；三锚点全命中 | ✅ |
 
 ### 已知限制（如实声明）
 
-- LLM 归因路径（CorrelationAnalyst/--orchestrate）代码就绪、解析校验有单测，但全程在无 DEEPSEEK_API_KEY 环境开发，**端到端真实 LLM 调用未经实测**（演示用规则对齐路径）。
+- ~~LLM 归因路径端到端真实调用未经实测~~ → **R9 已实测撤销**：真实 DeepSeek 调用 NVDA 全流程（26 归因 + 22 缺失，URL 全溯源、reasoning 全为 LLM 生成）；无效 key 整体降级规则对齐实测通过。**仍待办**：`--orchestrate`（agent-as-tool）路径未实测，且其 `align(symbol)` 整标的调用方式存在 R9 修复前同类的规模限制（需同样做分片改造后方可实测）。
+- LLM 归因存在拐点级不确定性：模型偶发返回缺 url 字段的条目（实测 13/48 拐点）——校验器如实丢弃并回填"事件缺失"，不静默补造；两次运行归因数（27/26）与缺失数（20/22）有小幅波动，属 LLM 不可复现性的如实呈现。
 - 部分来源 URL（qz.com/substack 等）偶发源站反爬不可达，属外部服务问题，不影响归因结论（URL 来自检索证据集合本身有效）。
 - 死代码 2 处（domain/MarketEvent 预留、RippleTools.AnalysisDoc/SUPPORTED_SYMBOLS）——按 R8"只查不改"原则记录为清理候选。

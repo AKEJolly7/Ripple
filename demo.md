@@ -5,9 +5,9 @@
 
 ## 演示前准备（1 分钟，演示前完成）
 
-如 java -version 已是 21 可跳过：
+如 java -version 已是 17 可跳过：
 ```bash
-export JAVA_HOME=<JDK21 路径> MAVEN_SKIP_RC=1     
+export JAVA_HOME=<JDK17 路径> MAVEN_SKIP_RC=1     
 ```
 
 若 work/ 与产物已在（断网演示），跳过下面这行；否则从零跑一次（约 5-10 分钟）：
@@ -56,13 +56,13 @@ open output/nvda-events.html
 
 **演示动作**：
 1. 在 tooltip 里点 **"来源 ↗"**——新窗口打开 investors.com 的 DeepSeek 报道原文
-2. 滚动到底部**溯源面板**——"全部 115 条归因结论，每条带日期/评级/置信度/来源 URL/一句话推理"
+2. 滚动到底部**溯源面板**——"三标的归因结论（run-all 混合模式 96 条，NVDA 为 LLM 归因、GLD/BTC 为规则归因），每条带日期/评级/置信度/来源 URL/一句话推理"
 3. 点筛选按钮 **"利空"**——面板过滤
 4. 指一条"事件缺失"（GLD 段）——"宁缺毋滥：找不到强相关事件的拐点只列同期候选，不编造归因"
 
 **口播要点**：
 - "每条结论都能回链原文——URL 只能来自检索证据集合，LLM 编造的会被直接丢弃（校验器单测覆盖）"
-- "命令行还能 `--verify` 打印全部 48 条 URL 清单供人工抽查"
+- "命令行还能 `--verify` 打印全部归因条目的 URL 清单供人工抽查（NVDA LLM 模式 29 条 / 规则模式 48 条）"
 
 ## 四、开三件套（40 秒）
 
@@ -81,11 +81,29 @@ open artifacts/gold-btc-backtest.xlsx artifacts/gold-btc-framework.pptx artifact
 
 ---
 
+## 可选加演：LLM 归因模式（+2 分钟，需 DEEPSEEK_API_KEY 与网络）
+
+```bash
+export DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+java -cp target/ripple-0.1.0.jar com.ripple.AgentMain --symbol NVDA --years 5
+java -cp target/ripple-0.1.0.jar com.ripple.RenderMain --symbols NVDA,GLD,BTC-USD
+```
+
+**口播要点**：
+- "刚才看的是规则对齐；现在换 LLM 模式——每个拐点分片调用 DeepSeek 做语义归因，约 1 分钟"
+- "看 `work/NVDA_alignments.json` 的 `mode` 字段：`llm` 还是 `rule`，归因来源一目了然"
+- "LLM 更'挑'：48 个拐点只归因 26 个，其余如实标'事件缺失'——宁缺毋滥；对比规则模式 48/48 全归因，两条路径互为镜像"
+- "推理是自然语言因果链：2025-01-27 暴跌归因 DeepSeek 冲击高端芯片需求，语义判断是词典打分做不到的"
+- "key 失效也不怕：三层降级——编造条目被校验器丢弃、单拐点失败降'缺失'、整体不可用自动回退规则对齐（无效 key 实测过）"
+
+---
+
 ## 备用预案
 
 | 意外 | 处置 |
 |---|---|
 | 外网新闻站打不开（源站反爬） | 换演示 2023-05-25 财报（investors.com/cnbc 通常可达）；或改讲 `--verify` 清单 |
 | HN/Yahoo 现场抓取慢 | 不现场抓——用 work/ 检查点（断点续跑本来就是卖点） |
-| 忘记 export JAVA_HOME | `java -version` 报 8 → 用 `~/tools/jdk-21.0.12.1+1/Contents/Home/bin/java` 全路径 |
+| 忘记 export JAVA_HOME | `java -version` 报 8 → 用 `~/tools/jdk-17/Contents/Home/bin/java` 全路径 |
 | 无 key 被问 | 正是卖点：--no-llm 规则对齐全程可跑，产物结构一致 |
+| LLM 演示时 DeepSeek 超时/限流 | 切回规则模式产物讲解；或讲降级日志（单拐点降缺失 → 整体降规则）本身就是演示点 |
