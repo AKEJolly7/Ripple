@@ -98,13 +98,13 @@ public final class DataFetchMain {
         // 验收要求的输出：条数 + 首末日期（含实际数据源）
         System.out.printf("OHLCV: symbol=%s, source=%s, 条数=%d, 首=%s, 末=%s, 落盘=%s%n",
                 symbol, market.source(), market.candles().size(),
-                market.candles().isEmpty() ? "-" : market.candles().getFirst().date(),
-                market.candles().isEmpty() ? "-" : market.candles().getLast().date(),
+                market.candles().isEmpty() ? "-" : market.candles().get(0).date(),
+                market.candles().isEmpty() ? "-" : market.candles().get(market.candles().size() - 1).date(),
                 ohlcvFile);
         System.out.printf("News:  keyword=\"%s\", 条数=%d, 首=%s, 末=%s, 落盘=%s%n",
                 keyword, news.size(),
-                news.isEmpty() ? "-" : news.getFirst().date(),
-                news.isEmpty() ? "-" : news.getLast().date(),
+                news.isEmpty() ? "-" : news.get(0).date(),
+                news.isEmpty() ? "-" : news.get(news.size() - 1).date(),
                 newsFile);
         return 0;
     }

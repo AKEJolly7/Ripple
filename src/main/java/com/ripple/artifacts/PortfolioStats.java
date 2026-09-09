@@ -107,10 +107,10 @@ public final class PortfolioStats {
      */
     public Metrics metricsOf(String name, List<Ohlcv> candles) {
         int n = candles.size();
-        double start = candles.getFirst().close();
-        double end = candles.getLast().close();
-        double years = ChronoUnit.DAYS.between(candles.getFirst().date(),
-                candles.getLast().date()) / 365.25;
+        double start = candles.get(0).close();
+        double end = candles.get(candles.size() - 1).close();
+        double years = ChronoUnit.DAYS.between(candles.get(0).date(),
+                candles.get(candles.size() - 1).date()) / 365.25;
         double cagr = Math.pow(end / start, 1 / Math.max(years, 1e-9)) - 1;
 
         DescriptiveStatistics ds = new DescriptiveStatistics();
@@ -122,7 +122,7 @@ public final class PortfolioStats {
         double mdd = maxDrawdownOf(candles);
         double sharpe = annVol == 0 ? 0 : cagr / annVol;
         return new Metrics(name, cagr, annVol, mdd, sharpe, n,
-                candles.getFirst().date(), candles.getLast().date());
+                candles.get(0).date(), candles.get(candles.size() - 1).date());
     }
 
     /**
@@ -217,8 +217,8 @@ public final class PortfolioStats {
         for (int i = 1; i < n; i++) {
             nav[i] = nav[i - 1] * (1 + combo[i]);
         }
-        double years = ChronoUnit.DAYS.between(alignedDates.getFirst(),
-                alignedDates.getLast()) / 365.25;
+        double years = ChronoUnit.DAYS.between(alignedDates.get(0),
+                alignedDates.get(alignedDates.size() - 1)) / 365.25;
         double cagr = Math.pow(nav[n - 1], 1 / Math.max(years, 1e-9)) - 1;
         DescriptiveStatistics ds = new DescriptiveStatistics();
         for (int i = 1; i < n; i++) {
@@ -234,7 +234,7 @@ public final class PortfolioStats {
         }
         return new Metrics(w.label(), cagr, annVol, mdd * 100,
                 annVol == 0 ? 0 : cagr / annVol, n,
-                alignedDates.getFirst(), alignedDates.getLast());
+                alignedDates.get(0), alignedDates.get(alignedDates.size() - 1));
     }
 
     /**

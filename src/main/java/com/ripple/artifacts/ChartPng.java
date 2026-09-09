@@ -81,7 +81,7 @@ public final class ChartPng {
         g.drawString(title, left, 28);
         g.setFont(new Font("PingFang SC", Font.PLAIN, 11));
         g.setColor(MUTED);
-        g.drawString(dates.isEmpty() ? "" : dates.getFirst() + " ~ " + dates.getLast(), left, h - 12);
+        g.drawString(dates.isEmpty() ? "" : dates.get(0) + " ~ " + dates.get(dates.size() - 1), left, h - 12);
 
         int plotW = w - left - right;
         int plotH = h - top - bottom;

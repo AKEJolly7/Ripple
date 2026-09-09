@@ -34,14 +34,14 @@ class BinanceProviderTest {
         assertEquals(4, candles.size());
         assertEquals(2, fake.calls()); // 3 根满页 + 1 根尾页 = 2 次请求
 
-        Ohlcv first = candles.getFirst();
+        Ohlcv first = candles.get(0);
         assertEquals(LocalDate.of(2024, 1, 1), first.date());
         assertEquals(42280.0, first.open(), 1e-9);
         assertEquals(43200.0, first.high(), 1e-9);
         assertEquals(42000.0, first.low(), 1e-9);
         assertEquals(42800.0, first.close(), 1e-9);
         assertEquals(1235L, first.volume());
-        assertEquals(LocalDate.of(2024, 1, 4), candles.getLast().date());
+        assertEquals(LocalDate.of(2024, 1, 4), candles.get(candles.size() - 1).date());
 
         // 翻页游标：第二页 startTime = 第一页最后一根 openTime + 1
         String secondUri = fake.uris().get(1).toString();

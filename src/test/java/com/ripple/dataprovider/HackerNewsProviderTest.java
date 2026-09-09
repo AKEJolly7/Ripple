@@ -37,7 +37,7 @@ class HackerNewsProviderTest {
 
         assertEquals(2, items.size());
 
-        NewsItem first = items.getFirst();
+        NewsItem first = items.get(0);
         assertEquals("OpenAI releases ChatGPT", first.title());
         assertEquals(LocalDate.of(2022, 11, 30), first.date());
         assertEquals("https://openai.com/blog/chatgpt", first.url());

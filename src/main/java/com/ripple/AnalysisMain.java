@@ -67,9 +67,9 @@ public final class AnalysisMain {
         int last = c.size() - 1;
 
         System.out.printf("=== %s 技术分析（%s ~ %s，%d 根日 K）===%n",
-                symbol, c.getFirst().date(), c.getLast().date(), c.size());
+                symbol, c.get(0).date(), c.get(c.size() - 1).date(), c.size());
         System.out.printf("最新收盘 %.2f | MA5 %.2f | MA20 %.2f | MA60 %.2f | RSI14 %.1f | 20日波动率 %.2f%%%n",
-                c.getLast().close(), r.ma5()[last], r.ma20()[last], r.ma60()[last],
+                c.get(c.size() - 1).close(), r.ma5()[last], r.ma20()[last], r.ma60()[last],
                 r.rsi14()[last], r.volatility20()[last]);
 
         System.out.printf("%n--- 趋势段（%d 段）---%n", r.segments().size());

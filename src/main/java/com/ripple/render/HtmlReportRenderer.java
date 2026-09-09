@@ -69,7 +69,7 @@ public final class HtmlReportRenderer {
         String echarts = readResource("/static/echarts.min.js");
 
         Map<String, Object> dataMap = new LinkedHashMap<>();
-        dataMap.put("defaultSymbol", reports.getFirst().symbol());
+        dataMap.put("defaultSymbol", reports.get(0).symbol());
         Map<String, Object> symMap = new LinkedHashMap<>();
         for (SymbolReport r : reports) {
             symMap.put(r.symbol(), dataOf(r));
@@ -78,7 +78,7 @@ public final class HtmlReportRenderer {
         // JSON 内嵌 <script> 上下文：转义 "</" 防止标题中出现 </script> 截断页面
         String dataJson = mapper.writeValueAsString(dataMap).replace("</", "<\\/");
 
-        String defaultSym = reports.getFirst().symbol();
+        String defaultSym = reports.get(0).symbol();
         String panel = reports.stream()
                 .map(r -> panelSection(r, r.symbol().equals(defaultSym)))
                 .collect(Collectors.joining("\n"));
@@ -228,8 +228,8 @@ public final class HtmlReportRenderer {
         // 只保留数据口径与来源（可溯源必需），不含生成时间等过程性信息
         return reports.stream().map(r -> "%s：%s，%d 根日 K（%s ~ %s），归因 %d 条、事件缺失 %d".formatted(
                         r.symbol(), r.source(), r.candles().size(),
-                        r.candles().isEmpty() ? "-" : r.candles().getFirst().date(),
-                        r.candles().isEmpty() ? "-" : r.candles().getLast().date(),
+                        r.candles().isEmpty() ? "-" : r.candles().get(0).date(),
+                        r.candles().isEmpty() ? "-" : r.candles().get(r.candles().size() - 1).date(),
                         r.outcome().marks().size(), r.outcome().missing().size()))
                 .collect(Collectors.joining(" · "))
                 + " · ECharts 本地打包（无 CDN），数据与结论内嵌，断网可用";

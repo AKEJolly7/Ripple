@@ -98,7 +98,7 @@ public final class BuildArtifactsMain {
         Map<String, List<Double>> norm = new HashMap<>();
         for (var e : closes.entrySet()) {
             List<Double> l = new ArrayList<>();
-            double base = e.getValue().getFirst();
+            double base = e.getValue().get(0);
             for (double v : e.getValue()) {
                 l.add(v / base * 100);
             }
@@ -113,8 +113,8 @@ public final class BuildArtifactsMain {
         Path docx = new DocxWriter().write(snap, outDir.resolve("gold-btc-strategy.docx"));
 
         // 6) 控制台摘要（验收对照）
-        System.out.println("=== 黄金 vs 比特币 回测摘要（" + stats.alignedDates().getFirst()
-                + " ~ " + stats.alignedDates().getLast() + "，交集 " + stats.alignedDates().size() + " 日）===");
+        System.out.println("=== 黄金 vs 比特币 回测摘要（" + stats.alignedDates().get(0)
+                + " ~ " + stats.alignedDates().get(stats.alignedDates().size() - 1) + "，交集 " + stats.alignedDates().size() + " 日）===");
         for (String a : snap.assetOrder()) {
             var m = metrics.get(a);
             System.out.printf("%-14s CAGR %.2f%% | 波动 %.2f%% | 最大回撤 %.2f%% | 夏普 %.4f%n",

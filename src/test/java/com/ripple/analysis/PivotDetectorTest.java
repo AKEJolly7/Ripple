@@ -49,9 +49,9 @@ class PivotDetectorTest {
         List<InflectionPoint> tops = byType(PivotType.LOCAL_TOP);
         List<InflectionPoint> bottoms = byType(PivotType.LOCAL_BOTTOM);
         assertEquals(1, tops.size());
-        assertEquals(LocalDate.of(2024, 1, 11), tops.getFirst().date());   // 110 峰
+        assertEquals(LocalDate.of(2024, 1, 11), tops.get(0).date());   // 110 峰
         assertEquals(1, bottoms.size());
-        assertEquals(LocalDate.of(2024, 1, 22), bottoms.getFirst().date()); // 85 谷
+        assertEquals(LocalDate.of(2024, 1, 22), bottoms.get(0).date()); // 85 谷
     }
 
     @Test
@@ -61,7 +61,7 @@ class PivotDetectorTest {
         assertEquals(1, downs.size());
         assertEquals(1, ups.size());
 
-        InflectionPoint crash = downs.getFirst();
+        InflectionPoint crash = downs.get(0);
         assertEquals(LocalDate.of(2024, 1, 12), crash.date());
         assertEquals(-13.64, crash.dayChangePct(), 0.01);
         assertTrue(crash.volumeSpike());                                   // 崩盘日放量

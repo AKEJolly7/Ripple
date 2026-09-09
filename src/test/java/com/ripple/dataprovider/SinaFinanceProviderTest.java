@@ -62,7 +62,7 @@ class SinaFinanceProviderTest {
                 LocalDate.of(2024, 1, 1), LocalDate.of(2024, 1, 31));
 
         assertEquals(1, candles.size());
-        assertEquals(391.0, candles.getFirst().close(), 1e-9);
+        assertEquals(391.0, candles.get(0).close(), 1e-9);
     }
 
     @Test

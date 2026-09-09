@@ -29,7 +29,7 @@ class GateIoProviderTest {
 
         assertEquals(4, candles.size());
         assertEquals(1, fake.calls());
-        Ohlcv first = candles.getFirst();
+        Ohlcv first = candles.get(0);
         assertEquals(LocalDate.of(2024, 1, 1), first.date());
         // Gate 行布局：idx2=open, idx3=high, idx4=low, idx5=close, idx6=baseVolume
         assertEquals(42000.0, first.open(), 1e-9);

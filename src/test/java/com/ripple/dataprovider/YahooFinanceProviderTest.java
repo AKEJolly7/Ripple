@@ -39,7 +39,7 @@ class YahooFinanceProviderTest {
                 LocalDate.of(2022, 9, 1), LocalDate.of(2022, 9, 10));
 
         assertEquals(3, candles.size()); // 第 3 根 close=null 被跳过
-        Ohlcv first = candles.getFirst();
+        Ohlcv first = candles.get(0);
         assertEquals(LocalDate.of(2022, 9, 2), first.date());
         // 复权因子 0.5：open 180→90，close 182→91
         assertEquals(90.0, first.open(), 1e-9);
@@ -47,8 +47,8 @@ class YahooFinanceProviderTest {
         assertEquals(1000L, first.volume());
         // 第 2 根：high 186 → 186*0.5=93.0（null 的 high 在被跳过的第 3 根上）
         assertEquals(93.0, candles.get(1).high(), 1e-9);
-        assertEquals(LocalDate.of(2022, 9, 5), candles.getLast().date());
-        assertEquals(92.5, candles.getLast().close(), 1e-9);
+        assertEquals(LocalDate.of(2022, 9, 5), candles.get(candles.size() - 1).date());
+        assertEquals(92.5, candles.get(candles.size() - 1).close(), 1e-9);
     }
 
     @Test

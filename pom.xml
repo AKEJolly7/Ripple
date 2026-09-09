@@ -13,7 +13,7 @@
     <description>观其澜，知其源 —— NVDA 行情 × AI 事件归因可视化；黄金 vs 比特币避险/抗通胀比较分析</description>
 
     <properties>
-        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <langchain4j.version>1.19.0</langchain4j.version>

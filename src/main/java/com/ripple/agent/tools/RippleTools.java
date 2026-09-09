@@ -335,8 +335,8 @@ public class RippleTools {
         out.put("symbol", symbol);
         out.put("source", doc.source());
         out.put("count", c.size());
-        out.put("firstDate", c.isEmpty() ? null : c.getFirst().date().toString());
-        out.put("lastDate", c.isEmpty() ? null : c.getLast().date().toString());
+        out.put("firstDate", c.isEmpty() ? null : c.get(0).date().toString());
+        out.put("lastDate", c.isEmpty() ? null : c.get(c.size() - 1).date().toString());
         out.put("file", file.toString());
         return mapper.writeValueAsString(out);
     }

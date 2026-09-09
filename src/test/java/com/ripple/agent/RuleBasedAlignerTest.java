@@ -40,7 +40,7 @@ class RuleBasedAlignerTest {
 
         assertEquals(1, out.marks().size());
         assertEquals(0, out.missing().size());
-        var m = out.marks().getFirst();
+        var m = out.marks().get(0);
 
         // R4 必带字段全数在位
         assertTrue(m.eventTitle().contains("DeepSeek"));
@@ -68,7 +68,7 @@ class RuleBasedAlignerTest {
         // 无关新闻得分低于 0.40 → 事件缺失，不做归因
         assertEquals(0, out.marks().size());
         assertEquals(1, out.missing().size());
-        var miss = out.missing().getFirst();
+        var miss = out.missing().get(0);
         assertEquals(D, miss.pivotDate());
         assertEquals(2, miss.candidates().size());           // 同期候选全数给出
         assertTrue(miss.candidates().stream().allMatch(c -> c.url() != null));
@@ -80,7 +80,7 @@ class RuleBasedAlignerTest {
                 List.of(new EventCandidates(pivot(PivotType.BIG_DOWN, -5.5, false), List.of())));
         assertEquals(0, out.marks().size());
         assertEquals(1, out.missing().size());
-        assertTrue(out.missing().getFirst().candidates().isEmpty());
+        assertTrue(out.missing().get(0).candidates().isEmpty());
     }
 
     @Test
@@ -90,7 +90,7 @@ class RuleBasedAlignerTest {
                 D, "", "https://example.com/nvda", "HackerNews", "id-4");
 
         var m = new RuleBasedAligner().align(
-                List.of(new EventCandidates(p, List.of(noText)))).marks().getFirst();
+                List.of(new EventCandidates(p, List.of(noText)))).marks().get(0);
 
         assertEquals("Nvidia Q1 2023 earnings blowout", m.summary());   // 摘要兜底用标题
         assertFalse(m.summary().isEmpty());

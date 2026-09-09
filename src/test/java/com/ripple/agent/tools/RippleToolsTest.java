@@ -72,7 +72,7 @@ class RippleToolsTest {
                 pivot(LocalDate.of(2024, 1, 20), PivotType.BIG_UP, 9.0, false));
         List<InflectionPoint> selected = RippleTools.selectAlignmentPivots(pivots);
         assertEquals(1, selected.size());
-        assertEquals(PivotType.BIG_UP, selected.getFirst().type());
+        assertEquals(PivotType.BIG_UP, selected.get(0).type());
     }
 
     @Test
@@ -88,6 +88,6 @@ class RippleToolsTest {
                         "candles", candles, "windowStart", "2024-01-01", "windowEnd", "2024-12-31"));
         List<Ohlcv> loaded = com.ripple.AnalysisMain.loadCandles(tmp.resolve("X_ohlcv.json"));
         assertEquals(1, loaded.size());
-        assertEquals(101, loaded.getFirst().close(), 1e-9);
+        assertEquals(101, loaded.get(0).close(), 1e-9);
     }
 }

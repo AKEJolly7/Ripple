@@ -30,7 +30,7 @@ final class FakeTransport implements HttpTransport {
     }
 
     URI lastUri() {
-        return uris.getLast();
+        return uris.get(uris.size() - 1);
     }
 
     List<URI> uris() {

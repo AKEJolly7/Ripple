@@ -100,8 +100,8 @@ class PortfolioStatsTest {
         assertEquals(20.0, m.maxDrawdown(), 1e-9);
         var top = stats.topDrawdowns("GLD", g, 5);
         assertEquals(1, top.size());
-        assertEquals(LocalDate.of(2024, 1, 3), top.getFirst().peakDate());
-        assertEquals(LocalDate.of(2024, 1, 4), top.getFirst().troughDate());
-        assertEquals(20.0, top.getFirst().depthPct(), 1e-9);
+        assertEquals(LocalDate.of(2024, 1, 3), top.get(0).peakDate());
+        assertEquals(LocalDate.of(2024, 1, 4), top.get(0).troughDate());
+        assertEquals(20.0, top.get(0).depthPct(), 1e-9);
     }
 }

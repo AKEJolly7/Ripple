@@ -42,7 +42,7 @@ public final class DocxWriter {
             heading(doc, "二、指标支撑", 1);
             heading(doc, "三、数据口径", 1);
             bullets(doc, List.of(
-                    "样本窗口：" + snap.dates().getFirst() + " ~ " + snap.dates().getLast()
+                    "样本窗口：" + snap.dates().get(0) + " ~ " + snap.dates().get(snap.dates().size() - 1)
                             + "（三资产日期交集 " + snap.dates().size() + " 个交易日）",
                     "行情来源：" + gldName + "=" + snap.sources().get(gldName)
                             + "；" + btcName + "=" + snap.sources().get(btcName)
@@ -125,10 +125,10 @@ public final class DocxWriter {
         for (int i = 0; i < cells.size(); i++) {
             var c = row.getCell(i);
             c.setText(cells.get(i));
-            var runs = c.getParagraphs().getFirst().getRuns();
+            var runs = c.getParagraphs().get(0).getRuns();
             if (!runs.isEmpty()) {
-                runs.getFirst().setBold(bold);
-                runs.getFirst().setFontSize(10);
+                runs.get(0).setBold(bold);
+                runs.get(0).setFontSize(10);
             }
         }
     }
