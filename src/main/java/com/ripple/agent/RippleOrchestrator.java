@@ -65,9 +65,17 @@ public final class RippleOrchestrator {
         boolean useLlm = !noLlm && LlmModels.available();
         com.ripple.domain.AlignmentOutcome outcome;
         if (useLlm) {
-            outcome = new LlmAligner(toolkit).align(symbol, candidates);
-            log.info("[Step4 对齐] LLM 产出：归因 {} 条，事件缺失 {} 个",
-                    outcome.marks().size(), outcome.missing().size());
+            outcome = new LlmAligner().align(candidates);
+            if (outcome.marks().isEmpty() && !candidates.isEmpty()) {
+                // 兑现 LlmAligner 的承诺：LLM 整体不可用（key 失效/网络不通/解析全败）时
+                // 降级为规则对齐，而非带着 0 归因和 llm 标记落盘
+                log.warn("LLM 归因为空（不可用或全被校验丢弃），降级为规则对齐");
+                outcome = new RuleBasedAligner().align(candidates);
+                useLlm = false;
+            } else {
+                log.info("[Step4 对齐] LLM 产出：归因 {} 条，事件缺失 {} 个",
+                        outcome.marks().size(), outcome.missing().size());
+            }
         } else {
             if (!noLlm) {
                 log.warn("DEEPSEEK_API_KEY 未设置，降级为规则对齐（--no-llm 等价）");

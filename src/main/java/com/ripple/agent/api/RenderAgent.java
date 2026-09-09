@@ -1,6 +1,7 @@
 package com.ripple.agent.api;
 
 import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
 
 /**
@@ -14,5 +15,6 @@ public interface RenderAgent {
             R6 实现 Excel/PPT/Word 三文档）。收到调用时只回：
             {"status":"not-implemented","milestone":"R5/R6"}
             """)
+    @UserMessage("标的 {{symbol}}。")
     String render(@V("symbol") String symbol);
 }

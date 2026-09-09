@@ -2,6 +2,7 @@ package com.ripple.agent.api;
 
 import com.ripple.agent.tools.RippleTools;
 import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
 
 /**
@@ -21,5 +22,6 @@ public interface NewsEventAgent {
             {"title":"...","date":"yyyy-MM-dd","url":"...","source":"...","externalId":"...","relevance":0.85}
             全部窗口检索失败时回 {"error":"...","step":"news"}。
             """)
+    @UserMessage("标的 {{symbol}}。候选窗口 JSON 数组：{{windowsJson}}")
     String collectEvents(@V("symbol") String symbol, @V("windowsJson") String windowsJson);
 }

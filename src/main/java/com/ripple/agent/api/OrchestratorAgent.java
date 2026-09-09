@@ -1,6 +1,7 @@
 package com.ripple.agent.api;
 
 import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
 
 /**
@@ -11,8 +12,8 @@ import dev.langchain4j.service.V;
 public interface OrchestratorAgent {
 
     @SystemMessage("""
-            你是观澜（Ripple）系统的顶层编排 agent。任务：{goal}
-            
+            你是观澜（Ripple）系统的顶层编排 agent。
+
             按顺序调用子 agent 工具，不要跳步、不要并行：
             1. marketData(symbol, years) —— 行情与技术分析；
             2. newsEvents(symbol, windowsJson) —— 按拐点候选窗口检索事件
@@ -24,5 +25,6 @@ public interface OrchestratorAgent {
             每步若返回 error 字段：重试一次，仍失败则终止并报告。全部完成后只回一个 JSON：
             {"steps":[{"tool":"...","status":"ok|error"}...],"alignmentsFile":"work/alignments.json"}
             """)
+    @UserMessage("{{goal}}")
     String orchestrate(@V("goal") String goal);
 }

@@ -2,6 +2,7 @@ package com.ripple.agent.api;
 
 import com.ripple.agent.tools.RippleTools;
 import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
 
 /**
@@ -19,5 +20,6 @@ public interface MarketDataAgent {
             {"symbol":"...","quotes":<fetchDailyQuotes 的返回>,"analysis":<runTechnicalAnalysis 的返回>}
             任一工具返回含 error 字段时，原样回 {"error":"...","step":"market"}。
             """)
+    @UserMessage("标的 {{symbol}}，近 {{years}} 年。")
     String collectMarketData(@V("symbol") String symbol, @V("years") int years);
 }

@@ -1,6 +1,7 @@
 package com.ripple.agent;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ripple.agent.api.CorrelationAnalyst;
 import com.ripple.domain.AlignmentOutcome;
 import com.ripple.domain.EventCandidates;
 import com.ripple.domain.EventMark;
@@ -43,8 +44,8 @@ class AlignmentValidationTest {
 
         assertEquals(1, out.marks().size());
         // 同日的无关新闻必须输给晚两天但主题吻合的新闻
-        assertEquals("https://example.com/nvda", out.marks().getFirst().url());
-        assertTrue(out.marks().getFirst().correlation() >= 0.40);
+        assertEquals("https://example.com/nvda", out.marks().get(0).url());
+        assertTrue(out.marks().get(0).correlation() >= 0.40);
     }
 
     @Test
@@ -53,10 +54,10 @@ class AlignmentValidationTest {
         NewsItem n = new NewsItem("Nvidia beats earnings as AI chip demand surges",
                 D, "", "https://example.com/e", "HackerNews", "id-3");
         var down = new RuleBasedAligner().align(List.of(
-                new EventCandidates(pivot(-15.0), List.of(n)))).marks().getFirst();
+                new EventCandidates(pivot(-15.0), List.of(n)))).marks().get(0);
         var up = new RuleBasedAligner().align(List.of(
                 new EventCandidates(new InflectionPoint(D, PivotType.BIG_UP, 15.0, true,
-                        D.minusDays(7), D.plusDays(7)), List.of(n)))).marks().getFirst();
+                        D.minusDays(7), D.plusDays(7)), List.of(n)))).marks().get(0);
         assertEquals(ImpactRating.BEARISH, down.rating());
         assertEquals(ImpactRating.BULLISH, up.rating());
     }
@@ -83,10 +84,10 @@ class AlignmentValidationTest {
                    "correlation":0.88,"rating":"BEARISH","confidence":0.85,"reasoning":"合法","summary":"s","source":"HN"}],
                  "missing":[]}""";
 
-        AlignmentOutcome out = new LlmAligner(null).validate(llmOutput, candidates);
+        AlignmentOutcome out = new LlmAligner().validate(llmOutput, candidates);
 
         assertEquals(1, out.marks().size());
-        EventMark m = out.marks().getFirst();
+        EventMark m = out.marks().get(0);
         assertEquals("https://example.com/real2", m.url());
         // correlation 经分档收敛：0.88 → STRONG
         assertEquals(LinkStrength.STRONG, m.strength());
@@ -103,6 +104,42 @@ class AlignmentValidationTest {
                 "pivotDate":"2025-01-27","pivotType":"BIG_DOWN","dayChangePct":-5,"volumeSpike":false,
                 "correlation":0.5,"rating":"BEARISH","confidence":0.5,"reasoning":"r","summary":"s","source":"HN"}],
                 "missing":[]}""" + "\n```";
-        assertEquals(1, new LlmAligner(null).validate(fenced, candidates).marks().size());
+        assertEquals(1, new LlmAligner().validate(fenced, candidates).marks().size());
+    }
+
+    @Test
+    void llmValidatorToleratesProseWrappedJson() throws Exception {
+        // R8 实测缺陷回归：模型在 JSON 前后夹散文（"Given…" 开头），须提取最外层对象再解析
+        NewsItem ev = new NewsItem("t", D, "", "https://example.com/r", "HN", "id");
+        var candidates = List.of(new EventCandidates(pivot(-5.0), List.of(ev)));
+        String prose = """
+                Given the pivot on 2025-01-27 and the candidate news, here is my alignment:
+                {"attributed":[{"eventTitle":"t","url":"https://example.com/r","eventDate":"2025-01-27",
+                "pivotDate":"2025-01-27","pivotType":"BIG_DOWN","dayChangePct":-5,"volumeSpike":false,
+                "correlation":0.5,"rating":"BEARISH","confidence":0.5,"reasoning":"r","summary":"s","source":"HN"}],
+                "missing":[]}
+                Hope this helps.""";
+        assertEquals(1, new LlmAligner().validate(prose, candidates).marks().size());
+    }
+
+    @Test
+    void emptyLlmResultBackfillsMissingInsteadOfLosingPivot() {
+        // 兑现承诺的兜底①：模型返回为空/全被校验丢弃时，拐点须回填事件缺失而非凭空消失
+        NewsItem ev = new NewsItem("Nvidia earnings beat", D, "", "https://example.com/e", "HN", "id-9");
+        var candidates = List.of(new EventCandidates(pivot(-15.0), List.of(ev)));
+        CorrelationAnalyst emptyAnalyst = new CorrelationAnalyst() {
+            @Override public String align(String symbol) {
+                return "{}";
+            }
+
+            @Override public String alignOne(String pivotJson) {
+                return "{}";
+            }
+        };
+        AlignmentOutcome out = new LlmAligner(emptyAnalyst).align(candidates);
+
+        assertEquals(0, out.marks().size());
+        assertEquals(1, out.missing().size());
+        assertEquals("https://example.com/e", out.missing().get(0).candidates().get(0).url());
     }
 }
