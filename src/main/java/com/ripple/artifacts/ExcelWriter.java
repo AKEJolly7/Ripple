@@ -4,6 +4,8 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -34,7 +36,7 @@ public final class ExcelWriter {
     }
 
     private final XSSFWorkbook wb = new XSSFWorkbook();
-    private final CellStyle headerStyle;
+    private final XSSFCellStyle headerStyle;
     private final CellStyle pctStyle;
     private final CellStyle num4Style;
     private final CellStyle dateStyle;
@@ -47,7 +49,10 @@ public final class ExcelWriter {
         headerStyle.setAlignment(HorizontalAlignment.CENTER);
         org.apache.poi.ss.usermodel.FillPatternType fill =
                 org.apache.poi.ss.usermodel.FillPatternType.SOLID_FOREGROUND;
-        headerStyle.setFillForegroundColor((short) 0xE8EEF4);
+        // RGB 走 XSSFColor（byte[] 构造写 rgb 属性）：setFillForegroundColor(short) 接的是
+        // 调色板索引（0-81），误传 RGB 十六进制会截断成非法 indexed（曾致 -4364 被 Excel 渲染成黑底）
+        headerStyle.setFillForegroundColor(
+                new XSSFColor(new byte[]{(byte) 0xE8, (byte) 0xEE, (byte) 0xF4}, null));
         headerStyle.setFillPattern(fill);
         pctStyle = wb.createCellStyle();
         pctStyle.setDataFormat(wb.createDataFormat().getFormat("0.00%"));

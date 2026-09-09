@@ -86,7 +86,7 @@ public final class PptxWriter {
         // 最大回撤事件摘要
         StringBuilder sb = new StringBuilder();
         for (String a : snap.assetOrder()) {
-            var top = snap.drawdowns().get(a).getFirst();
+            var top = snap.drawdowns().get(a).get(0);
             sb.append(a).append("最大回撤 ").append(pct(top.depthPct() / 100))
                     .append("（").append(top.peakDate()).append(" → ").append(top.troughDate())
                     .append("，").append(top.peakToTroughDays()).append(" 天）  ");
@@ -102,13 +102,13 @@ public final class PptxWriter {
                 .map(m -> new String[]{m.name(), pct(m.cagr()), pct(m.annVol()),
                         pct(m.maxDrawdown() / 100), num(m.sharpe())})
                 .toList();
-        // 表格收窄到左半区（x 60~470），图片放右半区（x 500~930），避免重叠
+        // 表格收窄到左半区（x 60~470，列宽显式收敛到 410），图片放右半区（x 520~940），避免重叠
         table(s, 80, 410, new String[]{"组合（金/币/股）", "年化收益", "年化波动", "最大回撤", "夏普"}, rows);
         if (chartPng != null && java.nio.file.Files.exists(chartPng)) {
             byte[] png = java.nio.file.Files.readAllBytes(chartPng);
             var picData = ppt.addPicture(png,
                     org.apache.poi.sl.usermodel.PictureData.PictureType.PNG);
-            s.createPicture(picData).setAnchor(new Rectangle(500, 130, 420, 196));
+            s.createPicture(picData).setAnchor(new Rectangle(520, 130, 420, 196));
         }
         footnote(s, "组合基于三资产日期交集的日收益率线性加权，逐日再平衡假设。");
     }
@@ -171,8 +171,8 @@ public final class PptxWriter {
         for (String h : header) {
             XSLFTableCell c = hr.addCell();
             c.setText(h);
-            c.getTextParagraphs().getFirst().getTextRuns().getFirst().setBold(true);
-            c.getTextParagraphs().getFirst().getTextRuns().getFirst().setFontColor(ACCENT);
+            c.getTextParagraphs().get(0).getTextRuns().get(0).setBold(true);
+            c.getTextParagraphs().get(0).getTextRuns().get(0).setFontColor(ACCENT);
             c.setFillColor(new Color(0xF2F5F8));
         }
         for (String[] row : rows) {
@@ -180,6 +180,13 @@ public final class PptxWriter {
             for (String v : row) {
                 tr.addCell().setText(v);
             }
+        }
+        // 列宽显式分配（首列 2 份、其余各 1 份）：XSLFTable 默认每列 100pt 且不受 anchor 宽约束，
+        // 列多时实际渲染宽度会超出 anchor（组合页 5 列曾实际 500pt 溢出压住右侧图表最右列字符）。
+        // 须在 addCell 之后调用（gridCol 随单元格创建生成）。
+        double share = width / (double) (header.length + 1);
+        for (int i = 0; i < header.length; i++) {
+            table.setColumnWidth(i, i == 0 ? share * 2 : share);
         }
     }
 
