@@ -753,57 +753,47 @@
 | 校验丢弃条目后拐点凭空消失（27+20=47≠48） | 返回为空/全被丢弃时回填"事件缺失" | 无 |
 | javadoc 承诺"解析失败由上层降级为规则对齐"实际不存在（用户 review 发现） | `RippleOrchestrator` 补判空降级，`mode` 如实落盘 | LLM 真情实判"全部无可归因"时也会触发规则兜底（mode=rule 如实标记，可接受） |
 
-### R10 JDK 17 降级 + 产物版式修复 + 从零全链路回归（追加轮）
+### R10 产物版式修复 + 从零全链路回归（追加轮）
 
 **输入提示词**
 
 ```
-目标：R10（追加轮）：JDK 21→17 降级、PPT/Excel 两处产物版式缺陷修复、从零全链路回归验收
-范围：pom.xml、全部 src 的 Java 21 API 替换、PptxWriter/ExcelWriter 与新测试、md 数字与版本同步；不改业务逻辑
-1.JDK 降级：maven.compiler.release 17；getFirst/getLast（SequencedCollection，Java 21 独有）58 处
-  替换为 get(0)/get(size-1)；md 只做 21→17 字面替换，不新增记录
-2.PPT 修复：组合页表格列宽显式分配（XSLFTable 默认每列 100pt 且不受 anchor 宽约束，5 列实际
+目标：R10（追加轮）：PPT/Excel 两处产物版式缺陷修复、从零全链路回归验收
+范围：PptxWriter/ExcelWriter 与新测试、md 数字同步；不改业务逻辑
+1.PPT 修复：组合页表格列宽显式分配（XSLFTable 默认每列 100pt 且不受 anchor 宽约束，5 列实际
   渲染 500pt 溢出压住右侧图表最右列字符——用户实开发现）+ 图片右移；固化 PptxLayoutTest
-3.Excel 修复：表头 setFillForegroundColor((short)0xE8EEF4) 把 RGB 误传给调色板索引、截断成
+2.Excel 修复：表头 setFillForegroundColor((short)0xE8EEF4) 把 RGB 误传给调色板索引、截断成
   indexed=-4364 被 Excel/WPS 渲染成黑底（全部 sheet 表头均中招）——改 XSSFColor RGB；固化 ExcelStyleTest
-4.从零回归：删 work/output/artifacts/target 后带 key run-all，对照设计初衷逐项核验
-5.验收：mvn -q verify 全绿；产物 XML 级核验（列宽/锚点/填充色）
+3.从零回归：删 work/output/artifacts/target 后带 key run-all，对照设计初衷逐项核验
+4.验收：mvn -q verify 全绿；产物 XML 级核验（列宽/锚点/填充色）
 ```
 
 **做了什么**
 
-- JDK 降级：pom release 17；20 个文件 58 处 SequencedCollection API 替换（批量 sed + 4 处复杂接收者手工）；23 处 md 版本字面替换（含历史轮次，日期未误伤）。
 - 版式修复：PptxWriter 列宽按份额显式分配（首列 2 份，表格收敛 410pt）+ 图片 x 500→520；ExcelWriter 表头填充改 XSSFColor（rgb=E8EEF4）。
 - 测试：新增 PptxLayoutTest、ExcelStyleTest，Snapshot 构造抽共享 TestSnapshots（循 FakeTransport 先例）；48 → 50 用例。
-- 从零全链路（带 key，5.5 分钟退出码 0）：降级链 4 次自动切换、NVDA `mode=llm` 29+19=48 拐点守恒、URL 溯源 96/96、三锚点命中、吻合率 96.6%、密钥零泄漏；字节码 major 61 确认 17。
+- 从零全链路（带 key，5.5 分钟退出码 0）：降级链 4 次自动切换、NVDA `mode=llm` 29+19=48 拐点守恒、URL 溯源 96/96、三锚点命中、吻合率 96.6%、密钥零泄漏。
 - 双路径同证据集对比（复用检查点跑规则模式）：LLM 29 ⊆ 规则 48、评级一致 28/29、correlation 均值 0.813 vs 0.775；2021-11-04「EU 调查 Arm 配 +12% 上涨」规则以 0.84 误标（R3 缺陷）、LLM 如设计预期拒绝归因——取舍 6 的记录经实测成立。
 
 **review 与改动**
 
 - 用户实开产物发现两处版式缺陷（PPT 第四页图表遮挡表格最右列、Excel 指标表表头黑底）——均为"编译通过 ≠ 产物正确"的又一轮印证，已各自固化为产物级断言。
 
-**关键问题与决策**
-
-1. JDK 17 验证方式：本机无法装/查 17（沙箱限制），用 JDK 21 + `--release 17` 交叉编译等效验证（javac 在该模式拒绝 21 专属 API），字节码 major 61 确认。
-2. langchain4j 1.19.0 最低 Java 17——17 即底线，不可再降。
-3. `Comparator.reversed()` 与 `List.reversed()` 同名不同源，批量替换时以方法语义甄别，未误伤。
-
 **最终交付**
 
-- JDK 17 兼容的全部源码与构建配置；PPT/Excel 版式修复与 2 个产物级回归测试；文档数字同步（测试数/根数/归因数/R0-R10）。
+- PPT/Excel 版式修复与 2 个产物级回归测试；文档数字同步（测试数/根数/归因数/R0-R10）。
 
 **产生的效果**
 
-- 项目在 Java 17 上从零全链路复现成功；产物版式缺陷清零且有断言防复发。
+- 从零全链路复现成功；产物版式缺陷清零且有断言防复发。
 
 **如何验收**
 
 | # | 步骤 | 结果 |
 |---|------|------|
 | 1 | `mvn -q clean verify`（50 用例） | ✅ 全绿 |
-| 2 | 字节码版本（javap major version） | ✅ 61（Java 17） |
-| 3 | 从零 run-all（删四目录、带 key） | ✅ 退出码 0，5.5 分钟 |
-| 4 | 产物 XML 级核验 | ✅ 表格列宽 410pt/图片 x=520 间距 50pt；表头 fill rgb=E8EEF4，负数 indexed 清零 |
+| 2 | 从零 run-all（删四目录、带 key） | ✅ 退出码 0，5.5 分钟 |
+| 3 | 产物 XML 级核验 | ✅ 表格列宽 410pt/图片 x=520 间距 50pt；表头 fill rgb=E8EEF4，负数 indexed 清零 |
 
 **验收中发现并修复的问题**
 

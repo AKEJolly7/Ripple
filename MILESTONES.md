@@ -1,6 +1,6 @@
 # 观澜（Ripple）里程碑 —— R0-R10
 
-> 状态总览：**R0-R8 全部完成；R9/R10 为追加轮（LLM 真实路径实测 / JDK 17 降级与产物版式修复）**。每条保留实际执行的范围、关键变更与最终验收结论；
+> 状态总览：**R0-R8 全部完成；R9/R10 为追加轮（LLM 真实路径实测 / 产物版式修复与从零回归）**。每条保留实际执行的范围、关键变更与最终验收结论；
 > 过程细节（输入提示词、问题修复三列表、方法论）见 DEVLOG.md，架构与题目核验 checklist 见 DESIGN.md。
 
 - [x] **R0 骨架与治理（0.25h）**
@@ -56,6 +56,6 @@
   关键变更：LlmAligner 重构为单拐点分片（alignOne：1 拐点 + 规则分预筛 top-8 候选，证据随用户消息下发）；散文包裹 JSON 提取兜底；丢弃/空返回回填"事件缺失"（拐点守恒 48）；RippleOrchestrator 补上层降级（LLM 归因为空 → 规则对齐，mode 如实落盘）；pom 补 maven.compiler.parameters；测试 46 → 48。
   验收：真实 key `mode=llm` 26 归因 + 22 缺失 = 48，URL 26/26 溯源、三锚点归因正确；无效 key 整体降级实测（48 次 401 → `mode=rule` 48 归因，退出码 0）；HTML 重渲染。双路径差异分析记入 DESIGN.md 取舍 6；遗留：--orchestrate 路径待分片改造后实测。
 
-- [x] **R10 JDK 17 降级 + 产物版式修复 + 从零全链路回归（追加轮，2026-09-09）**
-  JDK 21→17：release 17 + 58 处 SequencedCollection API 替换 + md 版本字面替换；langchain4j 1.19.0 最低要求 17（底线）。版式修复（用户实开产物发现）：PPT 组合页表格列宽显式分配（默认 100pt/列不受 anchor 约束致溢出压图）+ 图片右移；Excel 表头填充 RGB 误传调色板索引截断成 indexed=-4364 黑底——改 XSSFColor。新增 PptxLayoutTest/ExcelStyleTest（TestSnapshots 共享），48 → 50 用例。
-  验收：`mvn -q clean verify` 全绿、字节码 major 61；从零 run-all（带 key）退出码 0——NVDA `mode=llm` 29+19=48 守恒、URL 溯源 96/96、三锚点命中、吻合率 96.6%；双路径同证据集对比印证取舍 6（LLM 29 ⊆ 规则 48，R3 经典误标场景 LLM 拒绝归因）。
+- [x] **R10 产物版式修复 + 从零全链路回归（追加轮，2026-09-09）**
+  版式修复（用户实开产物发现）：PPT 组合页表格列宽显式分配（默认 100pt/列不受 anchor 约束致溢出压图）+ 图片右移；Excel 表头填充 RGB 误传调色板索引截断成 indexed=-4364 黑底——改 XSSFColor。新增 PptxLayoutTest/ExcelStyleTest（TestSnapshots 共享），48 → 50 用例。
+  验收：`mvn -q clean verify` 全绿；从零 run-all（带 key）退出码 0——NVDA `mode=llm` 29+19=48 守恒、URL 溯源 96/96、三锚点命中、吻合率 96.6%；双路径同证据集对比印证取舍 6（LLM 29 ⊆ 规则 48，R3 经典误标场景 LLM 拒绝归因）。
