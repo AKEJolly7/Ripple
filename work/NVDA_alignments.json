@@ -1,0 +1,956 @@
+{
+  "mode" : "llm",
+  "symbol" : "NVDA",
+  "schemaVersion" : "2",
+  "generatedAt" : "2026-09-09T16:55:50.982084+08:00",
+  "missing" : [ {
+    "pivotDate" : "2021-11-04",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "European Union Regulators Open Probe into Nvidia-Arm Acquisition",
+      "date" : "2021-11-04",
+      "summary" : "",
+      "url" : "https://www.anandtech.com/show/17038/european-union-regulators-open-probe-into-nvidiaarm-acquisition",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Arm-Nvidia: Europe investigates chip-designer sale",
+      "date" : "2021-11-01",
+      "summary" : "",
+      "url" : "https://www.bbc.com/news/technology-59069075",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Companies Most Likely to Next Join Tesla on $1T Valuation",
+      "date" : "2021-11-05",
+      "summary" : "",
+      "url" : "https://www.newsweek.com/trillion-dollar-companies-valuation-tesla-facebook-tencent-comcast-meituan-nvidia-1644898",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2021-12-07",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia launches GeForce RTX 2060 12GB, a perfect card for crypto miners",
+      "date" : "2021-12-08",
+      "summary" : "",
+      "url" : "https://videocardz.com/newz/nvidia-launches-geforce-rtx-2060-12gb-a-perfect-card-for-crypto-miners",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Stacking Up AMD MI200 versus Nvidia A100 Compute Engines",
+      "date" : "2021-12-07",
+      "summary" : "",
+      "url" : "https://www.nextplatform.com/2021/12/06/stacking-up-amd-mi200-versus-nvidia-a100-compute-engines/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia EditGAN: Image Editing with Full Control from Sketches",
+      "date" : "2021-12-05",
+      "summary" : "",
+      "url" : "https://www.louisbouchard.ai/editgan/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2022-03-15",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "SoftBank’s ARM to Lay Off Upto 15% as It Prepares IPO After Nvidia Deal Collapse",
+      "date" : "2022-03-15",
+      "summary" : "",
+      "url" : "https://www.bloomberg.com/news/articles/2022-03-14/softbank-s-arm-to-cut-up-to-15-of-workforce-as-it-prepares-ipo",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Unveils Big Accelerator Memory: Solid-State Storage for GPUs",
+      "date" : "2022-03-16",
+      "summary" : "",
+      "url" : "https://www.tomshardware.com/news/nvidia-unveils-big-accelerator-memory-solid-state-storage-for-gpus",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia wants to speed up data transfer by connecting data center GPUs to SSDs",
+      "date" : "2022-03-17",
+      "summary" : "",
+      "url" : "https://arstechnica.com/gadgets/2022/03/nvidia-wants-to-speed-up-data-transfer-by-connecting-data-center-gpus-to-ssds/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2022-05-09",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "NiceHash defeats Nvidia’s GPU crypto-mining limits, does not appear to be a scam",
+      "date" : "2022-05-09",
+      "summary" : "",
+      "url" : "https://arstechnica.com/gadgets/2022/05/nicehash-software-unlocks-full-cryptomining-performance-for-most-nvidia-gpus/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia LHR Lock Officially Cracked Bringing Full Crypto Mining Speeds",
+      "date" : "2022-05-09",
+      "summary" : "",
+      "url" : "https://www.forbes.com/sites/antonyleather/2022/05/07/nvidia-lhr-lock-officially-cracked-bringing-full-crypto-mining-speeds/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia's GPU mining limiter has been fully unlocked for the RTX 3080 Ti",
+      "date" : "2022-05-09",
+      "summary" : "",
+      "url" : "https://www.pcgamer.com/nvidia-lhr-lite-hash-rate-mining-gpu-limiter-full-bypass-unlock/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2022-06-13",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia’s budget GPU could be delayed – and RTX 4000 graphics cards might be, too",
+      "date" : "2022-06-13",
+      "summary" : "",
+      "url" : "https://www.techradar.com/news/nvidias-budget-gpu-could-be-delayed-and-rtx-4000-graphics-cards-might-be-too",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "If Nvidia’s next-gen GPUs can live up to hype, it'll make the RTX 3090 look slow",
+      "date" : "2022-06-13",
+      "summary" : "",
+      "url" : "https://www.pcgamer.com/if-nvidias-next-gen-gpus-can-somehow-live-up-to-the-hype-theyll-make-the-rtx-3090-look-slow/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Chooses Sapphire Rapids over AMD EPYC",
+      "date" : "2022-06-08",
+      "summary" : "",
+      "url" : "https://www.tomshardware.com/news/nvidia-switches-gears-chooses-sapphire-rapids-for-dgx-h100",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2022-09-13",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Analysis-U.S. ban on Nvidia, AMD chips seen boosting Chinese rivals",
+      "date" : "2022-09-12",
+      "summary" : "",
+      "url" : "https://www.reuters.com/article/usa-china-gpu-biren-analysis-idCAKBN2Q91P0",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "First Nvidia Hopper Benchmark Tests and Other AI Milestones",
+      "date" : "2022-09-12",
+      "summary" : "",
+      "url" : "https://spectrum.ieee.org/mlperf-inferencing",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Hopper Sweeps AI Inference Benchmarks in MLPerf Debut",
+      "date" : "2022-09-08",
+      "summary" : "",
+      "url" : "https://blogs.nvidia.com/blog/2022/09/08/hopper-mlperf-inference/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2022-10-07",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Prodigy Universal Processor: 6x Faster Nvidia H100 and 30x Faster Xeon",
+      "date" : "2022-10-07",
+      "summary" : "",
+      "url" : "https://wccftech.com/tachyum-prodigy-universal-processor-whitepaper-up-to-6x-faster-nvidia-h100-30x-faster-intel-xeon-8380/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "NVIDIA and nouveau",
+      "date" : "2022-10-06",
+      "summary" : "",
+      "url" : "https://lwn.net/SubscriberLink/910343/e360e44a7a63b1b7/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Omniverse: The Useful Metaverse",
+      "date" : "2022-10-07",
+      "summary" : "",
+      "url" : "https://www.forbes.com/sites/karlfreund/2022/10/07/nvidia-omniverse-the-useful-metaverse/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2022-11-30",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia RTX 6000 48GB Ada Professional GPU Listed at Suggested Retail of $9,999",
+      "date" : "2022-11-30",
+      "summary" : "",
+      "url" : "https://www.tomshardware.com/news/rtx-6000-now-on-sale-8200",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia’s new RTX 6000 may bust engineering department budgets at over $7,000",
+      "date" : "2022-11-30",
+      "summary" : "",
+      "url" : "https://www.theverge.com/2022/11/30/23485980/nvidia-rtx-6000-ada-workstation-gpu-pricing-leak",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "TSMC to make 4nm chips in Arizona for Apple, AMD, Nvidia",
+      "date" : "2022-12-01",
+      "summary" : "",
+      "url" : "https://techmonitor.ai/technology/silicon/tsmcs-arizona-apple-amd-nvidia",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2023-01-23",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia Grace Superchip Features 144 Cores 960GB of RAM and 128 PCIe Gen5 Lanes",
+      "date" : "2023-01-23",
+      "summary" : "",
+      "url" : "https://www.servethehome.com/nvidia-grace-superchip-features-144-cores-and-128-pcie-gen5-lanes-arm-neoverse/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Supersizing AI: Sweden Turbocharges Its Innovation Engine",
+      "date" : "2023-01-24",
+      "summary" : "",
+      "url" : "https://blogs.nvidia.com/blog/2023/01/24/ai-sweden-berzelius/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Testing Nvidia’s GeForce Now RTX 4080, the most advanced cloud gaming platform",
+      "date" : "2023-01-21",
+      "summary" : "",
+      "url" : "https://www.theverge.com/23561989/nvidia-geforce-now-rtx-4080-price-reflex-hands-on-cloud-gaming",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2023-02-01",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia Grace Superchip Features 144 Cores 960GB of RAM and 128 PCIe Gen5 Lanes",
+      "date" : "2023-01-30",
+      "summary" : "",
+      "url" : "https://www.servethehome.com/nvidia-grace-superchip-features-144-cores-and-128-pcie-gen5-lanes-arm-neoverse/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Grace CPU Superchip Architecture in Depth",
+      "date" : "2023-01-31",
+      "summary" : "",
+      "url" : "https://developer.nvidia.com/blog/nvidia-grace-cpu-superchip-architecture-in-depth/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Broadcast Adds Eye Contact and Vignette Effects",
+      "date" : "2023-02-03",
+      "summary" : "",
+      "url" : "https://www.nvidia.com/en-us/geforce/news/jan-2023-nvidia-broadcast-update/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2023-05-31",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Have Megafirms Like Nvidia Grown Too Big?",
+      "date" : "2023-05-31",
+      "summary" : "",
+      "url" : "https://www.wsj.com/articles/have-megafirms-like-nvidia-grown-too-big-investors-believe-they-are-only-getting-started-688fa0a3",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Broadcom says Nvidia Spectrum-X's 'lossless Ethernet' isn't new",
+      "date" : "2023-05-31",
+      "summary" : "",
+      "url" : "https://www.theregister.com/2023/05/31/nvidia_broadcom_spectrum_x/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Unveils More AI Products After $184B Rally",
+      "date" : "2023-05-29",
+      "summary" : "",
+      "url" : "https://www.bloomberg.com/news/articles/2023-05-29/nvidia-nvda-unveils-more-ai-products-to-further-capitalize-on-frenzy",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2023-06-01",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia DGX GH200",
+      "date" : "2023-05-30",
+      "summary" : "",
+      "url" : "https://www.nvidia.com/en-us/data-center/dgx-gh200/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia demos real-time NPC conversation using generative AI",
+      "date" : "2023-05-30",
+      "summary" : "",
+      "url" : "https://twitter.com/NVIDIAGeForce/status/1663565800639451136",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Neuralangelo: Nvidia’s 3D reconstruction from 2D video",
+      "date" : "2023-06-01",
+      "summary" : "",
+      "url" : "https://blogs.nvidia.com/blog/2023/06/01/neuralangelo-ai-research-3d-reconstruction/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2024-05-28",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Amazon's Struggle to Crack Nvidia's AI Chip Dominance",
+      "date" : "2024-05-28",
+      "summary" : "",
+      "url" : "https://www.businessinsider.com/amazon-nvidia-aws-ai-chip-dominance-gpu-trainium-inferentia-2024-5",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Lenovo HR650N Nvidia Grace Superchip 2U Server Shown",
+      "date" : "2024-05-28",
+      "summary" : "",
+      "url" : "https://www.servethehome.com/lenovo-hr650n-nvidia-grace-superchip-2u-server-shown-arm/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia CEO says Tesla 'far ahead' in self-driving tech",
+      "date" : "2024-05-26",
+      "summary" : "",
+      "url" : "https://finance.yahoo.com/news/nvidia-ceo-says-tesla-far-ahead-in-self-driving-tech-as-autonomous-driving-efforts-boost-chip-demand-181126677.html",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2024-09-11",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia CEO to nervous buyers and investors",
+      "date" : "2024-09-12",
+      "summary" : "",
+      "url" : "https://www.theregister.com/2024/09/12/jensen_huang_blackwell_shipping_prediction/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Why Nvidia is the Bo Jackson of the stock market",
+      "date" : "2024-09-10",
+      "summary" : "",
+      "url" : "https://sherwood.news/markets/nvidia-earnings-revenue-profit-growth-bo-jackson-of-stock-market/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia H100 Now Available on DigitalOcean Kubernetes (EA)",
+      "date" : "2024-09-11",
+      "summary" : "",
+      "url" : "https://www.digitalocean.com/blog/nvidia-h100-now-available-on-digitalocean-kubernetes",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2025-01-28",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Small investors bought the dip in Nvidia by a record amount Monday",
+      "date" : "2025-01-28",
+      "summary" : "",
+      "url" : "https://www.cnbc.com/2025/01/28/small-investors-bought-the-dip-in-nvidia-by-a-record-amount-monday.html",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "DeepSeek Won't Sink U.S. AI Titans",
+      "date" : "2025-01-28",
+      "summary" : "",
+      "url" : "https://www.wsj.com/tech/ai/deepseek-us-ai-stocks-nvidia-broadcom-6cdfae81",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia calls China's DeepSeek R1 model 'an excellent AI advancement'",
+      "date" : "2025-01-28",
+      "summary" : "",
+      "url" : "https://www.cnbc.com/2025/01/27/nvidia-calls-chinas-deepseek-r1-model-an-excellent-ai-advancement.html",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2025-04-04",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia ACE Agent",
+      "date" : "2025-04-04",
+      "summary" : "",
+      "url" : "https://docs.nvidia.com/ace/overview/latest/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Open Sources Run:AI Scheduler",
+      "date" : "2025-04-02",
+      "summary" : "",
+      "url" : "https://developer.nvidia.com/blog/nvidia-open-sources-runai-scheduler-to-foster-community-collaboration/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Building an Efficient GPU Server with Nvidia GeForce RTX 4090s/5090s",
+      "date" : "2025-04-03",
+      "summary" : "",
+      "url" : "https://a16z.com/building-an-efficient-gpu-server-with-nvidia-geforce-rtx-4090s-5090s/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2026-03-31",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia's PE sinks to seven-year low as war and AI angst weigh",
+      "date" : "2026-03-30",
+      "summary" : "",
+      "url" : "https://www.reuters.com/business/nvidias-pe-sinks-seven-year-low-war-ai-angst-weigh-2026-03-30/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Why Nvidia paid $20B for Groq instead of fixing the GPU",
+      "date" : "2026-03-31",
+      "summary" : "",
+      "url" : "https://twitter.com/MilksandMatcha/status/2036893593714253892",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Mistral raises $830M to build Nvidia-powered AI centres in Europe",
+      "date" : "2026-03-30",
+      "summary" : "",
+      "url" : "https://www.ft.com/content/229f4f59-d518-4e00-abd6-5a5b727cd2aa",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2026-05-06",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Nvidia's Status as the Biggest Company Could Could End Soon",
+      "date" : "2026-05-06",
+      "summary" : "",
+      "url" : "https://www.inc.com/moses-jeanfrancois/nvidia-alphabet-worlds-biggest-company/91341371",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia Spectrum-X MRC Is the Custom RDMA Transport Protocol for Gigascale AI",
+      "date" : "2026-05-06",
+      "summary" : "",
+      "url" : "https://www.servethehome.com/nvidia-spectrum-x-mrc-is-the-custom-rdma-transport-protocol-for-gigascale-ai/",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Huawei braces for $12B in AI chip revenue-Chinese fabs can barely keep up",
+      "date" : "2026-05-06",
+      "summary" : "",
+      "url" : "https://www.tomshardware.com/tech-industry/huawei-expects-12-billion-in-ai-chip-revenue-this-year-as-nvidias-china-market-share-hits-zero",
+      "source" : "",
+      "externalId" : null
+    } ]
+  }, {
+    "pivotDate" : "2026-06-05",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : 0.0,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Beneath Nvidia AI chips, Chinese PCBs raise security concerns in U.S.",
+      "date" : "2026-06-05",
+      "summary" : "",
+      "url" : "https://www.cnbc.com/2026/06/03/beneath-nvidia-ai-chips-chinese-pcbs-raise-security-concerns-in-us.html",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia – The Coming Short Squeeze?",
+      "date" : "2026-06-04",
+      "summary" : "",
+      "url" : "https://www.linkshort.app/r/pagea.uk/nvidia-stock-thesis",
+      "source" : "",
+      "externalId" : null
+    }, {
+      "title" : "Nvidia to spend $150B a year in Taiwan, 'epicentre' of AI revolution",
+      "date" : "2026-06-03",
+      "summary" : "",
+      "url" : "https://www.reuters.com/world/asia-pacific/nvidia-ceo-says-taiwan-is-epicentre-ai-revolution-2026-05-27/",
+      "source" : "",
+      "externalId" : null
+    } ]
+  } ],
+  "marks" : [ {
+    "eventTitle" : "Nvidia’s Blowout Forecast Sparks $260B AI Rally",
+    "eventDate" : "2023-05-25",
+    "url" : "https://www.bloomberg.com/news/articles/2023-05-24/nvidia-ignites-ai-related-stock-rally-after-blow-out-forecast",
+    "source" : "HackerNews",
+    "summary" : "Nvidia发布超预期财报和强劲业绩指引，引发AI相关股票大涨，市值飙升2600亿美元。",
+    "pivotDate" : "2023-05-25",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 24.37,
+    "volumeSpike" : true,
+    "correlation" : 0.95,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.95,
+    "reasoning" : "Nvidia财报超预期且AI芯片需求强劲，直接推动股价大涨24%，时间完全吻合，主题高度相关。"
+  }, {
+    "eventTitle" : "Nvidia, AI Chip Peers Tumble on DeepSeek Implications",
+    "eventDate" : "2025-01-27",
+    "url" : "https://www.investors.com/news/technology/nvidia-stock-ai-chipmakers-tumble-on-deepseek-news/",
+    "source" : "HackerNews",
+    "summary" : "DeepSeek发布R1模型引发市场对AI芯片需求担忧，Nvidia及AI芯片同行股价大跌。",
+    "pivotDate" : "2025-01-27",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -16.97,
+    "volumeSpike" : true,
+    "correlation" : 0.95,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.95,
+    "reasoning" : "DeepSeek突破性AI模型引发市场对Nvidia芯片需求减弱的担忧，直接导致当日股价暴跌16.97%，事件与拐点同日且主题高度吻合。"
+  }, {
+    "eventTitle" : "DOJ subpoenas Nvidia wiping out $265B in value",
+    "eventDate" : "2024-09-03",
+    "url" : "https://finance.yahoo.com/news/nvidia-gets-doj-subpoena-escalating-210038371.html",
+    "source" : "HackerNews",
+    "summary" : "美国司法部向英伟达发出传票，升级反垄断调查，导致公司市值蒸发2650亿美元。",
+    "pivotDate" : "2024-09-03",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -9.525006282985682,
+    "volumeSpike" : false,
+    "correlation" : 0.9,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.95,
+    "reasoning" : "司法部反垄断传票直接引发监管担忧，导致当日股价大跌，时间与主题高度吻合。"
+  }, {
+    "eventTitle" : "Nvidia easily beats earnings expectations on strong gaming and data center sales",
+    "eventDate" : "2021-11-17",
+    "url" : "https://finance.yahoo.com/news/nvidia-q-3-earnings-2022-203256956.html",
+    "source" : "HackerNews",
+    "summary" : "Nvidia 在 2021 年第三季度财报中轻松超出市场预期，主要得益于游戏和数据中心业务的强劲销售增长。",
+    "pivotDate" : "2021-11-18",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 8.25,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "财报超预期发生在拐点前一日，时间高度吻合，且业绩利好直接推动股价大涨，主题与行情方向一致。"
+  }, {
+    "eventTitle" : "Nvidia Introduces Grace CPU Superchip – Nvidia Newsroom",
+    "eventDate" : "2022-03-24",
+    "url" : "https://nvidianews.nvidia.com/news/nvidia-introduces-grace-cpu-superchip",
+    "source" : "HackerNews",
+    "summary" : "Nvidia在GTC 2022大会上发布Grace CPU超级芯片，结合Hopper GPU架构，展示其在AI和高性能计算领域的创新实力。",
+    "pivotDate" : "2022-03-24",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 9.82,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "当日发布重磅新品Grace CPU超级芯片，直接推动股价大涨，时间与主题高度吻合。"
+  }, {
+    "eventTitle" : "US Government Bans Export of Nvidia A100 and H100 GPUs to China and Russia",
+    "eventDate" : "2022-08-31",
+    "url" : "https://www.sec.gov/ix?doc=/Archives/edgar/data/1045810/000104581022000146/nvda-20220826.htm",
+    "source" : "HackerNews",
+    "summary" : "美国政府于8月26日宣布禁止英伟达向中国和俄罗斯出口A100和H100 GPU芯片，此举将严重限制英伟达在关键市场的销售。",
+    "pivotDate" : "2022-08-26",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -9.23,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.9,
+    "reasoning" : "美国政府对英伟达高端AI芯片出口中国的禁令直接打击其核心收入来源，与8月26日股价大幅下跌高度吻合，且事件性质为重大利空。"
+  }, {
+    "eventTitle" : "US blocks Nvidia AI chip exports to China",
+    "eventDate" : "2022-09-01",
+    "url" : "https://www.ft.com/content/7005d5d2-b02f-4092-a35c-8b44889a5f90",
+    "source" : "HackerNews",
+    "summary" : "美国政府于2022年9月1日宣布限制英伟达向中国出口高端AI芯片，此举直接冲击英伟达在华业务，引发市场对其营收前景的担忧。",
+    "pivotDate" : "2022-09-01",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -7.67,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.9,
+    "reasoning" : "出口管制事件与股价大跌同日发生，直接威胁英伟达中国区收入，主题高度吻合且解释力强。"
+  }, {
+    "eventTitle" : "Nvidia and Bullish Outlook on A.I",
+    "eventDate" : "2023-02-23",
+    "url" : "https://www.cnbc.com/2023/02/23/nvidia-stock-up-12percent-on-earnings-ai-potential.html",
+    "source" : "HackerNews",
+    "summary" : "英伟达财报显示AI芯片需求强劲，股价因业绩和AI前景上涨12%，市场对其AI领导地位持乐观态度。",
+    "pivotDate" : "2023-02-23",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 14.02,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "财报利好与AI乐观情绪推动当日股价大涨，时间完全吻合且主题直接解释行情。"
+  }, {
+    "eventTitle" : "Nvidia posts revenue up 265% on booming AI business",
+    "eventDate" : "2024-02-22",
+    "url" : "https://www.cnbc.com/2024/02/21/nvidia-nvda-earnings-report-q4-2024.html",
+    "source" : "HackerNews",
+    "summary" : "Nvidia公布财报，营收同比增长265%，远超预期，主要受AI业务强劲需求推动。",
+    "pivotDate" : "2024-02-22",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 16.4,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "Nvidia财报营收暴增265%远超预期，直接点燃AI芯片需求信心，推动股价大涨16.4%，时间与主题高度吻合。"
+  }, {
+    "eventTitle" : "Nvidia dragged to worst day since March 2020 after Super Micro plunge",
+    "eventDate" : "2024-04-19",
+    "url" : "https://www.cnbc.com/2024/04/19/super-micro-plunges-ahead-of-third-quarter-earnings-later-this-month.html",
+    "source" : "HackerNews",
+    "summary" : "Nvidia股价因Super Micro暴跌拖累而遭遇自2020年3月以来最糟糕的一天，市场情绪恶化。",
+    "pivotDate" : "2024-04-19",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -10.0046060634692,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.9,
+    "reasoning" : "当日Nvidia暴跌10%，与Super Micro暴跌引发的AI板块恐慌性抛售直接相关，时间完全吻合且主题明确解释行情。"
+  }, {
+    "eventTitle" : "Nvidia (NVDA) earnings report Q1 2025",
+    "eventDate" : "2024-05-22",
+    "url" : "https://www.cnbc.com/2024/05/22/nvidia-nvda-earnings-report-q1-2025-.html",
+    "source" : "HackerNews",
+    "summary" : "Nvidia发布2025财年第一季度财报，业绩超预期并上调展望，推动股价大涨。",
+    "pivotDate" : "2024-05-23",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 9.32,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "财报超预期且上调展望，直接利好股价，时间与拐点高度吻合，主题可解释大涨。"
+  }, {
+    "eventTitle" : "US Weighs Capping Exports of AI Chips from Nvidia and AMD to Some Countries",
+    "eventDate" : "2024-10-15",
+    "url" : "https://www.bloomberg.com/news/articles/2024-10-15/us-weighs-capping-exports-of-ai-chips-from-nvidia-and-amd-to-some-countries",
+    "source" : "HackerNews",
+    "summary" : "美国正在考虑限制英伟达和AMD向部分国家出口AI芯片，此举可能影响相关公司的海外销售和营收预期。",
+    "pivotDate" : "2024-10-15",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.69,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.9,
+    "reasoning" : "出口限制消息直接利空芯片股，与当日下跌方向一致，且时间完全吻合，解释力强。"
+  }, {
+    "eventTitle" : "Nvidia shares fall 9% or $265B off on tariff fears",
+    "eventDate" : "2025-03-03",
+    "url" : "https://www.cnbc.com/2025/03/03/nvidia-shares-fall-9percent-on-tariff-fears.html",
+    "source" : "HackerNews",
+    "summary" : "英伟达股价因关税担忧下跌9%，市值蒸发2650亿美元。",
+    "pivotDate" : "2025-03-03",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -8.69,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.9,
+    "reasoning" : "当日新闻直接报道英伟达股价因关税担忧大跌9%，与拐点时间完全吻合且主题直接解释下跌。"
+  }, {
+    "eventTitle" : "US markets' worst day since Covid pandemic: Apple and Nvidia lose combined $470B",
+    "eventDate" : "2025-04-03",
+    "url" : "https://www.theguardian.com/us-news/2025/apr/03/trump-tariffs-stock-market",
+    "source" : "HackerNews",
+    "summary" : "美国股市遭遇自新冠疫情以来最糟糕的一天，苹果和英伟达合计市值蒸发4700亿美元，主要受特朗普关税政策影响。",
+    "pivotDate" : "2025-04-03",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -7.8065567831914535,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.9,
+    "reasoning" : "当日新闻明确报道市场因特朗普关税大跌，苹果和英伟达市值大幅缩水，与拐点下跌方向及幅度高度吻合，主题可解释行情。"
+  }, {
+    "eventTitle" : "Trump administration backs off Nvidia's 'H20' crackdown after Mar-a-Lago dinner",
+    "eventDate" : "2025-04-09",
+    "url" : "https://www.npr.org/2025/04/09/nx-s1-5356480/nvidia-china-ai-h20-chips-trump",
+    "source" : "HackerNews",
+    "summary" : "特朗普政府在与黄仁勋共进晚餐后，据报道暂停了对Nvidia H20芯片的出口禁令计划，缓解了市场对Nvidia中国业务受限的担忧。",
+    "pivotDate" : "2025-04-09",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 18.72,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "当日Nvidia股价大涨18.72%，而同日特朗普政府暂停H20出口禁令的消息直接消除了重大利空，主题高度吻合且时间完全一致，是推动股价飙升的合理动因。"
+  }, {
+    "eventTitle" : "Nvidia rises 7% as Jensen Huang says $660B capex buildout is sustainable",
+    "eventDate" : "2026-02-06",
+    "url" : "https://www.cnbc.com/2026/02/06/nvidia-rises-7percent-as-ceo-says-660-billion-capex-buildout-is-sustainable.html",
+    "source" : "HackerNews",
+    "summary" : "英伟达CEO黄仁勋表示6600亿美元资本支出建设可持续，公司股价当日上涨7%。",
+    "pivotDate" : "2026-02-06",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 7.87,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "CEO关于资本支出可持续性的积极表态直接支撑股价大涨，时间与主题高度吻合。"
+  }, {
+    "eventTitle" : "Nvidia shares fall as blockbuster results fail to dazzle",
+    "eventDate" : "2026-02-26",
+    "url" : "https://www.ft.com/content/f4cda766-5650-4a97-a84f-24d3cfbeddd6",
+    "source" : "HackerNews",
+    "summary" : "英伟达公布强劲财报但股价下跌，因业绩未能超出市场高预期，投资者失望情绪引发抛售。",
+    "pivotDate" : "2026-02-26",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -5.456125997136441,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.9,
+    "reasoning" : "财报虽好但未达市场极高预期，直接导致当日股价大跌，时间与主题高度吻合。"
+  }, {
+    "eventTitle" : "Nvidia announces new AI chip for personal computers",
+    "eventDate" : "2026-06-01",
+    "url" : "https://www.bbc.com/news/articles/crmp9mppvzro",
+    "source" : "HackerNews",
+    "summary" : "Nvidia宣布推出面向个人电脑的新型AI芯片，标志着其进军PC市场。",
+    "pivotDate" : "2026-06-01",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 6.26,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "Nvidia发布AI PC芯片等系列新品，市场反应积极推动股价上涨，事件与拐点同日且主题高度契合。"
+  }, {
+    "eventTitle" : "Nvidia agrees to acquire Hugging Face for $13B",
+    "eventDate" : "2026-08-27",
+    "url" : "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
+    "source" : "HackerNews",
+    "summary" : "Nvidia同意以约130亿美元收购开源模型平台Hugging Face，强化AI生态布局。",
+    "pivotDate" : "2026-08-27",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 8.74,
+    "volumeSpike" : false,
+    "correlation" : 0.85,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.9,
+    "reasoning" : "收购Hugging Face强化AI生态，叠加同日营收翻倍至960亿美元及6730亿美元销售预测，多重利好推动股价大涨。"
+  }, {
+    "eventTitle" : "Nvidia Announces Financial Results for Fourth Quarter and Fiscal 2022",
+    "eventDate" : "2022-02-16",
+    "url" : "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2022",
+    "source" : "HackerNews",
+    "summary" : "Nvidia发布2022财年第四季度及全年财报，业绩表现强劲，推动股价上涨。",
+    "pivotDate" : "2022-02-15",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 9.18,
+    "volumeSpike" : false,
+    "correlation" : 0.75,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.8,
+    "reasoning" : "财报发布前一日股价大涨，市场预期业绩超预期，事件与上涨方向一致且时间高度吻合。"
+  }, {
+    "eventTitle" : "Nvidia offers China alternative to chip that the US banned for export",
+    "eventDate" : "2022-11-08",
+    "url" : "https://www.reuters.com/technology/exclusive-nvidia-offers-new-advanced-chip-china-that-meets-us-export-controls-2022-11-08/",
+    "source" : "HackerNews",
+    "summary" : "Nvidia推出专为中国市场设计的A800芯片，以符合美国出口管制要求，缓解了市场对其中国业务受限的担忧。",
+    "pivotDate" : "2022-11-10",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 14.33,
+    "volumeSpike" : false,
+    "correlation" : 0.75,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.8,
+    "reasoning" : "该新闻在拐点前2天发布，主题为应对出口限制的替代方案，缓解了市场对Nvidia中国收入损失的担忧，与股价大涨方向一致。"
+  }, {
+    "eventTitle" : "Nvidia Earnings Release",
+    "eventDate" : "2023-08-23",
+    "url" : "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000171/q2fy24pr.htm",
+    "source" : "HackerNews",
+    "summary" : "Nvidia发布2024财年第二季度财报，业绩超预期，推动股价大涨。",
+    "pivotDate" : "2023-08-21",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 8.47,
+    "volumeSpike" : false,
+    "correlation" : 0.75,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.8,
+    "reasoning" : "财报发布在拐点后2天内，业绩超预期是股价大涨的合理动因，时间吻合且主题一致。"
+  }, {
+    "eventTitle" : "Nvidia and other AI stocks are getting dragged down by Microsoft and Meta",
+    "eventDate" : "2024-10-31",
+    "url" : "https://www.yahoo.com/tech/nvidia-other-ai-stocks-getting-170132664.html",
+    "source" : "HackerNews",
+    "summary" : "微软和Meta财报指引引发市场对AI资本开支回报的担忧，拖累英伟达等AI股票下跌。",
+    "pivotDate" : "2024-10-31",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.72,
+    "volumeSpike" : false,
+    "correlation" : 0.75,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.8,
+    "reasoning" : "当日微软和Meta财报引发AI投资回报担忧，直接拖累英伟达等AI股下跌，与拐点时间吻合且主题可解释行情。"
+  }, {
+    "eventTitle" : "Nvidia releases open-source GPU kernel modules",
+    "eventDate" : "2022-05-11",
+    "url" : "https://developer.nvidia.com/blog/nvidia-releases-open-source-gpu-kernel-modules/",
+    "source" : "HackerNews",
+    "summary" : "Nvidia宣布开源其GPU内核模块，这是对Linux社区的重大让步，可能扩大其GPU在数据中心和开发者中的采用。",
+    "pivotDate" : "2022-05-13",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 9.47,
+    "volumeSpike" : false,
+    "correlation" : 0.72,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.75,
+    "reasoning" : "开源GPU内核模块的利好消息在拐点前两日发布，时间吻合，且该事件被视为对Nvidia生态系统的积极信号，可能推动股价上涨。"
+  }, {
+    "eventTitle" : "Nvidia Special Address at CES",
+    "eventDate" : "2024-01-09",
+    "url" : "https://www.nvidia.com/en-eu/events/ces/",
+    "source" : "HackerNews",
+    "summary" : "Nvidia在CES 2024上举行特别演讲，发布多项AI、游戏和机器人创新，提振市场信心。",
+    "pivotDate" : "2024-01-08",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 6.43,
+    "volumeSpike" : false,
+    "correlation" : 0.72,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.8,
+    "reasoning" : "CES主题演讲临近且内容高度相关，市场预期利好推动股价上涨，但事件在次日，时间吻合度稍降。"
+  }, {
+    "eventTitle" : "Nvidia's New AI Chip Is Delayed, Impacting Microsoft, Google, Meta",
+    "eventDate" : "2024-08-03",
+    "url" : "https://www.theinformation.com/articles/nvidias-new-ai-chip-is-delayed-impacting-microsoft-google-meta",
+    "source" : "HackerNews",
+    "summary" : "Nvidia的新AI芯片（Blackwell）被延迟，影响了微软、谷歌和Meta等主要客户。",
+    "pivotDate" : "2024-07-31",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 12.81,
+    "volumeSpike" : false,
+    "correlation" : 0.72,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.8,
+    "reasoning" : "拐点前市场因AMD财报和Nvidia利好上涨至局部高点，但8月3日曝出Blackwell延迟消息，在时间窗内构成利空，解释了随后价格回落。"
+  }, {
+    "eventTitle" : "Microsoft enters –$9.7B contract with IREN for access to Nvidia chips",
+    "eventDate" : "2025-11-10",
+    "url" : "https://apnews.com/article/microsoft-ai-iren-nvidia-openai-dell-b3d7a6032ad69dcbea43ce88b007fe3f",
+    "source" : "HackerNews",
+    "summary" : "微软与IREN签署97亿美元合同，以确保获得Nvidia芯片供应，凸显AI基础设施需求强劲。",
+    "pivotDate" : "2025-11-10",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 5.79,
+    "volumeSpike" : false,
+    "correlation" : 0.72,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.8,
+    "reasoning" : "微软巨额合同确认Nvidia芯片需求旺盛，直接利好Nvidia营收预期，与当日股价大涨方向一致。"
+  }, {
+    "eventTitle" : "TSMC to Ship $22B Worth of Nvidia H100 AI Accelerators in 2023",
+    "eventDate" : "2023-08-16",
+    "url" : "https://www.extremetech.com/computing/tsmc-to-ship-22-billion-worth-of-nvidia-h100-ai-accelerators-in-2023",
+    "source" : "HackerNews",
+    "summary" : "台积电预计2023年向英伟达交付价值220亿美元的H100 AI加速器，显示AI芯片需求强劲。",
+    "pivotDate" : "2023-08-14",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 7.09,
+    "volumeSpike" : false,
+    "correlation" : 0.65,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.7,
+    "reasoning" : "该新闻在拐点后2天发布，主题为英伟达AI芯片出货量大幅增长，与股价大涨方向一致，但时间稍晚且非当日直接驱动，故关联度中等偏上。"
+  }, {
+    "eventTitle" : "What Nvidia's reversal means for investors",
+    "eventDate" : "2024-03-12",
+    "url" : "https://qz.com/what-nvidias-reversal-means-for-investors-1851329107",
+    "source" : "HackerNews",
+    "summary" : "文章讨论Nvidia股价反转对投资者的影响，可能涉及市场对AI热潮的重新评估。",
+    "pivotDate" : "2024-03-12",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 7.16,
+    "volumeSpike" : false,
+    "correlation" : 0.65,
+    "strength" : "STRONG",
+    "rating" : "BULLISH",
+    "confidence" : 0.7,
+    "reasoning" : "当日Nvidia相关新闻聚焦其市场表现与AI前景，主题与股价大涨吻合，但缺乏具体利好细节，解释力中等。"
+  } ]
+}

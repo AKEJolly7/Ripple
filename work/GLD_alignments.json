@@ -1,0 +1,1034 @@
+{
+  "mode" : "rule",
+  "symbol" : "GLD",
+  "schemaVersion" : "2",
+  "generatedAt" : "2026-09-09T16:56:51.650657+08:00",
+  "missing" : [ {
+    "pivotDate" : "2022-03-28",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.8203750411229236,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Recommendations for investment contract services, SAFE, IRA Option",
+      "date" : "2022-03-29",
+      "summary" : "Hello HN,<p>I would like to invest in a bootstraped startup as a friends &amp; family investor. I am looking to make a one time total investment &lt;=50K.<p>In the past, I have been involved in early stage startups and paid a high price for  legal advice, and would like to avoid costs &amp; complexi…",
+      "url" : "https://news.ycombinator.com/item?id=30838494",
+      "source" : "HackerNews",
+      "externalId" : "30838494"
+    }, {
+      "title" : "Launch HN: Charge Robotics (YC S21) - Robots that build solar farms",
+      "date" : "2022-03-23",
+      "summary" : "Hi HN! We are Banks Hunter and Max Justicz, founders of Charge Robotics. We make robots to automate the most labor-intensive parts of solar construction.<p>We just got back from our first demo on a 150MW solar construction site, where we showed off our initial prototype: an autonomous forklift that …",
+      "url" : "https://news.ycombinator.com/item?id=30780455",
+      "source" : "HackerNews",
+      "externalId" : "30780455"
+    }, {
+      "title" : "Hacking Amazon Algo in Latam",
+      "date" : "2022-03-25",
+      "summary" : "No code or images, just good ol&#x27; text.<p>There are 4 steps to hacking Amazon&#x27;s algorithm and I&#x27;ll summarize them here.<p>Step 1: finding products that can lead their categories.<p>There are two tools to do this, either JungleScout or Helium10, I personally like H10 better (both are pa…",
+      "url" : "https://news.ycombinator.com/item?id=30797469",
+      "source" : "HackerNews",
+      "externalId" : "30797469"
+    } ]
+  }, {
+    "pivotDate" : "2022-05-31",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -0.989297078391671,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Which country/city are you most bullish on?",
+      "date" : "2022-05-30",
+      "summary" : "My partner and I are looking settle down and start a family. Unfortunately, we&#x27;ve been priced out of our city (Toronto). Consequently, we&#x27;re looking for alternatives...<p>Which country and&#x2F;or city should we look at? Or, in other words, which place are you most bullish about for the fu…",
+      "url" : "https://news.ycombinator.com/item?id=31561614",
+      "source" : "HackerNews",
+      "externalId" : "31561614"
+    }, {
+      "title" : "Runway and growth advice compiled from Sequoia, A16Z, YC, Craft and founders",
+      "date" : "2022-05-30",
+      "summary" : "I’ve summarized the top curated resources for navigating the downturn - thought it would be useful for everyone to refer to if they’re looking to understand whats happening .<p>All the Links to resources are at the bottom<p>Summary:<p>On managing your burn:\nThere is no certainty on when things will …",
+      "url" : "https://news.ycombinator.com/item?id=31559412",
+      "source" : "HackerNews",
+      "externalId" : "31559412"
+    }, {
+      "title" : "Ask HN: Looking for webdesign templates for a consulting/software dev company",
+      "date" : "2022-05-30",
+      "summary" : "I&#x27;ve been doing webdesign for many years for a number of customers. For my own company&#x2F;brand I struggle to create something I&#x27;m really happy with. Having created multiple MVPs to evaluate design decisions and none of them are really satisfying, I&#x27;m looking for a ready-to-use solu…",
+      "url" : "https://news.ycombinator.com/item?id=31557916",
+      "source" : "HackerNews",
+      "externalId" : "31557916"
+    } ]
+  }, {
+    "pivotDate" : "2022-06-02",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.230912152354402,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "The Hot Ride This Memorial Day Weekend Is a Minivan. Good Luck Finding One",
+      "date" : "2022-05-28",
+      "summary" : "",
+      "url" : "https://www.wsj.com/articles/minivan-sales-prices-memorial-day-11653423051",
+      "source" : "HackerNews",
+      "externalId" : "31537399"
+    }, {
+      "title" : "Ask HN: Which country/city are you most bullish on?",
+      "date" : "2022-05-30",
+      "summary" : "My partner and I are looking settle down and start a family. Unfortunately, we&#x27;ve been priced out of our city (Toronto). Consequently, we&#x27;re looking for alternatives...<p>Which country and&#x2F;or city should we look at? Or, in other words, which place are you most bullish about for the fu…",
+      "url" : "https://news.ycombinator.com/item?id=31561614",
+      "source" : "HackerNews",
+      "externalId" : "31561614"
+    }, {
+      "title" : "Runway and growth advice compiled from Sequoia, A16Z, YC, Craft and founders",
+      "date" : "2022-05-30",
+      "summary" : "I’ve summarized the top curated resources for navigating the downturn - thought it would be useful for everyone to refer to if they’re looking to understand whats happening .<p>All the Links to resources are at the bottom<p>Summary:<p>On managing your burn:\nThere is no certainty on when things will …",
+      "url" : "https://news.ycombinator.com/item?id=31559412",
+      "source" : "HackerNews",
+      "externalId" : "31559412"
+    } ]
+  }, {
+    "pivotDate" : "2022-09-15",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.867916165389738,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Do you invest in domain names?",
+      "date" : "2022-09-10",
+      "summary" : "Could you please share your experience in investing in domain names? How do you find them? What tools and registrars do you use? How do you negotiate prices when selling? How often do you sell? Any other information you&#x27;d like to share?<p>Otherwise, could you please share what prevents you from…",
+      "url" : "https://news.ycombinator.com/item?id=32792279",
+      "source" : "HackerNews",
+      "externalId" : "32792279"
+    }, {
+      "title" : "Ask HN: Renter's Real Estate Investment Trust (REIT)",
+      "date" : "2022-09-19",
+      "summary" : "I have read multiple times about how rent is increasing and making it more difficult to afford living as a non-homeowner.<p>It seems that landlords are simply &quot;charging what the market will bear&quot;, yielding greater profits for them at the expense of the renter&#x27;s budget.<p>But what if t…",
+      "url" : "https://news.ycombinator.com/item?id=32901369",
+      "source" : "HackerNews",
+      "externalId" : "32901369"
+    }, {
+      "title" : "Ask HN: I just finished creating a project and I’m lost",
+      "date" : "2022-09-08",
+      "summary" : "I spent the last month creating a little project only to realize it could be useless to anyone because it doesn&#x27;t solve any real problem.\nLong story short,  months ago I discovered the existence of productized services, or as I like to call them “SaaP”.<p>I was fascinated that they offer custom…",
+      "url" : "https://news.ycombinator.com/item?id=32766832",
+      "source" : "HackerNews",
+      "externalId" : "32766832"
+    } ]
+  }, {
+    "pivotDate" : "2022-09-26",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.163322658649757,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Is somewhat high inflation a net good for the U.S. longterm?",
+      "date" : "2022-09-30",
+      "summary" : "I understand that economics is a rather complex subject and this isn&#x27;t exactly the place for a non-technical discussion, but I greatly enjoy the insights of the HN crowd so thought I&#x27;d post this. In July of 2021 I had an interesting conversation with a former investment banker about econom…",
+      "url" : "https://news.ycombinator.com/item?id=33038283",
+      "source" : "HackerNews",
+      "externalId" : "33038283"
+    }, {
+      "title" : "Ask HN: What's the best “higher level Rust” these days?",
+      "date" : "2022-09-26",
+      "summary" : "After playing with rust, I really like it. However, I generally don&#x27;t need to write the low level code that justifies the increased complexity of the borrow checker. I would rather just pay the small price for a garbage collector. What language is most like rust, but at a higher level?<p>To me,…",
+      "url" : "https://news.ycombinator.com/item?id=32984776",
+      "source" : "HackerNews",
+      "externalId" : "32984776"
+    }, {
+      "title" : "Ask HN: A good open-source version of Flatfile?",
+      "date" : "2022-09-27",
+      "summary" : "I keep seeing ads for Flatfile, and they just raised some absurd round.<p>The service is super nice, and really useful. The problem is the price tag — as an indie developer, I can&#x27;t afford to spend upward of $50k a year on a service. The other thing is that I don&#x27;t need 99% of their featur…",
+      "url" : "https://news.ycombinator.com/item?id=33002308",
+      "source" : "HackerNews",
+      "externalId" : "33002308"
+    } ]
+  }, {
+    "pivotDate" : "2022-12-01",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.8384806747163474,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: Google Sheets GOOGLEFINANCE() reliability enhancement",
+      "date" : "2022-11-24",
+      "summary" : "Anyone who uses GOOGLEFINANCE() for stock&#x2F;ETF prices and then logs your total portfolio assets daily (by trigger), knows that it is not 100% reliable.<p>What I wanted was something that would use the last good data point if GOOGLEFINANCE was failing. So I added caching to solve this problem.<p>…",
+      "url" : "https://github.com/demmings/cachefinance",
+      "source" : "HackerNews",
+      "externalId" : "33737063"
+    }, {
+      "title" : "Ask HN: How do you handle translations in multi lingual apps?",
+      "date" : "2022-11-30",
+      "summary" : "Sup devs! I&#x27;ve had a handful of different experiences working on multi-lingual apps and in each case the translations process has been, well... a bit of a mess. (My experience is in web applications)<p>Now-a-days the open source tooling is actually pretty good at what it does. For example, i18N…",
+      "url" : "https://news.ycombinator.com/item?id=33795201",
+      "source" : "HackerNews",
+      "externalId" : "33795201"
+    }, {
+      "title" : "Ask HN: What books are you reading in 2023?",
+      "date" : "2022-12-04",
+      "summary" : "Following up on the exciting thread of the good books in 2022, what books have you tentatively planned to read in 2023? I have earmarked quite a few just from the comments in that thread.<p>Here are a few I&#x27;m excited about;<p>- Greenlights by Matthew McConaughey<p>- How Asia Works: Success and …",
+      "url" : "https://news.ycombinator.com/item?id=33854177",
+      "source" : "HackerNews",
+      "externalId" : "33854177"
+    } ]
+  }, {
+    "pivotDate" : "2022-12-15",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.6359309934562805,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: What do you use for auth?",
+      "date" : "2022-12-15",
+      "summary" : "What do you use for auth?<p>For context, I&#x27;m building a full-stack app using React Native, Django, and PostgresQL.<p>Do you use auth providers? I&#x27;ve looked into Auth0 (which seems to be pricey) and ORY but I&#x27;m not sure what best fits my use case.<p>I&#x27;ve seen that building your ow…",
+      "url" : "https://news.ycombinator.com/item?id=34004174",
+      "source" : "HackerNews",
+      "externalId" : "34004174"
+    }, {
+      "title" : "Disney Plus with ads isn’t a good deal",
+      "date" : "2022-12-09",
+      "summary" : "",
+      "url" : "https://www.theverge.com/23502068/disney-plus-basic-ads-price-worth-it-netflix",
+      "source" : "HackerNews",
+      "externalId" : "33927713"
+    } ]
+  }, {
+    "pivotDate" : "2022-12-20",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.6594516594516717,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: What do you use for auth?",
+      "date" : "2022-12-15",
+      "summary" : "What do you use for auth?<p>For context, I&#x27;m building a full-stack app using React Native, Django, and PostgresQL.<p>Do you use auth providers? I&#x27;ve looked into Auth0 (which seems to be pricey) and ORY but I&#x27;m not sure what best fits my use case.<p>I&#x27;ve seen that building your ow…",
+      "url" : "https://news.ycombinator.com/item?id=34004174",
+      "source" : "HackerNews",
+      "externalId" : "34004174"
+    }, {
+      "title" : "Ask HN: How hard would it be to make an open hardware prelit xmas tree?",
+      "date" : "2022-12-27",
+      "summary" : "I was reading the thread about repairable household items(0) and I was thinking how frustrating it was trying to get support for my prelit RGB LED tree this year.<p>I took everything apart but I am not good at identifying circuit components but I suspected things would be easier to diagnose and repa…",
+      "url" : "https://news.ycombinator.com/item?id=34148498",
+      "source" : "HackerNews",
+      "externalId" : "34148498"
+    }, {
+      "title" : "Ask HN: What about a job site that showed bid/ask spread for wages?",
+      "date" : "2022-12-28",
+      "summary" : "Maybe this is a dumb idea, but I think it would be interesting, if only as an experiment. Workers can have a hard time finding work, and employers have a hard time finding employees. Maybe full transparency can shine a light on what’s really happening.<p>The idea is, show the bid&#x2F;ask spread for…",
+      "url" : "https://news.ycombinator.com/item?id=34165958",
+      "source" : "HackerNews",
+      "externalId" : "34165958"
+    } ]
+  }, {
+    "pivotDate" : "2023-03-23",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.2538159616223288,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: AI-Powered Mock API Generator",
+      "date" : "2023-03-17",
+      "summary" : "@aashj99 and I have worked on countless side projects where we’ve needed to spin up mock APIs for demos, prototypes, etc. We’ve used existing mock API generators, which require too much effort and manually defining fields to generate generic data that doesn’t quite match our use case.<p>GPT is remar…",
+      "url" : "https://mockapigenerator.vercel.app/",
+      "source" : "HackerNews",
+      "externalId" : "35195753"
+    }, {
+      "title" : "Good performance, budget price: DeepCool AG500 Air Cooler reviewed",
+      "date" : "2023-03-18",
+      "summary" : "",
+      "url" : "https://boringtextreviews.com/2023/03/18/deepcools-gammaxx-ag500-bk-argb-reviewed/",
+      "source" : "HackerNews",
+      "externalId" : "35213918"
+    }, {
+      "title" : "Ask HN: In the future will there still be big organizations?",
+      "date" : "2023-03-17",
+      "summary" : "Something I have been seeing around these parts is this scenario were everyone with any degree of craftsmanship gets fired by clueless managers and they will drunkely prompt Jarvis to do the same job as these now fired employees.<p>I am just wondering how these organizations will live, what are they…",
+      "url" : "https://news.ycombinator.com/item?id=35200423",
+      "source" : "HackerNews",
+      "externalId" : "35200423"
+    } ]
+  }, {
+    "pivotDate" : "2023-04-13",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.351567925637065,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Are free robots a good solution to the wealth gap with AI?",
+      "date" : "2023-04-08",
+      "summary" : "TLDR; a half baked idea to programmatically shrink the wealth gap with AGI, a little luck, and robot credits<p>Sam Altman is considering what to do with the trillions OpenAI is about to profit. Those trillions are coming, and some of his ideas include just giving the money to everyone. He has been e…",
+      "url" : "https://news.ycombinator.com/item?id=35497504",
+      "source" : "HackerNews",
+      "externalId" : "35497504"
+    }, {
+      "title" : "Ask HN: Is MacBook Pro 14 M1 16/512 still a great choice for development?",
+      "date" : "2023-04-14",
+      "summary" : "I have been using my kind of old Dell Inspiron for about 5 years. It has 16GB of RAM but the keyboard has been incredibly buggy recently.<p>In my country, it&#x27;s not that easy at all to buy a laptop without paying 2x price but there is one seemingly good option with MBP 14 M1 with 16GB of RAM and…",
+      "url" : "https://news.ycombinator.com/item?id=35570667",
+      "source" : "HackerNews",
+      "externalId" : "35570667"
+    }, {
+      "title" : "Ask HN: Why hasn’t there been a “Starbucks for Chai” in the US?",
+      "date" : "2023-04-14",
+      "summary" : "On a recent trip to India, I had about 3-4 cups of chai a day from street vendors. I don’t even usually drink chai in the states but the street chai in India is addicting. The best part is it’s more a mild caffeine hit than coffee, so spacing out 3 cups a day works well.<p>It also tastes just as goo…",
+      "url" : "https://news.ycombinator.com/item?id=35565711",
+      "source" : "HackerNews",
+      "externalId" : "35565711"
+    } ]
+  }, {
+    "pivotDate" : "2023-10-27",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.162980272811276,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Any Experience with Microsoft Fabric Lakehouse?",
+      "date" : "2023-10-30",
+      "summary" : "I have a new colleague is all excited about Microsoft Fabric Lakehouse [1].(Store data in parquet&#x2F;delta files and use PySpark to transform data and serve them up using Fabric).  I appreciate any thoughts or comments.<p>I am mostly concerned about PySpark and can&#x27;t wrap my head around the p…",
+      "url" : "https://news.ycombinator.com/item?id=38071729",
+      "source" : "HackerNews",
+      "externalId" : "38071729"
+    }, {
+      "title" : "Ask HN: What do you plan to get this Black Friday/Cyber Monday?",
+      "date" : "2023-11-01",
+      "summary" : "I maintain a list of items that I plan in advance to buy on Black Friday&#x2F;Cyber Monday&#x2F;Thanksgiving. I am interested to know what are the other popular valuable stuff people get at good price during these yearly sales. Also do you follow any page for it?<p>Example this time I plan to buy th…",
+      "url" : "https://news.ycombinator.com/item?id=38093322",
+      "source" : "HackerNews",
+      "externalId" : "38093322"
+    } ]
+  }, {
+    "pivotDate" : "2023-11-10",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.0909691994049342,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Ideal life insurance/yearly salary ratio?",
+      "date" : "2023-11-12",
+      "summary" : "I am recently considering a life insurance, but I cannot decide how much sum I should go for.<p>I thought perhaps &quot;ratio of insurance sum to yearly salary or average house price&quot; might be a good metric to start, but I couldn&#x27;t find much info on the internet besides from insurance mark…",
+      "url" : "https://news.ycombinator.com/item?id=38242938",
+      "source" : "HackerNews",
+      "externalId" : "38242938"
+    }, {
+      "title" : "Show HN: PriceToRent – Compare Home and Rental Market Trends",
+      "date" : "2023-11-04",
+      "summary" : "Hey everyone, I built PriceToRent. Its a data platform that helps you compare home and rental market trends easily.<p>It calculates a price to rent ratio to see whether a location is better for buying or renting in.<p>I built this because I struggled to find a good calculator that lets me see these …",
+      "url" : "https://www.pricetorent.com/",
+      "source" : "HackerNews",
+      "externalId" : "38141445"
+    }, {
+      "title" : "1-person agency: lessons on negotiation after 6 years",
+      "date" : "2023-11-17",
+      "summary" : "When I was scaling beyond the $200k&#x2F;y range, I felt like I was leaving a lot of money on the table whenever I get pushed back on my pricing. So I took some time to write down a series of six (6) principles that I&#x27;d follow. Sharing them here now.<p>Every negotiation should start with “No” -…",
+      "url" : "https://news.ycombinator.com/item?id=38307251",
+      "source" : "HackerNews",
+      "externalId" : "38307251"
+    } ]
+  }, {
+    "pivotDate" : "2024-01-12",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 0.9794006493852203,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: Running Shoe Price Comparison and Alerts",
+      "date" : "2024-01-16",
+      "summary" : "Hey HN, I’m a guy who runs a lot and is prone to spending too much money on running shoes - so I made a site to find deals and alert me when shoes on my rotation are on sale.<p>I built the site with Elixir &amp; Phoenix with LiveView and couldn’t be happier with the tech stack.  A really nice featur…",
+      "url" : "https://runningshoescore.com",
+      "source" : "HackerNews",
+      "externalId" : "39016678"
+    }, {
+      "title" : "Ask HN: Options to Close Yelp Account",
+      "date" : "2024-01-19",
+      "summary" : "My family runs a small mom&#x2F;pop store and we foolishly claimed our Yelp business page when we opened; at that time I entered all our info, including adding a credit-card to the account.<p>Since then, yelp has been charging us $150.00 a month basically to not fuck us over.  By that I mean, litera…",
+      "url" : "https://news.ycombinator.com/item?id=39059094",
+      "source" : "HackerNews",
+      "externalId" : "39059094"
+    } ]
+  }, {
+    "pivotDate" : "2024-01-17",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.1015911872705009,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: Running Shoe Price Comparison and Alerts",
+      "date" : "2024-01-16",
+      "summary" : "Hey HN, I’m a guy who runs a lot and is prone to spending too much money on running shoes - so I made a site to find deals and alert me when shoes on my rotation are on sale.<p>I built the site with Elixir &amp; Phoenix with LiveView and couldn’t be happier with the tech stack.  A really nice featur…",
+      "url" : "https://runningshoescore.com",
+      "source" : "HackerNews",
+      "externalId" : "39016678"
+    }, {
+      "title" : "Ask HN: Options to Close Yelp Account",
+      "date" : "2024-01-19",
+      "summary" : "My family runs a small mom&#x2F;pop store and we foolishly claimed our Yelp business page when we opened; at that time I entered all our info, including adding a credit-card to the account.<p>Since then, yelp has been charging us $150.00 a month basically to not fuck us over.  By that I mean, litera…",
+      "url" : "https://news.ycombinator.com/item?id=39059094",
+      "source" : "HackerNews",
+      "externalId" : "39059094"
+    }, {
+      "title" : "Does anyone know what would be a good job for me?",
+      "date" : "2024-01-24",
+      "summary" : "Howdy!<p>I hate to use this card, but I&#x27;m autistic and I&#x27;m struggling to think of what kinds of jobs I could apply for. So far all the jobs I&#x27;ve had have just kind of fallen into my lap before I knew I even needed the job.<p>For the past several years I&#x27;ve been doing freelance ca…",
+      "url" : "https://news.ycombinator.com/item?id=39124173",
+      "source" : "HackerNews",
+      "externalId" : "39124173"
+    } ]
+  }, {
+    "pivotDate" : "2024-06-07",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -3.5683361436449013,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Navigating a strategic acquisition as single bootstrapped founder",
+      "date" : "2024-06-10",
+      "summary" : "I&#x27;ve been running my bootstrapped SaaS business for 10+ years and find myself positioned for an exit. Discussions with a potential partner are trending toward an acquisition. Our client list, software, and market leadership&#x2F;brand in our niche align very well with the strategic direction of…",
+      "url" : "https://news.ycombinator.com/item?id=40639763",
+      "source" : "HackerNews",
+      "externalId" : "40639763"
+    } ]
+  }, {
+    "pivotDate" : "2024-06-20",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.2484336566575438,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: What are the good invoicing solutions for agencies?",
+      "date" : "2024-06-19",
+      "summary" : "Hi HN! I have a simple problem: I run what is essentially a dev agency in EU that invoices clients based on either flat fees or time spent. We used to use Stripe, but it was very difficult to get time tracking calculations and sent multiple erroneous invoices.<p>Earlier this year we switched to Prod…",
+      "url" : "https://news.ycombinator.com/item?id=40727381",
+      "source" : "HackerNews",
+      "externalId" : "40727381"
+    }, {
+      "title" : "Ask HN: What is your trusted source for vitamin tablets?",
+      "date" : "2024-06-22",
+      "summary" : "I have been trying to find a reputable seller&#x2F;producer of vitamin pills but I often worry about quality, dose accuracy, contamination, etc these concerns stem from the fact that vitamins are not well regulated in the US so it’s very hard to tell the good and the bad apples apart; I especially c…",
+      "url" : "https://news.ycombinator.com/item?id=40758135",
+      "source" : "HackerNews",
+      "externalId" : "40758135"
+    }, {
+      "title" : "Ask HN: How do you deal with your co-founder when making decisions?",
+      "date" : "2024-06-27",
+      "summary" : "We started a startup 8 months ago and have gained good traction. We are both tech founders with 50&#x2F;50 equity, but I handle most of the technical side while my co-founder focuses more on marketing using his connections, as well as doing a smaller portion of the coding. I also come up with more i…",
+      "url" : "https://news.ycombinator.com/item?id=40810844",
+      "source" : "HackerNews",
+      "externalId" : "40810844"
+    } ]
+  }, {
+    "pivotDate" : "2024-07-16",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.9925836572398659,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: I Made an AI Deals Finder to Help You Find the Best Deals on Products",
+      "date" : "2024-07-21",
+      "summary" : "Hey HN,\nDo you love good bargains?<p>I built an AI Deal Finder that checks online marketplaces (Amazon &amp; eBay) for the best deal on any product and tells you where to get a good bargain.<p>This is a time saver for anyone who compares prices across marketplaces like me.<p>No more juggling between…",
+      "url" : "https://www.bestofferai.com",
+      "source" : "HackerNews",
+      "externalId" : "41025478"
+    }, {
+      "title" : "The price of gold – how bad do you want it? (2016)",
+      "date" : "2024-07-09",
+      "summary" : "",
+      "url" : "https://allaboutperformance.wordpress.com/2016/05/11/the-price-of-gold-how-bad-do-you-really-want-it/",
+      "source" : "HackerNews",
+      "externalId" : "40919288"
+    }, {
+      "title" : "Show HN: I made a LLM trade Stocks",
+      "date" : "2024-07-14",
+      "summary" : "Hi HN! I made this as a side project, but astonishingly, it actually turned out to be profitable for me (Paper Trading).<p>In short, the algorithm works in the following way:\n1. It discovers trending and profitable stocks provided by the Alpha Vantage API through news sentiment analysis.<p>2. Now, h…",
+      "url" : "https://github.com/Itachi-Uchiha581/Auto-Trader",
+      "source" : "HackerNews",
+      "externalId" : "40961890"
+    } ]
+  }, {
+    "pivotDate" : "2024-07-25",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.564472497745717,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: I Made an AI Deals Finder to Help You Find the Best Deals on Products",
+      "date" : "2024-07-21",
+      "summary" : "Hey HN,\nDo you love good bargains?<p>I built an AI Deal Finder that checks online marketplaces (Amazon &amp; eBay) for the best deal on any product and tells you where to get a good bargain.<p>This is a time saver for anyone who compares prices across marketplaces like me.<p>No more juggling between…",
+      "url" : "https://www.bestofferai.com",
+      "source" : "HackerNews",
+      "externalId" : "41025478"
+    }, {
+      "title" : "Show HN: We made glhf.chat – run almost any open-source LLM, including 405B",
+      "date" : "2024-07-24",
+      "summary" : "Try it out! <a href=\"https:&#x2F;&#x2F;glhf.chat&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;glhf.chat&#x2F;</a><p>Hey HN!<p>We’ve been working for the past few months on a website to let you easily run (almost) any open-source LLM on autoscaling GPU clusters. It’s free for now while we figure out how t…",
+      "url" : "https://glhf.chat/landing/home",
+      "source" : "HackerNews",
+      "externalId" : "41052934"
+    }, {
+      "title" : "Ask HN: Returning to tech after 4 years?",
+      "date" : "2024-07-30",
+      "summary" : "Worked as a front-end engineer from 2018 to 2020 but quit due to boredom and burnout. Ever since then I have just been doing bar work with some cheap backpacking trips in between. Now that I&#x27;m getting towards 30 it&#x27;s time to sort out a proper career for myself, but I&#x27;m not sure if the…",
+      "url" : "https://news.ycombinator.com/item?id=41110502",
+      "source" : "HackerNews",
+      "externalId" : "41110502"
+    } ]
+  }, {
+    "pivotDate" : "2024-07-31",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.8110731619629616,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: Returning to tech after 4 years?",
+      "date" : "2024-07-30",
+      "summary" : "Worked as a front-end engineer from 2018 to 2020 but quit due to boredom and burnout. Ever since then I have just been doing bar work with some cheap backpacking trips in between. Now that I&#x27;m getting towards 30 it&#x27;s time to sort out a proper career for myself, but I&#x27;m not sure if the…",
+      "url" : "https://news.ycombinator.com/item?id=41110502",
+      "source" : "HackerNews",
+      "externalId" : "41110502"
+    }, {
+      "title" : "Ask HN: Hotel/booking insiders, why the hostel love?",
+      "date" : "2024-08-04",
+      "summary" : "Not a great title, but limited space.  Here&#x27;s the full title:<p>&quot;Hotel&#x2F;booking devs, why is it impossible to filter out hostels?&quot;<p>Other than setting a high minimum price, there seems to be no reliable way to ensure that search results are not polluted with artificially low pric…",
+      "url" : "https://news.ycombinator.com/item?id=41153242",
+      "source" : "HackerNews",
+      "externalId" : "41153242"
+    }, {
+      "title" : "Show HN: We made glhf.chat – run almost any open-source LLM, including 405B",
+      "date" : "2024-07-24",
+      "summary" : "Try it out! <a href=\"https:&#x2F;&#x2F;glhf.chat&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;glhf.chat&#x2F;</a><p>Hey HN!<p>We’ve been working for the past few months on a website to let you easily run (almost) any open-source LLM on autoscaling GPU clusters. It’s free for now while we figure out how t…",
+      "url" : "https://glhf.chat/landing/home",
+      "source" : "HackerNews",
+      "externalId" : "41052934"
+    } ]
+  }, {
+    "pivotDate" : "2024-11-22",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.2892240330819815,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: Angus TV+ – Track What You Watch, Share, and Save on Streaming",
+      "date" : "2024-11-23",
+      "summary" : "The thing I&#x27;ve been using to track what I&#x27;ve been watching is now open for a loose public beta, so you can give it a try and message me a half-hearted, &quot;uh, it&#x27;s ... good?&quot;<p>If you don&#x27;t know what I&#x27;m talking about, here&#x27;s the blog post about it: <a href=\"htt…",
+      "url" : "https://tv.angus.plus",
+      "source" : "HackerNews",
+      "externalId" : "42221129"
+    }, {
+      "title" : "Ask HN: Would you recommend a framework laptop?",
+      "date" : "2024-11-17",
+      "summary" : "It&#x27;s that time of my life where I need to find a good work laptop. With the prices that laptops go for I&#x27;d rather not impulse buy and (maybe) regret my decision.<p>My last purchase was a Vivobook S(15?), and even with the discount I regret it to this day. It didn&#x27;t even run Windows 10…",
+      "url" : "https://news.ycombinator.com/item?id=42163518",
+      "source" : "HackerNews",
+      "externalId" : "42163518"
+    }, {
+      "title" : "Ask HN: Sources of reasonably priced EV code signing certs?",
+      "date" : "2024-11-19",
+      "summary" : "We&#x27;ve been with Digicert since the mid &#x27;00s, just when they were starting up, but they have finally circled completely down the drain. They now default to a monthly subscription that ends up costing over $800 <i>a year</i> for an EV Code Signing cert. In comparison our last renewal with th…",
+      "url" : "https://news.ycombinator.com/item?id=42184638",
+      "source" : "HackerNews",
+      "externalId" : "42184638"
+    } ]
+  }, {
+    "pivotDate" : "2025-04-21",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 3.093558081797987,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Ask HN: \"RTX 5090\" or \"DGX Spark\"",
+      "date" : "2025-04-20",
+      "summary" : "With the price of &quot;RTX 5090&quot; being over $2,000 and scarce availability would &quot;DGX Spark&quot; be as good as the RTX for LLM experimentation?",
+      "url" : "https://news.ycombinator.com/item?id=43746860",
+      "source" : "HackerNews",
+      "externalId" : "43746860"
+    }, {
+      "title" : "All-in-One Platform to promote with NO budget. Roast the idea",
+      "date" : "2025-04-28",
+      "summary" : "In the era of AI and vibe coding, marketing has become the most important and complicated thing. It takes much time, and it is super expensive to market.<p>I recently checked Google Ads for my project and was amazed at the price — nearly $15 for a click for a pretty much not-so-popular keyword.<p>Be…",
+      "url" : "https://news.ycombinator.com/item?id=43823172",
+      "source" : "HackerNews",
+      "externalId" : "43823172"
+    } ]
+  }, {
+    "pivotDate" : "2025-06-02",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 2.658102766798409,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: RenderDay: A GPU-only render farm for Blender",
+      "date" : "2025-06-09",
+      "summary" : "Hey HN!<p>I recently had to render my first longer Blender animation, and I found myself pretty frustrated with the existing render farms out there. Everything I tried was either buggy, overly complicated (I really don’t want to pick from a huge list of hardware options), or just *really* expensive.…",
+      "url" : "https://renderday.com",
+      "source" : "HackerNews",
+      "externalId" : "44229356"
+    }, {
+      "title" : "Ask HN: Donating as a Small Company/Freelancer?",
+      "date" : "2025-06-03",
+      "summary" : "There as a good Ask HN post about which projects are worth donating to [1] a few days ago. Lots of great suggestions in there.<p>But what are some good ways of &quot;donating&quot; to worthwhile causes as a small company or a freelancer? My accountant won&#x27;t be happy if I just donate money direc…",
+      "url" : "https://news.ycombinator.com/item?id=44174894",
+      "source" : "HackerNews",
+      "externalId" : "44174894"
+    }, {
+      "title" : "Show HN: Is Manual Social Posting Tanking Your Startup's Reach and Sanity?",
+      "date" : "2025-05-28",
+      "summary" : "Hey HN,<p>Vikram here. We all know social media is a necessary beast for getting a startup off the ground. But let&#x27;s be honest, manually managing and scheduling posts across multiple platforms can feel like a one-way ticket to burnout, especially when you&#x27;re bootstrapped and every minute (…",
+      "url" : "https://www.postlayer.co",
+      "source" : "HackerNews",
+      "externalId" : "44113250"
+    } ]
+  }, {
+    "pivotDate" : "2025-07-11",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 0.9601567602874006,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: Tothemoon live crypto countdown tracker",
+      "date" : "2025-07-08",
+      "summary" : "Hey everyone<p>I recently built <a href=\"https:&#x2F;&#x2F;countdowncalendar.io&#x2F;tothemoon&#x2F;crypto&#x2F;btc\" rel=\"nofollow\">https:&#x2F;&#x2F;countdowncalendar.io&#x2F;tothemoon&#x2F;crypto&#x2F;btc</a> — it’s a live crypto countdown tracker you can use for any coin, not just BTC.<p>The idea…",
+      "url" : "https://countdowncalendar.io/tothemoon/crypto/eth",
+      "source" : "HackerNews",
+      "externalId" : "44502958"
+    }, {
+      "title" : "Ask HN: How do I get traffic and distribution for my app cheaply?",
+      "date" : "2025-07-11",
+      "summary" : "We built a SaaS. There are enough competition and people are making millions in our vertical. We confirmed demand and have sold subset of features and made probably $500.<p>However, our website and app have no almost traffic. The money we made was from single platform that has shutdown now. So we do…",
+      "url" : "https://news.ycombinator.com/item?id=44529977",
+      "source" : "HackerNews",
+      "externalId" : "44529977"
+    }, {
+      "title" : "Show HN: I rebuilt few years old project and now it covers my expenses",
+      "date" : "2025-07-10",
+      "summary" : "Hey HN,<p>A few years ago, when I was working as a freelance web developer, there were many projects that used repetitive layouts and designs<p>That&#x27;s when I built my own collection of basic UI components like buttons and all. At that time, I was using CSS, so I styled my components using CSS. …",
+      "url" : "https://www.hextaui.com/",
+      "source" : "HackerNews",
+      "externalId" : "44521204"
+    } ]
+  }, {
+    "pivotDate" : "2025-07-30",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.7273469387755203,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: Smarter Gold and Silver Investing, Powered by AI",
+      "date" : "2025-07-24",
+      "summary" : "Hi HN!<p>I built GoldSilver.ai because I believe more people should be thinking about sound money, especially now.<p>Gold just hit an all-time high - but most people missed it. Inflation quietly eats away at savings, and few modern platforms support physical metals or give good insight into mining s…",
+      "url" : "https://goldsilver.ai/",
+      "source" : "HackerNews",
+      "externalId" : "44668959"
+    }, {
+      "title" : "GlobalComix Gold lowers price to $6.99/mo, adds same-day IDW Comics",
+      "date" : "2025-07-26",
+      "summary" : "",
+      "url" : "https://www.comicsbeat.com/globalcomix-gold-membership-idw-comics/",
+      "source" : "HackerNews",
+      "externalId" : "44690368"
+    }, {
+      "title" : "Show HN: GoldNow – Track Gold Prices, SPDR Gold Trust Activity and Market News",
+      "date" : "2025-08-05",
+      "summary" : "I built GoldNow, a mobile app that helps me stay updated on gold prices, commodity markets, and related financial news.<p><a href=\"https:&#x2F;&#x2F;www.goldnow.app\" rel=\"nofollow\">https:&#x2F;&#x2F;www.goldnow.app</a><p>Features:<p>- Live prices for gold, silver, oil, and other commodities<p>- SPDR…",
+      "url" : "https://www.goldnow.app",
+      "source" : "HackerNews",
+      "externalId" : "44798296"
+    } ]
+  }, {
+    "pivotDate" : "2025-10-21",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -6.426888254991936,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "The price of gold is skyrocketing. Why is this, and will it continue",
+      "date" : "2025-10-15",
+      "summary" : "",
+      "url" : "https://theconversation.com/the-price-of-gold-is-skyrocketing-why-is-this-and-will-it-continue-267004",
+      "source" : "HackerNews",
+      "externalId" : "45598420"
+    }, {
+      "title" : "Show HN: AI that uses image context to translate and redraw manga",
+      "date" : "2025-10-27",
+      "summary" : "Hi HN,<p>As a huge manga fan and a translator by training, I&#x27;ve always been in awe of the incredible amount of work that fan translators put in. The process isn&#x27;t just about translation; it involves manually cleaning the original text from the bubbles, redrawing the background art (inpaint…",
+      "url" : "https://www.aifandom.app/home.html",
+      "source" : "HackerNews",
+      "externalId" : "45716885"
+    }, {
+      "title" : "Show HN: FlyingStart – Brandable domain names for indie makers (under $1k)",
+      "date" : "2025-10-22",
+      "summary" : "Hey HN,<p>I built FlyingStart to help indie makers and startup founders launch with a memorable brand identity, without wasting days (or weeks) hunting for a good name that’s actually available.<p>Every name on FlyingStart is unique, brandable, and comes with a matching domain, ready to use out of t…",
+      "url" : "https://www.flyingstart.co/",
+      "source" : "HackerNews",
+      "externalId" : "45669905"
+    } ]
+  }, {
+    "pivotDate" : "2026-06-24",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -3.021308173433679,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "When falling housing prices are good news – and when they're not",
+      "date" : "2026-06-23",
+      "summary" : "",
+      "url" : "https://text.npr.org/g-s1-129339",
+      "source" : "HackerNews",
+      "externalId" : "48646559"
+    }, {
+      "title" : "Show HN: MCP Server for a UK Meat Price Comparison Site",
+      "date" : "2026-06-25",
+      "summary" : "Posted previously about the price scraping site I pulled together that matches meat from a variety of online butchers to an internal shared taxonomy to make it easier to see what&#x27;s actually a good price vs. a temporary price fluctuation.<p>I&#x27;ve now got over a year of data so there are some…",
+      "url" : "https://meat.offer-spider.com",
+      "source" : "HackerNews",
+      "externalId" : "48676707"
+    }, {
+      "title" : "Ask HN: Have the founders of Palentir and Anduril ever read Tolkien?",
+      "date" : "2026-06-29",
+      "summary" : "<i>The Lord of the Rings</i> famously includes very strong thematic critiques of industrialization and technological encroachment into everyday life.[0] Tolkien portrays the titular relics, as well as many of the other magical artifacts in Middle Earth like the palentiri, as tools of evil, destructi…",
+      "url" : "https://news.ycombinator.com/item?id=48715346",
+      "source" : "HackerNews",
+      "externalId" : "48715346"
+    } ]
+  }, {
+    "pivotDate" : "2026-07-16",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.9846918222102938,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Launch HN: Bloomy (YC S26) – AI-powered mastery learning for K-12",
+      "date" : "2026-07-20",
+      "summary" : "Hi HN, I’m Alex Southmayd, the founder of Bloomy (<a href=\"https:&#x2F;&#x2F;bloomylearning.com\">https:&#x2F;&#x2F;bloomylearning.com</a>) – an AI-powered mastery-learning platform for K-12 students. Bloomy provides students with an AI tutor alongside adaptive curriculum (right now Math, English Lan…",
+      "url" : "https://news.ycombinator.com/item?id=48981136",
+      "source" : "HackerNews",
+      "externalId" : "48981136"
+    }, {
+      "title" : "Nvidia RTX 3060 returns to retail 5 years after original launch, priced at $339",
+      "date" : "2026-07-11",
+      "summary" : "",
+      "url" : "https://www.tomshardware.com/pc-components/gpus/legacy-nvidia-rtx-3060-12gb-returns-to-retail-five-years-after-original-launch-priced-at-usd339-resurrected-gpu-strategy-that-jensen-called-a-good-idea-apparently-comes-to-fruition",
+      "source" : "HackerNews",
+      "externalId" : "48874329"
+    }, {
+      "title" : "Show HN: ReadAloud – on-device, podcast-quality text-to-speech in the browser",
+      "date" : "2026-07-15",
+      "summary" : "Hi HN,<p>Dima here. Super excited to launch ReadAloud!<p>We built a Chrome extension that brings state-of-the-art text-to-speech to your browser. (for free!)<p>The existing options forced a bad choice: the browser&#x27;s built-in voices are unlistenable, and the products with good voices charge $29&…",
+      "url" : "https://tryreadaloud.com",
+      "source" : "HackerNews",
+      "externalId" : "48924300"
+    } ]
+  }, {
+    "pivotDate" : "2026-07-28",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.404051997971334,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "Show HN: Zenly – Investment research platform built around a quality/value score",
+      "date" : "2026-07-28",
+      "summary" : "I&#x27;ve spent the past year building what I believe to be a comprehensive investment research and tracking platform. As an avid investor who incorporates a few strategies for investing (index investing, factor tilts, some quality stocks at good valuations, a bit of dividends), I was continuously j…",
+      "url" : "https://zenlyfinancial.com/",
+      "source" : "HackerNews",
+      "externalId" : "49082361"
+    }, {
+      "title" : "Show HN: CheapFoodMap – A map of good meals under $10",
+      "date" : "2026-07-29",
+      "summary" : "I was recently laid off after 18 years, and gave myself 100 days to build soething useful in public. CheapFoodMap is a crowdsourced map of meal under $10, excluding franchises, local good eats only.<p>It&#x27;s inspried by 거지맵 (Begger&#x27;s Map) a Korean crowdsourced map students use to find cheap …",
+      "url" : "https://cheapfoodmap.com/",
+      "source" : "HackerNews",
+      "externalId" : "49100043"
+    }, {
+      "title" : "Show HN: Find undervalued bikes near you with ML",
+      "date" : "2026-07-23",
+      "summary" : "Hi HN-<p>Sharing a project that initially started to help me scratch my itch for carbon bike parts (mountain bike wheels in my case).<p>There&#x27;s lots of different forums for finding used bikes, and even as an experienced cyclist it&#x27;s hard to wade through all of them and compare bikes with c…",
+      "url" : "https://bike.broker",
+      "source" : "HackerNews",
+      "externalId" : "49022946"
+    } ]
+  }, {
+    "pivotDate" : "2026-08-18",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.711509531677724,
+    "volumeSpike" : false,
+    "candidates" : [ {
+      "title" : "LLMs .what do you smoke beforehand?",
+      "date" : "2026-08-18",
+      "summary" : "I know this is going to sound negative, and probably a bit generalist but....seriously, what exactly is the LLM helping you with that is not just purely &quot;time saving&quot; - ie. Actual, novel work.<p>I personally feel like while I cannot prove it, nor want to frankly, that LLMs have been neuter…",
+      "url" : "https://news.ycombinator.com/item?id=49353513",
+      "source" : "HackerNews",
+      "externalId" : "49353513"
+    }, {
+      "title" : "Ask HN: You have model orders of magnitudes faster than transformer, so?",
+      "date" : "2026-08-15",
+      "summary" : "Hypothetically speaking: if you have cpu friendly   ultimate &quot;content generator&quot; what would you do? Not saying it&#x27;s the holy grail btw: so not &quot;break satoshi&#x27;s wallet&quot;, not &quot;cure cancer&quot; or turn mercury -&gt; gold but say it has the power of common gpt 5+ exce…",
+      "url" : "https://news.ycombinator.com/item?id=49311767",
+      "source" : "HackerNews",
+      "externalId" : "49311767"
+    }, {
+      "title" : "Show HN: I built self-hosted deployment automation tool for Windows and IIS",
+      "date" : "2026-08-25",
+      "summary" : "Seven years in the making (I admit that I did get a kid at some point which slowed down progress and brought it to a halt quite a few times), I decided to finaly release it, with a rather drastic change to the now (I believe) generous licensing model.<p>Unlike current major players in this field, I …",
+      "url" : "https://fdeploy.com/",
+      "source" : "HackerNews",
+      "externalId" : "49430259"
+    } ]
+  } ],
+  "marks" : [ {
+    "eventTitle" : "Silver plunges 30% in worst day since 1980, gold tumbles",
+    "eventDate" : "2026-01-30",
+    "url" : "https://www.cnbc.com/2026/01/30/silver-gold-fall-price-usd-dollar-fed-warsh-chair-trump-metals.html",
+    "source" : "HackerNews",
+    "summary" : "Silver plunges 30% in worst day since 1980, gold tumbles",
+    "pivotDate" : "2026-01-30",
+    "pivotType" : "BIG_DOWN",
+    "dayChangePct" : -10.274248840492028,
+    "volumeSpike" : true,
+    "correlation" : 0.8540152584526448,
+    "strength" : "STRONG",
+    "rating" : "BEARISH",
+    "confidence" : 0.8190481615917184,
+    "reasoning" : "规则对齐：拐点 2026-01-30（显著下跌）当日 -10.27%且异常放量，候选窗口内新闻《Silver plunges 30% in worst day since 1980, gold tumbles》（2026-01-30）与行情变化同日发生，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.85。"
+  }, {
+    "eventTitle" : "Show HN: I made that viral AI business card into a product you can buy",
+    "eventDate" : "2025-05-06",
+    "url" : "https://card.quanta.tools",
+    "source" : "HackerNews",
+    "summary" : "fr0gger_ on twitter posted this chatgpt generated business card and people loved it. <a href=\"https:&#x2F;&#x2F;x.com&#x2F;fr0gger_&#x2F;status&#x2F;1916743281339498760\" rel=\"nofollow\">https:&#x2F;&#x…",
+    "pivotDate" : "2025-05-06",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 2.8023983315954126,
+    "volumeSpike" : false,
+    "correlation" : 0.5767066388599236,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.45040128606187,
+    "reasoning" : "规则对齐：拐点 2025-05-06（局部高点）当日 +2.80%，候选窗口内新闻《Show HN: I made that viral AI business card into a product y…》（2025-05-06）与行情变化同日发生，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.58。"
+  }, {
+    "eventTitle" : "Show HN: Tothemoon live crypto countdown tracker",
+    "eventDate" : "2025-07-08",
+    "url" : "https://countdowncalendar.io/tothemoon/crypto/eth",
+    "source" : "HackerNews",
+    "summary" : "Hey everyone<p>I recently built <a href=\"https:&#x2F;&#x2F;countdowncalendar.io&#x2F;tothemoon&#x2F;crypto&#x2F;btc\" rel=\"nofollow\">https:&#x2F;&#x2F;countdowncalendar.io&#x2F;tothemoon&#x2F;crypto&#x…",
+    "pivotDate" : "2025-07-08",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.0443439502879182,
+    "volumeSpike" : false,
+    "correlation" : 0.5724057325047986,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.4180897452581577,
+    "reasoning" : "规则对齐：拐点 2025-07-08（局部低点）当日 -1.04%，候选窗口内新闻《Show HN: Tothemoon live crypto countdown tracker》（2025-07-08）与行情变化同日发生，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.57。"
+  }, {
+    "eventTitle" : "Classic card game Dominion is getting a scary good new AI (2021)",
+    "eventDate" : "2024-02-01",
+    "url" : "https://www.polygon.com/22440924/dominion-app-neural-network-ai-release-date-price",
+    "source" : "HackerNews",
+    "summary" : "Classic card game Dominion is getting a scary good new AI (2021)",
+    "pivotDate" : "2024-02-01",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.0400636773679972,
+    "volumeSpike" : false,
+    "correlation" : 0.5612232835116888,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.4101906930809821,
+    "reasoning" : "规则对齐：拐点 2024-02-01（局部高点）当日 +1.04%，候选窗口内新闻《Classic card game Dominion is getting a scary good new AI (2…》（2024-02-01）与行情变化同日发生，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.56。"
+  }, {
+    "eventTitle" : "Ask HN: What happens when AI-voice becomes good enough?",
+    "eventDate" : "2026-06-12",
+    "url" : "https://news.ycombinator.com/item?id=48507696",
+    "source" : "HackerNews",
+    "summary" : "I fell into the rabbit hole of TTS models lately. Tried all major paid tools (ElevenLabs&#x2F;InWorld&#x2F;etc.), and all the newest open-source models.<p>I started asking myself: what happens when th…",
+    "pivotDate" : "2026-06-10",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.14555504375863,
+    "volumeSpike" : false,
+    "correlation" : 0.5229814729515327,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.4351796151287167,
+    "reasoning" : "规则对齐：拐点 2026-06-10（局部低点）当日 -4.15%，候选窗口内新闻《Ask HN: What happens when AI-voice becomes good enough?》（2026-06-12）与行情变化相距 2 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.52。"
+  }, {
+    "eventTitle" : "Kia EV6 review: a gold star electric vehicle",
+    "eventDate" : "2022-03-10",
+    "url" : "https://www.theverge.com/22960060/kia-ev6-review-electric-specs-price",
+    "source" : "HackerNews",
+    "summary" : "Kia EV6 review: a gold star electric vehicle",
+    "pivotDate" : "2022-03-08",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 2.7359047261412917,
+    "volumeSpike" : false,
+    "correlation" : 0.5105984121023549,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.4030173005740033,
+    "reasoning" : "规则对齐：拐点 2022-03-08（局部高点）当日 +2.74%，候选窗口内新闻《Kia EV6 review: a gold star electric vehicle》（2022-03-10）与行情变化相距 2 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.51。"
+  }, {
+    "eventTitle" : "Silver plunges 30% in worst day since 1980, gold tumbles",
+    "eventDate" : "2026-01-30",
+    "url" : "https://www.cnbc.com/2026/01/30/silver-gold-fall-price-usd-dollar-fed-warsh-chair-trump-metals.html",
+    "source" : "HackerNews",
+    "summary" : "Silver plunges 30% in worst day since 1980, gold tumbles",
+    "pivotDate" : "2026-02-03",
+    "pivotType" : "BIG_UP",
+    "dayChangePct" : 6.35871982768712,
+    "volumeSpike" : false,
+    "correlation" : 0.5087564415725631,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.4621081728955794,
+    "reasoning" : "规则对齐：拐点 2026-02-03（显著上涨）当日 +6.36%，候选窗口内新闻《Silver plunges 30% in worst day since 1980, gold tumbles》（2026-01-30）与行情变化相距 -4 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.51。"
+  }, {
+    "eventTitle" : "Show HN: I made an AI task scheduling app",
+    "eventDate" : "2026-05-02",
+    "url" : "https://apps.apple.com/us/app/taskmaster-ai-assistant/id6761262496",
+    "source" : "HackerNews",
+    "summary" : "I just wanted to have an AI do research for me so I don&#x27;t waste time on it. You can leverage your time by letting the AI search and evaluate your favorite stocks price every morning, searching fo…",
+    "pivotDate" : "2026-05-04",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -2.0015123588071337,
+    "volumeSpike" : false,
+    "correlation" : 0.4921085393134522,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.3778345168328688,
+    "reasoning" : "规则对齐：拐点 2026-05-04（局部低点）当日 -2.00%，候选窗口内新闻《Show HN: I made an AI task scheduling app》（2026-05-02）与行情变化相距 -2 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.49。"
+  }, {
+    "eventTitle" : "As energy prices soar, the Bitcoin miners may find they have struck fool’s gold",
+    "eventDate" : "2022-06-11",
+    "url" : "https://www.theguardian.com/commentisfree/2022/jun/11/as-energy-prices-soar-the-bitcoin-miners-may-find-they-have-struck-fools-gold",
+    "source" : "HackerNews",
+    "summary" : "As energy prices soar, the Bitcoin miners may find they have struck fool’s gold",
+    "pivotDate" : "2022-06-10",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.3412297509144855,
+    "volumeSpike" : false,
+    "correlation" : 0.48735382918190806,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.3635015096092437,
+    "reasoning" : "规则对齐：拐点 2022-06-10（局部高点）当日 +1.34%，候选窗口内新闻《As energy prices soar, the Bitcoin miners may find they have…》（2022-06-11）与行情变化相距 1 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.49。"
+  }, {
+    "eventTitle" : "Show HN: Find Domains Fast (Prices, SEO, AI and Alerts)",
+    "eventDate" : "2024-12-20",
+    "url" : "https://www.indomain.co",
+    "source" : "HackerNews",
+    "summary" : "After being frustrated for years with existing solutions, I&#x27;m working on a new domain finder.<p>The idea is to combine everything I was missing: instant speed, good design, multiple extensions (w…",
+    "pivotDate" : "2024-12-18",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.9185045502992604,
+    "volumeSpike" : false,
+    "correlation" : 0.48586396472720983,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.37207985114736786,
+    "reasoning" : "规则对齐：拐点 2024-12-18（局部低点）当日 -1.92%，候选窗口内新闻《Show HN: Find Domains Fast (Prices, SEO, AI and Alerts)》（2024-12-20）与行情变化相距 2 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.49。"
+  }, {
+    "eventTitle" : "Show HN: Get AI job tools and Premium Perks at RemotelyGood.us",
+    "eventDate" : "2025-11-02",
+    "url" : "https://remotelygood.us",
+    "source" : "HackerNews",
+    "summary" : "Hey everyone!<p>My name is Theresa and I am the founder of RemotelyGood.us, an AI-powered job board for remote social impact careers.<p>I updated the site and would love your feedback! I&#x27;ll be in…",
+    "pivotDate" : "2025-11-04",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.7517218938120194,
+    "volumeSpike" : false,
+    "correlation" : 0.479195364896867,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.36463212032467385,
+    "reasoning" : "规则对齐：拐点 2025-11-04（局部低点）当日 -1.75%，候选窗口内新闻《Show HN: Get AI job tools and Premium Perks at RemotelyGood.…》（2025-11-02）与行情变化相距 -2 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.48。"
+  }, {
+    "eventTitle" : "2023 Hyundai Ioniq 6 First Drive: Effortlessly Good, Near-Slam Dunk on Tesla",
+    "eventDate" : "2023-04-03",
+    "url" : "https://www.thedrive.com/car-reviews/hyundai-ioniq-6-first-drive-review-specs-price-options-impressions",
+    "source" : "HackerNews",
+    "summary" : "2023 Hyundai Ioniq 6 First Drive: Effortlessly Good, Near-Slam Dunk on Tesla",
+    "pivotDate" : "2023-04-04",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.8640945052563085,
+    "volumeSpike" : false,
+    "correlation" : 0.4752349084209384,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.3637326776489287,
+    "reasoning" : "规则对齐：拐点 2023-04-04（局部高点）当日 +1.86%，候选窗口内新闻《2023 Hyundai Ioniq 6 First Drive: Effortlessly Good, Near-Sl…》（2023-04-03）与行情变化相距 -1 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.48。"
+  }, {
+    "eventTitle" : "Gold Standard Dropped Temporarily to Aid Prices and Our World Position (1933)",
+    "eventDate" : "2023-01-30",
+    "url" : "https://mitchellarchives.com/us-goes-off-the-gold-standard.htm",
+    "source" : "HackerNews",
+    "summary" : "Gold Standard Dropped Temporarily to Aid Prices and Our World Position (1933)",
+    "pivotDate" : "2023-02-01",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.259684521487081,
+    "volumeSpike" : false,
+    "correlation" : 0.47099474202478464,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.3506910614421339,
+    "reasoning" : "规则对齐：拐点 2023-02-01（局部高点）当日 +1.26%，候选窗口内新闻《Gold Standard Dropped Temporarily to Aid Prices and Our Worl…》（2023-01-30）与行情变化相距 -2 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.47。"
+  }, {
+    "eventTitle" : "Silver plunges 30% in worst day since 1980, gold tumbles",
+    "eventDate" : "2026-01-30",
+    "url" : "https://www.cnbc.com/2026/01/30/silver-gold-fall-price-usd-dollar-fed-warsh-chair-trump-metals.html",
+    "source" : "HackerNews",
+    "summary" : "Silver plunges 30% in worst day since 1980, gold tumbles",
+    "pivotDate" : "2026-02-02",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.004944375772556,
+    "volumeSpike" : false,
+    "correlation" : 0.46952685070732025,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.39541786842466675,
+    "reasoning" : "规则对齐：拐点 2026-02-02（局部低点）当日 -4.00%，候选窗口内新闻《Silver plunges 30% in worst day since 1980, gold tumbles》（2026-01-30）与行情变化相距 -3 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.47。"
+  }, {
+    "eventTitle" : "The price of gold is skyrocketing. Why is this, and will it continue",
+    "eventDate" : "2025-10-15",
+    "url" : "https://theconversation.com/the-price-of-gold-is-skyrocketing-why-is-this-and-will-it-continue-267004",
+    "source" : "HackerNews",
+    "summary" : "The price of gold is skyrocketing. Why is this, and will it continue",
+    "pivotDate" : "2025-10-20",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 3.6401964060772674,
+    "volumeSpike" : false,
+    "correlation" : 0.4356699401012878,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.3656388981721892,
+    "reasoning" : "规则对齐：拐点 2025-10-20（局部高点）当日 +3.64%，候选窗口内新闻《The price of gold is skyrocketing. Why is this, and will it …》（2025-10-15）与行情变化相距 -5 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.44。"
+  }, {
+    "eventTitle" : "Gold prices are hitting records",
+    "eventDate" : "2023-12-06",
+    "url" : "https://www.wsj.com/finance/commodities-futures/why-gold-prices-are-hitting-records-5772ec5f",
+    "source" : "HackerNews",
+    "summary" : "Gold prices are hitting records",
+    "pivotDate" : "2023-12-01",
+    "pivotType" : "LOCAL_TOP",
+    "dayChangePct" : 1.7271523178807868,
+    "volumeSpike" : false,
+    "correlation" : 0.42378587196467976,
+    "strength" : "MODERATE",
+    "rating" : "BULLISH",
+    "confidence" : 0.32543598233995563,
+    "reasoning" : "规则对齐：拐点 2023-12-01（局部高点）当日 +1.73%，候选窗口内新闻《Gold prices are hitting records》（2023-12-06）与行情变化相距 5 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.42。"
+  }, {
+    "eventTitle" : "Ask HN: Does OpenAI make a profit on GPT-3.5-turbo API?",
+    "eventDate" : "2023-06-02",
+    "url" : "https://news.ycombinator.com/item?id=36162923",
+    "source" : "HackerNews",
+    "summary" : "Like many, I&#x27;m using the OpenAI API in my product and I&#x27;ve noticed that gpt-3.5-turbo offers very good value for money relative to the other models.<p>My main concern is that OpenAI might be…",
+    "pivotDate" : "2023-06-07",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.2010529779532764,
+    "volumeSpike" : false,
+    "correlation" : 0.4086539132689182,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.30607528892079733,
+    "reasoning" : "规则对齐：拐点 2023-06-07（局部低点）当日 -1.20%，候选窗口内新闻《Ask HN: Does OpenAI make a profit on GPT-3.5-turbo API?》（2023-06-02）与行情变化相距 -5 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.41。"
+  }, {
+    "eventTitle" : "Kia EV6 review: a gold star electric vehicle",
+    "eventDate" : "2022-03-10",
+    "url" : "https://www.theverge.com/22960060/kia-ev6-review-electric-specs-price",
+    "source" : "HackerNews",
+    "summary" : "Kia EV6 review: a gold star electric vehicle",
+    "pivotDate" : "2022-03-15",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.870543060888663,
+    "volumeSpike" : false,
+    "correlation" : 0.40617571768147764,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.31549872005851204,
+    "reasoning" : "规则对齐：拐点 2022-03-15（局部低点）当日 -1.87%，候选窗口内新闻《Kia EV6 review: a gold star electric vehicle》（2022-03-10）与行情变化相距 -5 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.41。"
+  }, {
+    "eventTitle" : "China Is Buying Gold Like There's No Tomorrow",
+    "eventDate" : "2024-05-05",
+    "url" : "https://www.nytimes.com/2024/05/05/business/china-gold-price.html",
+    "source" : "HackerNews",
+    "summary" : "China Is Buying Gold Like There's No Tomorrow",
+    "pivotDate" : "2024-04-30",
+    "pivotType" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.9937089462484958,
+    "volumeSpike" : false,
+    "correlation" : 0.4019784824374749,
+    "strength" : "MODERATE",
+    "rating" : "BEARISH",
+    "confidence" : 0.31461342014370736,
+    "reasoning" : "规则对齐：拐点 2024-04-30（局部低点）当日 -1.99%，候选窗口内新闻《China Is Buying Gold Like There's No Tomorrow》（2024-05-05）与行情变化相距 5 天，按时间窗吻合度为主、关键词重合度为辅给出关联度 0.40。"
+  } ]
+}

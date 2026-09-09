@@ -1,0 +1,946 @@
+{
+  "symbol" : "NVDA",
+  "generatedAt" : "2026-09-09",
+  "pivotCount" : 291,
+  "pivots" : [ {
+    "date" : "2021-11-04",
+    "type" : "BIG_UP",
+    "dayChangePct" : 12.042258816452357,
+    "volumeSpike" : true,
+    "windowStart" : "2021-10-28",
+    "windowEnd" : "2021-11-11"
+  }, {
+    "date" : "2021-11-18",
+    "type" : "BIG_UP",
+    "dayChangePct" : 8.249888930658544,
+    "volumeSpike" : false,
+    "windowStart" : "2021-11-11",
+    "windowEnd" : "2021-11-26"
+  }, {
+    "date" : "2021-12-07",
+    "type" : "BIG_UP",
+    "dayChangePct" : 7.956853214368942,
+    "volumeSpike" : false,
+    "windowStart" : "2021-11-30",
+    "windowEnd" : "2021-12-14"
+  }, {
+    "date" : "2022-02-15",
+    "type" : "BIG_UP",
+    "dayChangePct" : 9.181192566036177,
+    "volumeSpike" : false,
+    "windowStart" : "2022-02-08",
+    "windowEnd" : "2022-02-23"
+  }, {
+    "date" : "2022-03-15",
+    "type" : "BIG_UP",
+    "dayChangePct" : 7.70276605719642,
+    "volumeSpike" : false,
+    "windowStart" : "2022-03-08",
+    "windowEnd" : "2022-03-22"
+  }, {
+    "date" : "2022-03-24",
+    "type" : "BIG_UP",
+    "dayChangePct" : 9.815089334477655,
+    "volumeSpike" : false,
+    "windowStart" : "2022-03-17",
+    "windowEnd" : "2022-03-31"
+  }, {
+    "date" : "2022-05-09",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -9.236947791164663,
+    "volumeSpike" : false,
+    "windowStart" : "2022-05-02",
+    "windowEnd" : "2022-05-16"
+  }, {
+    "date" : "2022-05-13",
+    "type" : "BIG_UP",
+    "dayChangePct" : 9.465224111282833,
+    "volumeSpike" : false,
+    "windowStart" : "2022-05-06",
+    "windowEnd" : "2022-05-20"
+  }, {
+    "date" : "2022-06-13",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -7.817839047955699,
+    "volumeSpike" : false,
+    "windowStart" : "2022-06-06",
+    "windowEnd" : "2022-06-21"
+  }, {
+    "date" : "2022-08-26",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -9.22793501925977,
+    "volumeSpike" : false,
+    "windowStart" : "2022-08-19",
+    "windowEnd" : "2022-09-02"
+  }, {
+    "date" : "2022-09-01",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -7.665297469193044,
+    "volumeSpike" : false,
+    "windowStart" : "2022-08-25",
+    "windowEnd" : "2022-09-09"
+  }, {
+    "date" : "2022-09-13",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -9.472595656670112,
+    "volumeSpike" : false,
+    "windowStart" : "2022-09-06",
+    "windowEnd" : "2022-09-20"
+  }, {
+    "date" : "2022-10-07",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -8.027418126428032,
+    "volumeSpike" : false,
+    "windowStart" : "2022-09-30",
+    "windowEnd" : "2022-10-14"
+  }, {
+    "date" : "2022-11-10",
+    "type" : "BIG_UP",
+    "dayChangePct" : 14.32926829268293,
+    "volumeSpike" : false,
+    "windowStart" : "2022-11-03",
+    "windowEnd" : "2022-11-17"
+  }, {
+    "date" : "2022-11-30",
+    "type" : "BIG_UP",
+    "dayChangePct" : 8.210243621714941,
+    "volumeSpike" : false,
+    "windowStart" : "2022-11-22",
+    "windowEnd" : "2022-12-07"
+  }, {
+    "date" : "2023-01-23",
+    "type" : "BIG_UP",
+    "dayChangePct" : 7.590111553338197,
+    "volumeSpike" : false,
+    "windowStart" : "2023-01-13",
+    "windowEnd" : "2023-01-30"
+  }, {
+    "date" : "2023-02-01",
+    "type" : "BIG_UP",
+    "dayChangePct" : 7.196601320571228,
+    "volumeSpike" : false,
+    "windowStart" : "2023-01-25",
+    "windowEnd" : "2023-02-08"
+  }, {
+    "date" : "2023-02-23",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 14.021393466319743,
+    "volumeSpike" : false,
+    "windowStart" : "2023-02-15",
+    "windowEnd" : "2023-03-02"
+  }, {
+    "date" : "2023-05-25",
+    "type" : "BIG_UP",
+    "dayChangePct" : 24.369637828279522,
+    "volumeSpike" : true,
+    "windowStart" : "2023-05-18",
+    "windowEnd" : "2023-06-02"
+  }, {
+    "date" : "2023-05-31",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -5.676747027000095,
+    "volumeSpike" : false,
+    "windowStart" : "2023-05-23",
+    "windowEnd" : "2023-06-07"
+  }, {
+    "date" : "2023-06-01",
+    "type" : "BIG_UP",
+    "dayChangePct" : 5.11709044774542,
+    "volumeSpike" : false,
+    "windowStart" : "2023-05-24",
+    "windowEnd" : "2023-06-08"
+  }, {
+    "date" : "2023-08-14",
+    "type" : "BIG_UP",
+    "dayChangePct" : 7.093379023375346,
+    "volumeSpike" : false,
+    "windowStart" : "2023-08-07",
+    "windowEnd" : "2023-08-21"
+  }, {
+    "date" : "2023-08-21",
+    "type" : "BIG_UP",
+    "dayChangePct" : 8.471327282385266,
+    "volumeSpike" : false,
+    "windowStart" : "2023-08-14",
+    "windowEnd" : "2023-08-28"
+  }, {
+    "date" : "2024-01-08",
+    "type" : "BIG_UP",
+    "dayChangePct" : 6.428091329409136,
+    "volumeSpike" : false,
+    "windowStart" : "2023-12-29",
+    "windowEnd" : "2024-01-16"
+  }, {
+    "date" : "2024-02-22",
+    "type" : "BIG_UP",
+    "dayChangePct" : 16.400877400995938,
+    "volumeSpike" : false,
+    "windowStart" : "2024-02-14",
+    "windowEnd" : "2024-02-29"
+  }, {
+    "date" : "2024-03-12",
+    "type" : "BIG_UP",
+    "dayChangePct" : 7.157180497586668,
+    "volumeSpike" : false,
+    "windowStart" : "2024-03-05",
+    "windowEnd" : "2024-03-19"
+  }, {
+    "date" : "2024-04-19",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -10.0046060634692,
+    "volumeSpike" : false,
+    "windowStart" : "2024-04-12",
+    "windowEnd" : "2024-04-26"
+  }, {
+    "date" : "2024-05-23",
+    "type" : "BIG_UP",
+    "dayChangePct" : 9.319641916798327,
+    "volumeSpike" : false,
+    "windowStart" : "2024-05-16",
+    "windowEnd" : "2024-05-31"
+  }, {
+    "date" : "2024-05-28",
+    "type" : "BIG_UP",
+    "dayChangePct" : 6.980435619757852,
+    "volumeSpike" : false,
+    "windowStart" : "2024-05-20",
+    "windowEnd" : "2024-06-04"
+  }, {
+    "date" : "2024-07-31",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 12.812108358237717,
+    "volumeSpike" : false,
+    "windowStart" : "2024-07-24",
+    "windowEnd" : "2024-08-07"
+  }, {
+    "date" : "2024-09-03",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -9.525006282985682,
+    "volumeSpike" : false,
+    "windowStart" : "2024-08-26",
+    "windowEnd" : "2024-09-10"
+  }, {
+    "date" : "2024-09-11",
+    "type" : "BIG_UP",
+    "dayChangePct" : 8.149861239592981,
+    "volumeSpike" : false,
+    "windowStart" : "2024-09-04",
+    "windowEnd" : "2024-09-18"
+  }, {
+    "date" : "2024-10-15",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.686028825957845,
+    "volumeSpike" : false,
+    "windowStart" : "2024-10-08",
+    "windowEnd" : "2024-10-22"
+  }, {
+    "date" : "2024-10-31",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.72226209272284,
+    "volumeSpike" : false,
+    "windowStart" : "2024-10-24",
+    "windowEnd" : "2024-11-07"
+  }, {
+    "date" : "2025-01-27",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -16.968167157481417,
+    "volumeSpike" : true,
+    "windowStart" : "2025-01-17",
+    "windowEnd" : "2025-02-03"
+  }, {
+    "date" : "2025-01-28",
+    "type" : "BIG_UP",
+    "dayChangePct" : 8.925857118729951,
+    "volumeSpike" : false,
+    "windowStart" : "2025-01-21",
+    "windowEnd" : "2025-02-04"
+  }, {
+    "date" : "2025-03-03",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -8.69356388088377,
+    "volumeSpike" : false,
+    "windowStart" : "2025-02-24",
+    "windowEnd" : "2025-03-10"
+  }, {
+    "date" : "2025-04-03",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -7.8065567831914535,
+    "volumeSpike" : false,
+    "windowStart" : "2025-03-27",
+    "windowEnd" : "2025-04-10"
+  }, {
+    "date" : "2025-04-04",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -7.357563850687621,
+    "volumeSpike" : false,
+    "windowStart" : "2025-03-28",
+    "windowEnd" : "2025-04-11"
+  }, {
+    "date" : "2025-04-09",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 18.722741433021817,
+    "volumeSpike" : false,
+    "windowStart" : "2025-04-02",
+    "windowEnd" : "2025-04-16"
+  }, {
+    "date" : "2025-11-10",
+    "type" : "BIG_UP",
+    "dayChangePct" : 5.793250066436362,
+    "volumeSpike" : false,
+    "windowStart" : "2025-11-03",
+    "windowEnd" : "2025-11-17"
+  }, {
+    "date" : "2026-02-06",
+    "type" : "BIG_UP",
+    "dayChangePct" : 7.871771003025363,
+    "volumeSpike" : false,
+    "windowStart" : "2026-01-30",
+    "windowEnd" : "2026-02-13"
+  }, {
+    "date" : "2026-02-26",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -5.456125997136441,
+    "volumeSpike" : false,
+    "windowStart" : "2026-02-19",
+    "windowEnd" : "2026-03-05"
+  }, {
+    "date" : "2026-03-31",
+    "type" : "BIG_UP",
+    "dayChangePct" : 5.588181873221543,
+    "volumeSpike" : false,
+    "windowStart" : "2026-03-24",
+    "windowEnd" : "2026-04-08"
+  }, {
+    "date" : "2026-05-06",
+    "type" : "BIG_UP",
+    "dayChangePct" : 5.765903307888043,
+    "volumeSpike" : false,
+    "windowStart" : "2026-04-29",
+    "windowEnd" : "2026-05-13"
+  }, {
+    "date" : "2026-06-01",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 6.261248460736968,
+    "volumeSpike" : false,
+    "windowStart" : "2026-05-22",
+    "windowEnd" : "2026-06-08"
+  }, {
+    "date" : "2026-06-05",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -6.201408579529866,
+    "volumeSpike" : false,
+    "windowStart" : "2026-05-29",
+    "windowEnd" : "2026-06-12"
+  }, {
+    "date" : "2026-08-27",
+    "type" : "BIG_UP",
+    "dayChangePct" : 8.737956691786696,
+    "volumeSpike" : false,
+    "windowStart" : "2026-08-20",
+    "windowEnd" : "2026-09-03"
+  } ],
+  "segmentCount" : 86,
+  "segments" : [ {
+    "startDate" : "2021-09-23",
+    "endDate" : "2021-10-04",
+    "label" : "DOWN",
+    "startPrice" : 22.482,
+    "endPrice" : 19.732,
+    "maxDrawdownPct" : 12.23200782848501
+  }, {
+    "startDate" : "2021-10-04",
+    "endDate" : "2021-11-29",
+    "label" : "UP",
+    "startPrice" : 19.732,
+    "endPrice" : 33.376,
+    "maxDrawdownPct" : 5.009089728606671
+  }, {
+    "startDate" : "2021-11-29",
+    "endDate" : "2021-12-13",
+    "label" : "DOWN",
+    "startPrice" : 33.376,
+    "endPrice" : 28.161,
+    "maxDrawdownPct" : 15.62499999999999
+  }, {
+    "startDate" : "2021-12-13",
+    "endDate" : "2021-12-15",
+    "label" : "UP",
+    "startPrice" : 28.161,
+    "endPrice" : 30.458999999999996,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2021-12-15",
+    "endDate" : "2021-12-20",
+    "label" : "DOWN",
+    "startPrice" : 30.458999999999996,
+    "endPrice" : 27.719,
+    "maxDrawdownPct" : 8.995699136544191
+  }, {
+    "startDate" : "2021-12-20",
+    "endDate" : "2021-12-27",
+    "label" : "UP",
+    "startPrice" : 27.719,
+    "endPrice" : 30.945,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2021-12-27",
+    "endDate" : "2022-01-27",
+    "label" : "DOWN",
+    "startPrice" : 30.945,
+    "endPrice" : 21.944,
+    "maxDrawdownPct" : 29.087089998384236
+  }, {
+    "startDate" : "2022-01-27",
+    "endDate" : "2022-02-09",
+    "label" : "UP",
+    "startPrice" : 21.944,
+    "endPrice" : 26.705000000000002,
+    "maxDrawdownPct" : 5.126376673797627
+  }, {
+    "startDate" : "2022-02-09",
+    "endDate" : "2022-02-11",
+    "label" : "DOWN",
+    "startPrice" : 26.705000000000002,
+    "endPrice" : 23.949,
+    "maxDrawdownPct" : 10.320164763152968
+  }, {
+    "startDate" : "2022-02-11",
+    "endDate" : "2022-02-16",
+    "label" : "UP",
+    "startPrice" : 23.949,
+    "endPrice" : 26.511000000000003,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2022-02-16",
+    "endDate" : "2022-02-23",
+    "label" : "DOWN",
+    "startPrice" : 26.511000000000003,
+    "endPrice" : 22.387,
+    "maxDrawdownPct" : 15.555807023499687
+  }, {
+    "startDate" : "2022-02-23",
+    "endDate" : "2022-02-28",
+    "label" : "UP",
+    "startPrice" : 22.387,
+    "endPrice" : 24.384999999999998,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2022-02-28",
+    "endDate" : "2022-03-14",
+    "label" : "DOWN",
+    "startPrice" : 24.384999999999998,
+    "endPrice" : 21.330000000000002,
+    "maxDrawdownPct" : 12.528193561615733
+  }, {
+    "startDate" : "2022-03-14",
+    "endDate" : "2022-03-29",
+    "label" : "UP",
+    "startPrice" : 21.330000000000002,
+    "endPrice" : 28.656,
+    "maxDrawdownPct" : 4.114610608214265
+  }, {
+    "startDate" : "2022-03-29",
+    "endDate" : "2022-04-27",
+    "label" : "DOWN",
+    "startPrice" : 28.656,
+    "endPrice" : 18.415,
+    "maxDrawdownPct" : 35.73771635957566
+  }, {
+    "startDate" : "2022-04-27",
+    "endDate" : "2022-05-04",
+    "label" : "UP",
+    "startPrice" : 18.415,
+    "endPrice" : 20.334,
+    "maxDrawdownPct" : 6.2430492366798065
+  }, {
+    "startDate" : "2022-05-04",
+    "endDate" : "2022-05-12",
+    "label" : "DOWN",
+    "startPrice" : 20.334,
+    "endPrice" : 16.175,
+    "maxDrawdownPct" : 20.453427756466997
+  }, {
+    "startDate" : "2022-05-12",
+    "endDate" : "2022-05-17",
+    "label" : "UP",
+    "startPrice" : 16.175,
+    "endPrice" : 18.177,
+    "maxDrawdownPct" : 2.496328928046991
+  }, {
+    "startDate" : "2022-05-17",
+    "endDate" : "2022-05-24",
+    "label" : "DOWN",
+    "startPrice" : 18.177,
+    "endPrice" : 16.154,
+    "maxDrawdownPct" : 11.129449304065577
+  }, {
+    "startDate" : "2022-05-24",
+    "endDate" : "2022-06-02",
+    "label" : "UP",
+    "startPrice" : 16.154,
+    "endPrice" : 19.592,
+    "maxDrawdownPct" : 2.610174897666257
+  }, {
+    "startDate" : "2022-06-02",
+    "endDate" : "2022-06-16",
+    "label" : "DOWN",
+    "startPrice" : 19.592,
+    "endPrice" : 15.600999999999999,
+    "maxDrawdownPct" : 20.370559412004898
+  }, {
+    "startDate" : "2022-06-16",
+    "endDate" : "2022-06-24",
+    "label" : "UP",
+    "startPrice" : 15.600999999999999,
+    "endPrice" : 17.125999999999998,
+    "maxDrawdownPct" : 2.058432934926944
+  }, {
+    "startDate" : "2022-06-24",
+    "endDate" : "2022-07-01",
+    "label" : "DOWN",
+    "startPrice" : 17.125999999999998,
+    "endPrice" : 14.523,
+    "maxDrawdownPct" : 15.199112460586234
+  }, {
+    "startDate" : "2022-07-01",
+    "endDate" : "2022-07-21",
+    "label" : "UP",
+    "startPrice" : 14.523,
+    "endPrice" : 18.05,
+    "maxDrawdownPct" : 4.893429184008082
+  }, {
+    "startDate" : "2022-07-21",
+    "endDate" : "2022-07-26",
+    "label" : "DOWN",
+    "startPrice" : 18.05,
+    "endPrice" : 16.533,
+    "maxDrawdownPct" : 8.404432132963986
+  }, {
+    "startDate" : "2022-07-26",
+    "endDate" : "2022-08-04",
+    "label" : "UP",
+    "startPrice" : 16.533,
+    "endPrice" : 19.215,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2022-08-04",
+    "endDate" : "2022-08-09",
+    "label" : "DOWN",
+    "startPrice" : 19.215,
+    "endPrice" : 17.086000000000002,
+    "maxDrawdownPct" : 11.079885506115003
+  }, {
+    "startDate" : "2022-08-09",
+    "endDate" : "2022-08-15",
+    "label" : "UP",
+    "startPrice" : 17.086000000000002,
+    "endPrice" : 19.032,
+    "maxDrawdownPct" : 0.856495551748915
+  }, {
+    "startDate" : "2022-08-15",
+    "endDate" : "2022-09-30",
+    "label" : "DOWN",
+    "startPrice" : 19.032,
+    "endPrice" : 12.139,
+    "maxDrawdownPct" : 36.21794871794872
+  }, {
+    "startDate" : "2022-09-30",
+    "endDate" : "2022-10-05",
+    "label" : "UP",
+    "startPrice" : 12.139,
+    "endPrice" : 13.209,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2022-10-05",
+    "endDate" : "2022-10-14",
+    "label" : "DOWN",
+    "startPrice" : 13.209,
+    "endPrice" : 11.227,
+    "maxDrawdownPct" : 15.004920887273823
+  }, {
+    "startDate" : "2022-10-14",
+    "endDate" : "2022-11-15",
+    "label" : "UP",
+    "startPrice" : 11.227,
+    "endPrice" : 16.666,
+    "maxDrawdownPct" : 5.6567593480345195
+  }, {
+    "startDate" : "2022-11-15",
+    "endDate" : "2022-11-21",
+    "label" : "DOWN",
+    "startPrice" : 16.666,
+    "endPrice" : 15.316999999999998,
+    "maxDrawdownPct" : 8.094323772950931
+  }, {
+    "startDate" : "2022-11-21",
+    "endDate" : "2022-12-13",
+    "label" : "UP",
+    "startPrice" : 15.316999999999998,
+    "endPrice" : 18.072,
+    "maxDrawdownPct" : 6.69973737963232
+  }, {
+    "startDate" : "2022-12-13",
+    "endDate" : "2022-12-28",
+    "label" : "DOWN",
+    "startPrice" : 18.072,
+    "endPrice" : 14.036000000000001,
+    "maxDrawdownPct" : 22.332890659583875
+  }, {
+    "startDate" : "2022-12-28",
+    "endDate" : "2023-02-14",
+    "label" : "UP",
+    "startPrice" : 14.036000000000001,
+    "endPrice" : 22.971,
+    "maxDrawdownPct" : 5.907193714706619
+  }, {
+    "startDate" : "2023-02-14",
+    "endDate" : "2023-02-21",
+    "label" : "DOWN",
+    "startPrice" : 22.971,
+    "endPrice" : 20.655,
+    "maxDrawdownPct" : 10.082277654433847
+  }, {
+    "startDate" : "2023-02-21",
+    "endDate" : "2023-07-18",
+    "label" : "UP",
+    "startPrice" : 20.655,
+    "endPrice" : 47.494,
+    "maxDrawdownPct" : 7.249817384952524
+  }, {
+    "startDate" : "2023-07-18",
+    "endDate" : "2023-08-11",
+    "label" : "DOWN",
+    "startPrice" : 47.494,
+    "endPrice" : 40.855000000000004,
+    "maxDrawdownPct" : 13.9786078241462
+  }, {
+    "startDate" : "2023-08-11",
+    "endDate" : "2023-08-31",
+    "label" : "UP",
+    "startPrice" : 40.855000000000004,
+    "endPrice" : 49.355000000000004,
+    "maxDrawdownPct" : 2.7657717120531427
+  }, {
+    "startDate" : "2023-08-31",
+    "endDate" : "2023-09-21",
+    "label" : "DOWN",
+    "startPrice" : 49.355000000000004,
+    "endPrice" : 41.017,
+    "maxDrawdownPct" : 16.893931719177388
+  }, {
+    "startDate" : "2023-09-21",
+    "endDate" : "2023-10-12",
+    "label" : "UP",
+    "startPrice" : 41.017,
+    "endPrice" : 46.945,
+    "maxDrawdownPct" : 2.824795676834428
+  }, {
+    "startDate" : "2023-10-12",
+    "endDate" : "2023-10-26",
+    "label" : "DOWN",
+    "startPrice" : 46.945,
+    "endPrice" : 40.326,
+    "maxDrawdownPct" : 14.099478112685057
+  }, {
+    "startDate" : "2023-10-26",
+    "endDate" : "2023-11-20",
+    "label" : "UP",
+    "startPrice" : 40.326,
+    "endPrice" : 50.409,
+    "maxDrawdownPct" : 1.5466408893185128
+  }, {
+    "startDate" : "2023-11-20",
+    "endDate" : "2023-12-06",
+    "label" : "DOWN",
+    "startPrice" : 50.409,
+    "endPrice" : 45.503,
+    "maxDrawdownPct" : 9.732389057509568
+  }, {
+    "startDate" : "2023-12-06",
+    "endDate" : "2024-02-14",
+    "label" : "UP",
+    "startPrice" : 45.503,
+    "endPrice" : 73.9,
+    "maxDrawdownPct" : 5.008287237654004
+  }, {
+    "startDate" : "2024-02-14",
+    "endDate" : "2024-02-21",
+    "label" : "DOWN",
+    "startPrice" : 73.9,
+    "endPrice" : 67.47200000000001,
+    "maxDrawdownPct" : 8.698240866035178
+  }, {
+    "startDate" : "2024-02-21",
+    "endDate" : "2024-03-25",
+    "label" : "UP",
+    "startPrice" : 67.47200000000001,
+    "endPrice" : 95.002,
+    "maxDrawdownPct" : 7.4404601322988375
+  }, {
+    "startDate" : "2024-03-25",
+    "endDate" : "2024-04-19",
+    "label" : "DOWN",
+    "startPrice" : 95.002,
+    "endPrice" : 76.2,
+    "maxDrawdownPct" : 19.791162291320173
+  }, {
+    "startDate" : "2024-04-19",
+    "endDate" : "2024-06-18",
+    "label" : "UP",
+    "startPrice" : 76.2,
+    "endPrice" : 135.58,
+    "maxDrawdownPct" : 5.373930284763618
+  }, {
+    "startDate" : "2024-06-18",
+    "endDate" : "2024-06-24",
+    "label" : "DOWN",
+    "startPrice" : 135.58,
+    "endPrice" : 118.11,
+    "maxDrawdownPct" : 12.885381324679166
+  }, {
+    "startDate" : "2024-06-24",
+    "endDate" : "2024-07-10",
+    "label" : "UP",
+    "startPrice" : 118.11,
+    "endPrice" : 134.91,
+    "maxDrawdownPct" : 2.9509493670886107
+  }, {
+    "startDate" : "2024-07-10",
+    "endDate" : "2024-07-30",
+    "label" : "DOWN",
+    "startPrice" : 134.91,
+    "endPrice" : 103.73,
+    "maxDrawdownPct" : 23.111704099028977
+  }, {
+    "startDate" : "2024-07-30",
+    "endDate" : "2024-07-31",
+    "label" : "UP",
+    "startPrice" : 103.73,
+    "endPrice" : 117.02,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2024-07-31",
+    "endDate" : "2024-08-07",
+    "label" : "DOWN",
+    "startPrice" : 117.02,
+    "endPrice" : 98.91,
+    "maxDrawdownPct" : 15.475987010767389
+  }, {
+    "startDate" : "2024-08-07",
+    "endDate" : "2024-08-19",
+    "label" : "UP",
+    "startPrice" : 98.91,
+    "endPrice" : 130.0,
+    "maxDrawdownPct" : 0.20958369057825937
+  }, {
+    "startDate" : "2024-08-19",
+    "endDate" : "2024-09-06",
+    "label" : "DOWN",
+    "startPrice" : 130.0,
+    "endPrice" : 102.83,
+    "maxDrawdownPct" : 20.900000000000002
+  }, {
+    "startDate" : "2024-09-06",
+    "endDate" : "2024-11-07",
+    "label" : "UP",
+    "startPrice" : 102.83,
+    "endPrice" : 148.88,
+    "maxDrawdownPct" : 7.619511516248011
+  }, {
+    "startDate" : "2024-11-07",
+    "endDate" : "2024-12-18",
+    "label" : "DOWN",
+    "startPrice" : 148.88,
+    "endPrice" : 128.91,
+    "maxDrawdownPct" : 13.41348737238044
+  }, {
+    "startDate" : "2024-12-18",
+    "endDate" : "2025-01-06",
+    "label" : "UP",
+    "startPrice" : 128.91,
+    "endPrice" : 149.43,
+    "maxDrawdownPct" : 4.229068606475543
+  }, {
+    "startDate" : "2025-01-06",
+    "endDate" : "2025-01-14",
+    "label" : "DOWN",
+    "startPrice" : 149.43,
+    "endPrice" : 131.76,
+    "maxDrawdownPct" : 11.82493475205783
+  }, {
+    "startDate" : "2025-01-14",
+    "endDate" : "2025-01-23",
+    "label" : "UP",
+    "startPrice" : 131.76,
+    "endPrice" : 147.22,
+    "maxDrawdownPct" : 1.9597768643570286
+  }, {
+    "startDate" : "2025-01-23",
+    "endDate" : "2025-01-27",
+    "label" : "DOWN",
+    "startPrice" : 147.22,
+    "endPrice" : 118.42,
+    "maxDrawdownPct" : 19.56255943485939
+  }, {
+    "startDate" : "2025-01-27",
+    "endDate" : "2025-01-28",
+    "label" : "UP",
+    "startPrice" : 118.42,
+    "endPrice" : 128.99,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2025-01-28",
+    "endDate" : "2025-02-03",
+    "label" : "DOWN",
+    "startPrice" : 128.99,
+    "endPrice" : 116.66,
+    "maxDrawdownPct" : 9.558880533374689
+  }, {
+    "startDate" : "2025-02-03",
+    "endDate" : "2025-02-20",
+    "label" : "UP",
+    "startPrice" : 116.66,
+    "endPrice" : 140.11,
+    "maxDrawdownPct" : 1.8192707943400517
+  }, {
+    "startDate" : "2025-02-20",
+    "endDate" : "2025-03-10",
+    "label" : "DOWN",
+    "startPrice" : 140.11,
+    "endPrice" : 106.98,
+    "maxDrawdownPct" : 23.645706944543576
+  }, {
+    "startDate" : "2025-03-10",
+    "endDate" : "2025-03-14",
+    "label" : "UP",
+    "startPrice" : 106.98,
+    "endPrice" : 121.67,
+    "maxDrawdownPct" : 0.1382408847416594
+  }, {
+    "startDate" : "2025-03-14",
+    "endDate" : "2025-04-04",
+    "label" : "DOWN",
+    "startPrice" : 121.67,
+    "endPrice" : 94.31,
+    "maxDrawdownPct" : 22.487055149173997
+  }, {
+    "startDate" : "2025-04-04",
+    "endDate" : "2025-04-09",
+    "label" : "UP",
+    "startPrice" : 94.31,
+    "endPrice" : 114.33,
+    "maxDrawdownPct" : 1.37238836542401
+  }, {
+    "startDate" : "2025-04-09",
+    "endDate" : "2025-04-21",
+    "label" : "DOWN",
+    "startPrice" : 114.33,
+    "endPrice" : 96.91,
+    "maxDrawdownPct" : 15.236595819120094
+  }, {
+    "startDate" : "2025-04-21",
+    "endDate" : "2025-08-12",
+    "label" : "UP",
+    "startPrice" : 96.91,
+    "endPrice" : 183.16,
+    "maxDrawdownPct" : 3.450867052023121
+  }, {
+    "startDate" : "2025-08-12",
+    "endDate" : "2025-09-05",
+    "label" : "DOWN",
+    "startPrice" : 183.16,
+    "endPrice" : 167.02,
+    "maxDrawdownPct" : 8.811967678532422
+  }, {
+    "startDate" : "2025-09-05",
+    "endDate" : "2025-10-29",
+    "label" : "UP",
+    "startPrice" : 167.02,
+    "endPrice" : 207.04,
+    "maxDrawdownPct" : 6.615776081424926
+  }, {
+    "startDate" : "2025-10-29",
+    "endDate" : "2025-12-17",
+    "label" : "DOWN",
+    "startPrice" : 207.04,
+    "endPrice" : 170.94,
+    "maxDrawdownPct" : 17.436244204018543
+  }, {
+    "startDate" : "2025-12-17",
+    "endDate" : "2026-01-29",
+    "label" : "UP",
+    "startPrice" : 170.94,
+    "endPrice" : 192.51,
+    "maxDrawdownPct" : 6.53965254815515
+  }, {
+    "startDate" : "2026-01-29",
+    "endDate" : "2026-02-05",
+    "label" : "DOWN",
+    "startPrice" : 192.51,
+    "endPrice" : 171.88,
+    "maxDrawdownPct" : 10.716326424601318
+  }, {
+    "startDate" : "2026-02-05",
+    "endDate" : "2026-02-25",
+    "label" : "UP",
+    "startPrice" : 171.88,
+    "endPrice" : 195.56,
+    "maxDrawdownPct" : 3.809523809523814
+  }, {
+    "startDate" : "2026-02-25",
+    "endDate" : "2026-03-30",
+    "label" : "DOWN",
+    "startPrice" : 195.56,
+    "endPrice" : 165.17,
+    "maxDrawdownPct" : 15.539987727551654
+  }, {
+    "startDate" : "2026-03-30",
+    "endDate" : "2026-04-27",
+    "label" : "UP",
+    "startPrice" : 165.17,
+    "endPrice" : 216.61,
+    "maxDrawdownPct" : 1.4123456790123523
+  }, {
+    "startDate" : "2026-04-27",
+    "endDate" : "2026-05-05",
+    "label" : "DOWN",
+    "startPrice" : 216.61,
+    "endPrice" : 196.5,
+    "maxDrawdownPct" : 9.283966575873697
+  }, {
+    "startDate" : "2026-05-05",
+    "endDate" : "2026-05-14",
+    "label" : "UP",
+    "startPrice" : 196.5,
+    "endPrice" : 235.74,
+    "maxDrawdownPct" : 0.0
+  }, {
+    "startDate" : "2026-05-14",
+    "endDate" : "2026-06-26",
+    "label" : "DOWN",
+    "startPrice" : 235.74,
+    "endPrice" : 192.53,
+    "maxDrawdownPct" : 18.329515567998644
+  }, {
+    "startDate" : "2026-06-26",
+    "endDate" : "2026-07-15",
+    "label" : "UP",
+    "startPrice" : 192.53,
+    "endPrice" : 212.5,
+    "maxDrawdownPct" : 3.5219946909366735
+  }, {
+    "startDate" : "2026-07-15",
+    "endDate" : "2026-07-29",
+    "label" : "DOWN",
+    "startPrice" : 212.5,
+    "endPrice" : 190.01,
+    "maxDrawdownPct" : 10.58352941176471
+  }, {
+    "startDate" : "2026-07-29",
+    "endDate" : "2026-09-04",
+    "label" : "UP",
+    "startPrice" : 190.01,
+    "endPrice" : 230.36,
+    "maxDrawdownPct" : 7.46560142032846
+  } ]
+}

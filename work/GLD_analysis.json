@@ -1,0 +1,449 @@
+{
+  "symbol" : "GLD",
+  "generatedAt" : "2026-09-09",
+  "pivotCount" : 165,
+  "pivots" : [ {
+    "date" : "2022-03-08",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 2.7359047261412917,
+    "volumeSpike" : false,
+    "windowStart" : "2022-03-01",
+    "windowEnd" : "2022-03-15"
+  }, {
+    "date" : "2022-03-15",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.870543060888663,
+    "volumeSpike" : false,
+    "windowStart" : "2022-03-08",
+    "windowEnd" : "2022-03-22"
+  }, {
+    "date" : "2022-03-28",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.8203750411229236,
+    "volumeSpike" : false,
+    "windowStart" : "2022-03-21",
+    "windowEnd" : "2022-04-04"
+  }, {
+    "date" : "2022-05-31",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -0.989297078391671,
+    "volumeSpike" : false,
+    "windowStart" : "2022-05-23",
+    "windowEnd" : "2022-06-07"
+  }, {
+    "date" : "2022-06-02",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.230912152354402,
+    "volumeSpike" : false,
+    "windowStart" : "2022-05-25",
+    "windowEnd" : "2022-06-09"
+  }, {
+    "date" : "2022-06-10",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.3412297509144855,
+    "volumeSpike" : false,
+    "windowStart" : "2022-06-03",
+    "windowEnd" : "2022-06-17"
+  }, {
+    "date" : "2022-09-15",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.867916165389738,
+    "volumeSpike" : false,
+    "windowStart" : "2022-09-08",
+    "windowEnd" : "2022-09-22"
+  }, {
+    "date" : "2022-09-26",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.163322658649757,
+    "volumeSpike" : false,
+    "windowStart" : "2022-09-19",
+    "windowEnd" : "2022-10-03"
+  }, {
+    "date" : "2022-12-01",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.8384806747163474,
+    "volumeSpike" : false,
+    "windowStart" : "2022-11-23",
+    "windowEnd" : "2022-12-08"
+  }, {
+    "date" : "2022-12-15",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.6359309934562805,
+    "volumeSpike" : false,
+    "windowStart" : "2022-12-08",
+    "windowEnd" : "2022-12-22"
+  }, {
+    "date" : "2022-12-20",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.6594516594516717,
+    "volumeSpike" : false,
+    "windowStart" : "2022-12-13",
+    "windowEnd" : "2022-12-28"
+  }, {
+    "date" : "2023-02-01",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.259684521487081,
+    "volumeSpike" : false,
+    "windowStart" : "2023-01-25",
+    "windowEnd" : "2023-02-08"
+  }, {
+    "date" : "2023-03-23",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.2538159616223288,
+    "volumeSpike" : false,
+    "windowStart" : "2023-03-16",
+    "windowEnd" : "2023-03-30"
+  }, {
+    "date" : "2023-04-04",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.8640945052563085,
+    "volumeSpike" : false,
+    "windowStart" : "2023-03-28",
+    "windowEnd" : "2023-04-12"
+  }, {
+    "date" : "2023-04-13",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.351567925637065,
+    "volumeSpike" : false,
+    "windowStart" : "2023-04-05",
+    "windowEnd" : "2023-04-20"
+  }, {
+    "date" : "2023-06-07",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.2010529779532764,
+    "volumeSpike" : false,
+    "windowStart" : "2023-05-31",
+    "windowEnd" : "2023-06-14"
+  }, {
+    "date" : "2023-10-27",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.162980272811276,
+    "volumeSpike" : false,
+    "windowStart" : "2023-10-20",
+    "windowEnd" : "2023-11-03"
+  }, {
+    "date" : "2023-11-10",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.0909691994049342,
+    "volumeSpike" : false,
+    "windowStart" : "2023-11-03",
+    "windowEnd" : "2023-11-17"
+  }, {
+    "date" : "2023-12-01",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.7271523178807868,
+    "volumeSpike" : false,
+    "windowStart" : "2023-11-24",
+    "windowEnd" : "2023-12-08"
+  }, {
+    "date" : "2024-01-12",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 0.9794006493852203,
+    "volumeSpike" : false,
+    "windowStart" : "2024-01-05",
+    "windowEnd" : "2024-01-22"
+  }, {
+    "date" : "2024-01-17",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.1015911872705009,
+    "volumeSpike" : false,
+    "windowStart" : "2024-01-09",
+    "windowEnd" : "2024-01-24"
+  }, {
+    "date" : "2024-02-01",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.0400636773679972,
+    "volumeSpike" : false,
+    "windowStart" : "2024-01-25",
+    "windowEnd" : "2024-02-08"
+  }, {
+    "date" : "2024-04-30",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.9937089462484958,
+    "volumeSpike" : false,
+    "windowStart" : "2024-04-23",
+    "windowEnd" : "2024-05-07"
+  }, {
+    "date" : "2024-06-07",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -3.5683361436449013,
+    "volumeSpike" : false,
+    "windowStart" : "2024-05-31",
+    "windowEnd" : "2024-06-14"
+  }, {
+    "date" : "2024-06-20",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.2484336566575438,
+    "volumeSpike" : false,
+    "windowStart" : "2024-06-12",
+    "windowEnd" : "2024-06-27"
+  }, {
+    "date" : "2024-07-16",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.9925836572398659,
+    "volumeSpike" : false,
+    "windowStart" : "2024-07-09",
+    "windowEnd" : "2024-07-23"
+  }, {
+    "date" : "2024-07-25",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.564472497745717,
+    "volumeSpike" : false,
+    "windowStart" : "2024-07-18",
+    "windowEnd" : "2024-08-01"
+  }, {
+    "date" : "2024-07-31",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.8110731619629616,
+    "volumeSpike" : false,
+    "windowStart" : "2024-07-24",
+    "windowEnd" : "2024-08-07"
+  }, {
+    "date" : "2024-11-22",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 1.2892240330819815,
+    "volumeSpike" : false,
+    "windowStart" : "2024-11-15",
+    "windowEnd" : "2024-12-02"
+  }, {
+    "date" : "2024-12-18",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.9185045502992604,
+    "volumeSpike" : false,
+    "windowStart" : "2024-12-11",
+    "windowEnd" : "2024-12-26"
+  }, {
+    "date" : "2025-04-21",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 3.093558081797987,
+    "volumeSpike" : false,
+    "windowStart" : "2025-04-11",
+    "windowEnd" : "2025-04-28"
+  }, {
+    "date" : "2025-05-06",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 2.8023983315954126,
+    "volumeSpike" : false,
+    "windowStart" : "2025-04-29",
+    "windowEnd" : "2025-05-13"
+  }, {
+    "date" : "2025-06-02",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 2.658102766798409,
+    "volumeSpike" : false,
+    "windowStart" : "2025-05-23",
+    "windowEnd" : "2025-06-09"
+  }, {
+    "date" : "2025-07-08",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.0443439502879182,
+    "volumeSpike" : false,
+    "windowStart" : "2025-06-30",
+    "windowEnd" : "2025-07-15"
+  }, {
+    "date" : "2025-07-11",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 0.9601567602874006,
+    "volumeSpike" : false,
+    "windowStart" : "2025-07-03",
+    "windowEnd" : "2025-07-18"
+  }, {
+    "date" : "2025-07-30",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.7273469387755203,
+    "volumeSpike" : false,
+    "windowStart" : "2025-07-23",
+    "windowEnd" : "2025-08-06"
+  }, {
+    "date" : "2025-10-20",
+    "type" : "LOCAL_TOP",
+    "dayChangePct" : 3.6401964060772674,
+    "volumeSpike" : false,
+    "windowStart" : "2025-10-13",
+    "windowEnd" : "2025-10-27"
+  }, {
+    "date" : "2025-10-21",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -6.426888254991936,
+    "volumeSpike" : false,
+    "windowStart" : "2025-10-14",
+    "windowEnd" : "2025-10-28"
+  }, {
+    "date" : "2025-11-04",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.7517218938120194,
+    "volumeSpike" : false,
+    "windowStart" : "2025-10-28",
+    "windowEnd" : "2025-11-11"
+  }, {
+    "date" : "2026-01-30",
+    "type" : "BIG_DOWN",
+    "dayChangePct" : -10.274248840492028,
+    "volumeSpike" : true,
+    "windowStart" : "2026-01-23",
+    "windowEnd" : "2026-02-06"
+  }, {
+    "date" : "2026-02-02",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.004944375772556,
+    "volumeSpike" : false,
+    "windowStart" : "2026-01-26",
+    "windowEnd" : "2026-02-09"
+  }, {
+    "date" : "2026-02-03",
+    "type" : "BIG_UP",
+    "dayChangePct" : 6.35871982768712,
+    "volumeSpike" : false,
+    "windowStart" : "2026-01-27",
+    "windowEnd" : "2026-02-10"
+  }, {
+    "date" : "2026-05-04",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -2.0015123588071337,
+    "volumeSpike" : false,
+    "windowStart" : "2026-04-27",
+    "windowEnd" : "2026-05-11"
+  }, {
+    "date" : "2026-06-10",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -4.14555504375863,
+    "volumeSpike" : false,
+    "windowStart" : "2026-06-03",
+    "windowEnd" : "2026-06-17"
+  }, {
+    "date" : "2026-06-24",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -3.021308173433679,
+    "volumeSpike" : false,
+    "windowStart" : "2026-06-16",
+    "windowEnd" : "2026-07-01"
+  }, {
+    "date" : "2026-07-16",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.9846918222102938,
+    "volumeSpike" : false,
+    "windowStart" : "2026-07-09",
+    "windowEnd" : "2026-07-23"
+  }, {
+    "date" : "2026-07-28",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.404051997971334,
+    "volumeSpike" : false,
+    "windowStart" : "2026-07-21",
+    "windowEnd" : "2026-08-04"
+  }, {
+    "date" : "2026-08-18",
+    "type" : "LOCAL_BOTTOM",
+    "dayChangePct" : -1.711509531677724,
+    "volumeSpike" : false,
+    "windowStart" : "2026-08-11",
+    "windowEnd" : "2026-08-25"
+  } ],
+  "segmentCount" : 15,
+  "segments" : [ {
+    "startDate" : "2021-09-29",
+    "endDate" : "2022-03-08",
+    "label" : "UP",
+    "startPrice" : 161.32,
+    "endPrice" : 191.51,
+    "maxDrawdownPct" : 5.306590257879651
+  }, {
+    "startDate" : "2022-03-08",
+    "endDate" : "2022-09-26",
+    "label" : "DOWN",
+    "startPrice" : 191.51,
+    "endPrice" : 151.23,
+    "maxDrawdownPct" : 21.032844237898807
+  }, {
+    "startDate" : "2022-09-26",
+    "endDate" : "2023-05-04",
+    "label" : "UP",
+    "startPrice" : 151.23,
+    "endPrice" : 190.44,
+    "maxDrawdownPct" : 7.331975560081464
+  }, {
+    "startDate" : "2023-05-04",
+    "endDate" : "2023-10-05",
+    "label" : "DOWN",
+    "startPrice" : 190.44,
+    "endPrice" : 168.83,
+    "maxDrawdownPct" : 11.347406007141348
+  }, {
+    "startDate" : "2023-10-05",
+    "endDate" : "2024-10-30",
+    "label" : "UP",
+    "startPrice" : 168.83,
+    "endPrice" : 257.5,
+    "maxDrawdownPct" : 5.771286070537944
+  }, {
+    "startDate" : "2024-10-30",
+    "endDate" : "2024-11-15",
+    "label" : "DOWN",
+    "startPrice" : 257.5,
+    "endPrice" : 236.59,
+    "maxDrawdownPct" : 8.120388349514563
+  }, {
+    "startDate" : "2024-11-15",
+    "endDate" : "2025-10-20",
+    "label" : "UP",
+    "startPrice" : 236.59,
+    "endPrice" : 403.15,
+    "maxDrawdownPct" : 7.10732279223041
+  }, {
+    "startDate" : "2025-10-20",
+    "endDate" : "2025-11-04",
+    "label" : "DOWN",
+    "startPrice" : 403.15,
+    "endPrice" : 362.32,
+    "maxDrawdownPct" : 10.127744015874981
+  }, {
+    "startDate" : "2025-11-04",
+    "endDate" : "2026-01-29",
+    "label" : "UP",
+    "startPrice" : 362.32,
+    "endPrice" : 495.9,
+    "maxDrawdownPct" : 4.902337188654799
+  }, {
+    "startDate" : "2026-01-29",
+    "endDate" : "2026-02-02",
+    "label" : "DOWN",
+    "startPrice" : 495.9,
+    "endPrice" : 427.13,
+    "maxDrawdownPct" : 13.867715265174427
+  }, {
+    "startDate" : "2026-02-02",
+    "endDate" : "2026-03-02",
+    "label" : "UP",
+    "startPrice" : 427.13,
+    "endPrice" : 490.0,
+    "maxDrawdownPct" : 4.154994333126619
+  }, {
+    "startDate" : "2026-03-02",
+    "endDate" : "2026-03-26",
+    "label" : "DOWN",
+    "startPrice" : 490.0,
+    "endPrice" : 400.64,
+    "maxDrawdownPct" : 18.236734693877555
+  }, {
+    "startDate" : "2026-03-26",
+    "endDate" : "2026-04-17",
+    "label" : "UP",
+    "startPrice" : 400.64,
+    "endPrice" : 445.93,
+    "maxDrawdownPct" : 2.3228724133205465
+  }, {
+    "startDate" : "2026-04-17",
+    "endDate" : "2026-07-16",
+    "label" : "DOWN",
+    "startPrice" : 445.93,
+    "endPrice" : 364.96,
+    "maxDrawdownPct" : 18.15755836117777
+  }, {
+    "startDate" : "2026-07-16",
+    "endDate" : "2026-08-25",
+    "label" : "UP",
+    "startPrice" : 364.96,
+    "endPrice" : 428.07,
+    "maxDrawdownPct" : 2.571745093901667
+  } ]
+}
